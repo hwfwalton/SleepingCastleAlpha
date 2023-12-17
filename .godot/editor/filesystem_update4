@@ -40,3 +40,4 @@ res://globals/AudioManager.gd
 res://BookView/puzzle_pages/puzzle_zones/castle0_zone_0.tscn
 res://themes/book_view_puzzle_text.tres
 res://BookView/puzzle_pages/puzzle_zones/castle0_zone_1.tscn
+res://globals/AudioManager.tscn
