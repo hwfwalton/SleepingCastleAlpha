@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhkbka7h4qqib"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_1oxdk"]
+[ext_resource type="Texture2D" uid="uid://c5wjy0ct1xdbp" path="res://assets/clues/clue.robert.png" id="2_b0awm"]
+[ext_resource type="PackedScene" uid="uid://dw7qjdh5v703h" path="res://world_items/clue_sparkle.tscn" id="3_5hije"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_1oxdk")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_b0awm")
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "A brown horse"
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = ""
+
+[node name="ClueSparkle" parent="." index="1" instance=ExtResource("3_5hije")]
+visible = false
+layout_mode = 0
+clue_item_type = 1
+clue_item_symbol_value = 2
+clue_item_value = "brown_horse"

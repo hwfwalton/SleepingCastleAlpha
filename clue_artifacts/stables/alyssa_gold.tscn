@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cld7hq4qwd77p"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_6oqkp"]
+[ext_resource type="Texture2D" uid="uid://mygqux4vksnm" path="res://assets/symbols/symbol.gold.png" id="2_fkmvi"]
+[ext_resource type="PackedScene" uid="uid://dw7qjdh5v703h" path="res://world_items/clue_sparkle.tscn" id="3_2c11r"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_6oqkp")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_fkmvi")
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "The woman has 4 gold in her pocket. "
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = ""
+
+[node name="ClueSparkle" parent="." index="1" instance=ExtResource("3_2c11r")]
+visible = false
+layout_mode = 0
+clue_item_type = 1
+clue_item_symbol_value = 13

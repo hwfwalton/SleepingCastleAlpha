@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://5piuomql43j6"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_j67v6"]
+[ext_resource type="Texture2D" uid="uid://bmqd0n2h4apml" path="res://assets/clues/clue.carriage.png" id="2_3qqsm"]
+[ext_resource type="PackedScene" uid="uid://dw7qjdh5v703h" path="res://world_items/clue_sparkle.tscn" id="3_1sg37"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_j67v6")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_3qqsm")
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "Carriage"
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = "A blue carriage with a symbol on the door. It is dry underneath the carriage."
+
+[node name="ClueSparkle" parent="." index="1" instance=ExtResource("3_1sg37")]
+visible = false
+layout_mode = 0
+clue_item_type = 1
+clue_item_symbol_value = 12
+clue_item_value = "fish"

@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmra5comie0c5"]
+
+[ext_resource type="Texture2D" uid="uid://cf8kmdc625nih" path="res://assets/dooricon.png" id="1_6m44k"]
+[ext_resource type="Script" path="res://GameHUD/nav_sparkle.gd" id="1_tx387"]
+
+[node name="NavSparkle" type="PanelContainer" groups=["nav_sparkle"]]
+custom_minimum_size = Vector2(64, 0)
+offset_right = 64.0
+offset_bottom = 64.0
+mouse_filter = 1
+theme_type_variation = &"BookPanel"
+script = ExtResource("1_tx387")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_6m44k")
+expand_mode = 5
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_nav_sparkle_pressed"]

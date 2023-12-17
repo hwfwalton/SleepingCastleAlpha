@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhnhc2xg7iqww"]
+
+[ext_resource type="PackedScene" uid="uid://dua8h0obvspql" path="res://clue_containers/ClueContainerTemplate.tscn" id="1_ae21e"]
+[ext_resource type="Texture2D" uid="uid://cwef43br6545u" path="res://assets/clues/clue.bedsignBRONZE.png" id="2_m1ah8"]
+[ext_resource type="PackedScene" uid="uid://no2lghy85xom" path="res://world_items/artifact_sparkle.tscn" id="3_k1yly"]
+[ext_resource type="Texture2D" uid="uid://dckxppox0y7yy" path="res://assets/clues/clue.poster.png" id="4_6f8bf"]
+
+[node name="ClueContainerTemplate" instance=ExtResource("1_ae21e")]
+
+[node name="Clue_bedsignBronze" type="Sprite2D" parent="." index="1"]
+position = Vector2(724, 330)
+scale = Vector2(0.591603, 0.591603)
+texture = ExtResource("2_m1ah8")
+
+[node name="ArtifactSparkle" parent="." index="2" instance=ExtResource("3_k1yly")]
+layout_mode = 0
+offset_left = 936.0
+offset_top = 294.0
+offset_right = 1000.0
+offset_bottom = 358.0
+tooltip_text = "A bronze plaque on the edge of the bed"
+artifact_name = "guardroom/hugo_zone_plaque"
+
+[node name="Clue_poster" type="Sprite2D" parent="." index="3"]
+position = Vector2(736, 640)
+scale = Vector2(0.493243, 0.493243)
+texture = ExtResource("4_6f8bf")
+
+[node name="ArtifactSparkle2" parent="." index="4" instance=ExtResource("3_k1yly")]
+layout_mode = 0
+offset_left = 912.0
+offset_top = 448.0
+offset_right = 976.0
+offset_bottom = 512.0
+artifact_name = "guardroom/hugo_zone_poster"

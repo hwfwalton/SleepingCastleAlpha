@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7tpikb50ecx3"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_wi0te"]
+[ext_resource type="Texture2D" uid="uid://dbnkp7e5pe4i7" path="res://assets/clues/clue.boxingtrophy.png" id="2_f7qqb"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_wi0te")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_f7qqb")
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "A boxing trophy"
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = "Trophy plauqe reads: \"Tournament in honor of the Prince's Birth\""

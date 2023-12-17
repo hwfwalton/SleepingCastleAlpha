@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://cltpmem0mjodc"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_ntojb"]
+[ext_resource type="Texture2D" uid="uid://dqw74dxw4uu4o" path="res://assets/notepageonly.png" id="2_poubs"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_ntojb")]
+
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/MarginContainer2" index="0"]
+visible = false
+position = Vector2(720, 539.47)
+scale = Vector2(1.61, 1.11)
+texture = ExtResource("2_poubs")
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="1"]
+custom_minimum_size = Vector2(1000, 0)
+texture = ExtResource("2_poubs")
+stretch_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/MarginContainer2/TextureRect" index="0"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.144
+anchor_top = 0.104
+anchor_right = 0.894
+anchor_bottom = 0.904
+offset_left = -25.32
+offset_right = -25.3201
+offset_bottom = 0.319946
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 23
+text = "Something has gone horribly wrong and I need your help! 
+
+	My brother was frantic to get his children out of the castle before {Blurry Name} attacked, but by the time we arrived, it was all over. We expected to find a feast to celebrate the Queen’s victory, but when we arrived at the castle, we found everyone frozen as though sleeping, and we can’t wake them up! 
+	
+	The castle is locked up, but those who know {Blurry Name} best have a secret password to get in. At least we won’t have to break a window to get in. 
+	
+	Please follow us! I’ve sent my familiar Leroy and my magic book to help you organize your thoughts. We don’t know what happened – we fear this spell was called by those loyal to her sorcerous uncle to punish the Queen for his death. We must find a way to release those we can trust from this slumber! 
+	
+Your friend Caroline
+"
+
+[node name="MarginContainer" parent="HBoxContainer" index="1"]
+visible = false

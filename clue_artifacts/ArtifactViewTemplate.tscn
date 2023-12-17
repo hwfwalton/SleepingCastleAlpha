@@ -1,0 +1,77 @@
+[gd_scene load_steps=4 format=3 uid="uid://din48m4aysgf8"]
+
+[ext_resource type="LabelSettings" uid="uid://bc0hdx37n02a2" path="res://themes/artifact_view_title.tres" id="1_fccd8"]
+[ext_resource type="Script" path="res://clue_artifacts/ArtifactViewTemplate.gd" id="1_pt58g"]
+[ext_resource type="LabelSettings" uid="uid://biawa0yp21s2l" path="res://themes/artifact_view_description.tres" id="2_6g3aa"]
+
+[node name="ArtifactViewTemplate" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 240.0
+offset_right = -240.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_pt58g")
+metadata/_edit_lock_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(1000, 1080)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_type_variation = &"ArtifactViewMargsin"
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/MarginContainer2"]
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(436, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(396, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="ArtifactTitle" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(396, 0)
+layout_mode = 2
+text = "ArtifactViewTitle
+"
+label_settings = ExtResource("1_fccd8")
+autowrap_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="ArtifactDescription" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(396, 0)
+layout_mode = 2
+text = "Artifact Description Text
+A line or two
+Or maybe "
+label_settings = ExtResource("2_6g3aa")
+autowrap_mode = 2
+metadata/_edit_lock_ = true

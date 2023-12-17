@@ -1,0 +1,76 @@
+[gd_scene load_steps=4 format=3 uid="uid://dh2a6hap8vb4q"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_32a42"]
+[ext_resource type="Texture2D" uid="uid://dqw74dxw4uu4o" path="res://assets/notepageonly.png" id="2_mvsrt"]
+[ext_resource type="PackedScene" uid="uid://dw7qjdh5v703h" path="res://world_items/clue_sparkle.tscn" id="3_p4b3s"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_32a42")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_mvsrt")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/MarginContainer2/TextureRect" index="0"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.229
+anchor_top = 0.104
+anchor_right = 0.229
+anchor_bottom = 0.104
+offset_left = -0.360016
+offset_top = 0.32
+offset_right = 455.64
+offset_bottom = 744.32
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+bbcode_enabled = true
+text = "My son, 
+
+	Take care! Operation Sleeping Beauty has gone awry! 
+	[b]Isolde[/b] managed to disguise herself as one of the guards, so you should still be able to get in through the west gate, but we were not able to capture Hamfist! She did not take her break at the appointed time, and so the royal chambers will be guarded – we don’t know by who! 
+	I would urge you to take additional precautions. [b]Jace[/b] is ready to free our allies in the prison if you require backup. Everything we’ve been working for will be ruined if you are not successful and our involvement was discovered. 
+
+							[b]Sunrise[/b], [b]Sunset[/b]"
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "A sealed message"
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = ""
+
+[node name="ClueSparkle" parent="." index="1" instance=ExtResource("3_p4b3s")]
+visible = false
+layout_mode = 0
+clue_item_name_value = 14
+clue_item_value = "Isolde"
+
+[node name="ClueSparkle2" parent="." index="2" instance=ExtResource("3_p4b3s")]
+visible = false
+layout_mode = 0
+offset_left = 64.0
+offset_right = 128.0
+offset_bottom = 64.0
+clue_item_name_value = 15
+clue_item_value = "Jace"
+
+[node name="ClueSparkle3" parent="." index="3" instance=ExtResource("3_p4b3s")]
+visible = false
+layout_mode = 0
+offset_top = 64.0
+offset_right = 64.0
+offset_bottom = 128.0
+clue_item_type = 1
+clue_item_symbol_value = 29
+clue_item_value = "sunrise"
+
+[node name="ClueSparkle4" parent="." index="4" instance=ExtResource("3_p4b3s")]
+visible = false
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 128.0
+offset_bottom = 128.0
+clue_item_type = 1
+clue_item_symbol_value = 30
+clue_item_value = "sunset"

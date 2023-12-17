@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bo8kk02r8rulf"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_pv6ch"]
+[ext_resource type="Texture2D" uid="uid://bdqgtebwa01ci" path="res://assets/clues/clue.rain.png" id="2_etwbb"]
+[ext_resource type="PackedScene" uid="uid://dw7qjdh5v703h" path="res://world_items/clue_sparkle.tscn" id="3_h0mi0"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_pv6ch")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_etwbb")
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "It seems to have rained in the night..."
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = ""
+
+[node name="ClueSparkle" parent="." index="1" instance=ExtResource("3_h0mi0")]
+visible = false
+layout_mode = 0
+clue_item_type = 1
+clue_item_symbol_value = 19
+clue_item_value = "rain"

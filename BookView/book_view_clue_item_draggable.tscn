@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://djgykbt25ntxy"]
+
+[ext_resource type="Script" path="res://BookView/book_view_clue_item_draggable.gd" id="1_8wk7c"]
+[ext_resource type="PackedScene" uid="uid://d3tc64mctqeyy" path="res://BookView/book_view_clue_item.tscn" id="1_jl8sd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mwhik"]
+size = Vector2(152, 40)
+
+[node name="BookViewClueItemDraggable" type="Node2D"]
+script = ExtResource("1_8wk7c")
+
+[node name="BookViewClueItem" parent="." instance=ExtResource("1_jl8sd")]
+offset_left = -76.0
+offset_top = -20.0
+offset_right = 76.0
+offset_bottom = 20.0
+mouse_filter = 1
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_mwhik")
+
+[connection signal="mouse_entered" from="BookViewClueItem" to="." method="_on_book_view_clue_item_mouse_entered"]
+[connection signal="mouse_exited" from="BookViewClueItem" to="." method="_on_book_view_clue_item_mouse_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

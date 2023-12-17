@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsuuhdvj1njbp"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_tkngy"]
+[ext_resource type="Texture2D" uid="uid://dqw74dxw4uu4o" path="res://assets/notepageonly.png" id="2_ee1ce"]
+[ext_resource type="PackedScene" uid="uid://dw7qjdh5v703h" path="res://world_items/clue_sparkle.tscn" id="3_tgbpw"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_tkngy")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_ee1ce")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/MarginContainer2/TextureRect" index="0"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 112.0
+offset_right = 640.0
+offset_bottom = 816.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+bbcode_enabled = true
+text = "[b]Albert[/b] –
+
+I know you’ve been accepting bribes, and I’m going to tell Commander [b]Sterling[/b] unless you give me my cut. You have until your break at [b]10pm[/b] tonight or I’ll deck you! 
+
+-Hamfist
+"
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "A note hidden under the pillow"
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = ""
+
+[node name="ClueSparkle" parent="." index="1" instance=ExtResource("3_tgbpw")]
+visible = false
+layout_mode = 0
+clue_item_name_value = 1
+
+[node name="ClueSparkle2" parent="." index="2" instance=ExtResource("3_tgbpw")]
+visible = false
+layout_mode = 0
+offset_left = 64.0
+offset_right = 128.0
+offset_bottom = 64.0
+clue_item_name_value = 25
+
+[node name="ClueSparkle3" parent="." index="3" instance=ExtResource("3_tgbpw")]
+visible = false
+layout_mode = 0
+offset_top = 64.0
+offset_right = 64.0
+offset_bottom = 128.0
+clue_item_type = 1
+clue_item_symbol_value = 4

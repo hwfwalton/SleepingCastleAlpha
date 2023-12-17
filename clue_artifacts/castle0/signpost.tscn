@@ -1,0 +1,119 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctgfxd7g2y423"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_1m24k"]
+[ext_resource type="Texture2D" uid="uid://bupsqqgvq01qx" path="res://assets/clues/clue.sign.png" id="2_d1m5k"]
+[ext_resource type="PackedScene" uid="uid://dw7qjdh5v703h" path="res://world_items/clue_sparkle.tscn" id="3_7s1yc"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_1m24k")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_d1m5k")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/MarginContainer2/TextureRect" index="0"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.22
+anchor_top = 0.183
+anchor_right = 0.22
+anchor_bottom = 0.183
+offset_left = -40.8
+offset_top = -24.36
+offset_right = 607.2
+offset_bottom = 423.64
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 20
+theme_override_font_sizes/italics_font_size = 20
+bbcode_enabled = true
+text = "Hear Ye, Hear ye! 
+
+	The Illustrious Queen cordially invites all loyal citizens, nobles, and servants alike, to celebrate Her Majesty's victory over the Would-Be Usurper.
+There is no need for wives to stay home with the children! Villainous traitors are still roaming the land and anyone not present for the ball would be in grave danger. 
+
+	Castle gates will open at [b]Noon[/b]! 
+
+	(Please note the Royal Horologist predicts rain after [b]eight o’clock![/b] It should clear up before the end of the party at [b]midnight[/b].)
+
+	Refreshments will be served at a discounted price! Entertainers will travel from across the land to perform!  Enjoyment will be had. 
+
+								Signed, 
+								*[b]Juliet Sterling[/b]*
+								*[b]ROSE SIGIL[/b]*
+
+[i]Paid coat check services will be available inside the castle.[/i] 
+"
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "Signpost before the castle
+"
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = ""
+
+[node name="PNGSource" type="Label" parent="." index="1"]
+visible = false
+layout_mode = 0
+offset_left = 22.0
+offset_top = 1017.0
+offset_right = 927.0
+offset_bottom = 1066.0
+text = "Signpost png source
+https://www.cleanpng.com/png-plywood-wood-stain-varnish-hardwood-wood-board-mat-170364/download-png.html"
+
+[node name="ClueSparkle" parent="." index="2" instance=ExtResource("3_7s1yc")]
+visible = false
+layout_mode = 0
+clue_item_name_value = 16
+clue_item_value = "Juliet"
+
+[node name="ClueSparkle2" parent="." index="3" instance=ExtResource("3_7s1yc")]
+visible = false
+layout_mode = 0
+offset_left = 64.0
+offset_right = 128.0
+offset_bottom = 64.0
+clue_item_name_value = 25
+clue_item_value = "Sterling"
+
+[node name="ClueSparkle3" parent="." index="4" instance=ExtResource("3_7s1yc")]
+visible = false
+layout_mode = 0
+offset_top = 64.0
+offset_right = 64.0
+offset_bottom = 128.0
+clue_item_type = 1
+clue_item_symbol_value = 22
+clue_item_value = "rose_sigil"
+
+[node name="ClueSparkle4" parent="." index="5" instance=ExtResource("3_7s1yc")]
+visible = false
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 128.0
+offset_bottom = 128.0
+clue_item_type = 1
+clue_item_symbol_value = 5
+clue_item_value = "clock_12"
+
+[node name="ClueSparkle5" parent="." index="6" instance=ExtResource("3_7s1yc")]
+visible = false
+layout_mode = 0
+offset_left = 128.0
+offset_top = 64.0
+offset_right = 192.0
+offset_bottom = 128.0
+clue_item_type = 1
+clue_item_symbol_value = 9
+clue_item_value = "clock_8"
+
+[node name="ClueSparkle6" parent="." index="7" instance=ExtResource("3_7s1yc")]
+visible = false
+layout_mode = 0
+offset_left = 192.0
+offset_top = 64.0
+offset_right = 256.0
+offset_bottom = 128.0
+clue_item_type = 1
+clue_item_symbol_value = 3
+clue_item_value = "clock_0"

@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://dx5blyq6r5ri4"]
+
+[ext_resource type="PackedScene" uid="uid://dua8h0obvspql" path="res://clue_containers/ClueContainerTemplate.tscn" id="1_y5epa"]
+[ext_resource type="Texture2D" uid="uid://c5wjy0ct1xdbp" path="res://assets/clues/clue.robert.png" id="2_i8wix"]
+[ext_resource type="PackedScene" uid="uid://no2lghy85xom" path="res://world_items/artifact_sparkle.tscn" id="3_2rued"]
+[ext_resource type="Texture2D" uid="uid://dqw74dxw4uu4o" path="res://assets/notepageonly.png" id="4_xun4y"]
+
+[node name="ClueContainerTemplate" instance=ExtResource("1_y5epa")]
+
+[node name="Clue_robert" type="Sprite2D" parent="." index="1"]
+position = Vector2(520.372, 544.5)
+scale = Vector2(1.09316, 1.09316)
+texture = ExtResource("2_i8wix")
+
+[node name="ArtifactSparkle_Robert" parent="." index="2" instance=ExtResource("3_2rued")]
+layout_mode = 0
+offset_left = 848.0
+offset_top = 320.0
+offset_right = 912.0
+offset_bottom = 384.0
+tooltip_text = "Man"
+artifact_name = "castle1/robert_face"
+
+[node name="ArtifactSparkle_Horse" parent="." index="3" instance=ExtResource("3_2rued")]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 256.0
+offset_right = 528.0
+offset_bottom = 320.0
+tooltip_text = "Brown horse"
+artifact_name = "castle1/robert_horse"
+
+[node name="Notepageonly" type="Sprite2D" parent="." index="4"]
+position = Vector2(1096, 592)
+scale = Vector2(0.189086, 0.189086)
+texture = ExtResource("4_xun4y")
+
+[node name="ArtifactSparkle_Note" parent="." index="5" instance=ExtResource("3_2rued")]
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 448.0
+offset_right = 1104.0
+offset_bottom = 512.0
+tooltip_text = "Scrap of paper"
+artifact_name = "castle1/robert_note"

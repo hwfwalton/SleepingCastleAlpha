@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0r4a0qq22si3"]
+
+[ext_resource type="PackedScene" uid="uid://c3t05rwnym6kn" path="res://stages/StageTemplate.tscn" id="1_wfnam"]
+[ext_resource type="Texture2D" uid="uid://dvl4twf6dgjql" path="res://assets/stage_backdrops/scene.castleentrance.12.15.png" id="2_s1y41"]
+[ext_resource type="PackedScene" uid="uid://bmra5comie0c5" path="res://GameHUD/nav_sparkle.tscn" id="4_ntgd1"]
+[ext_resource type="PackedScene" uid="uid://no2lghy85xom" path="res://world_items/artifact_sparkle.tscn" id="5_ipxsi"]
+[ext_resource type="PackedScene" uid="uid://qgibjy1gropy" path="res://world_items/container_sparkle.tscn" id="7_dsoi4"]
+
+[node name="StageTemplate" instance=ExtResource("1_wfnam")]
+
+[node name="Background" parent="." index="0"]
+texture = ExtResource("2_s1y41")
+
+[node name="NavSparkle" parent="." index="1" instance=ExtResource("4_ntgd1")]
+layout_mode = 0
+offset_left = 504.0
+offset_top = 664.0
+offset_right = 568.0
+offset_bottom = 728.0
+tooltip_text = "Castle courtyard"
+nav_destination_name = "castle1"
+
+[node name="ContainerSparkle_Albert" parent="." index="2" instance=ExtResource("7_dsoi4")]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 744.0
+offset_right = 624.0
+offset_bottom = 808.0
+tooltip_text = "Man on guard at door"
+container_name = "castle0/albert"
+
+[node name="ContainerSparkle_Philip" parent="." index="3" instance=ExtResource("7_dsoi4")]
+layout_mode = 0
+offset_left = 1024.0
+offset_top = 640.0
+offset_right = 1088.0
+offset_bottom = 704.0
+tooltip_text = "Man on horse"
+container_name = "castle0/philip"
+
+[node name="ArtifactSparkle_Moon" parent="." index="4" instance=ExtResource("5_ipxsi")]
+layout_mode = 0
+offset_left = 1344.0
+offset_top = 384.0
+offset_right = 1408.0
+offset_bottom = 448.0
+tooltip_text = "Moon"
+artifact_name = "castle0/moon"
+
+[node name="ArtifactSparkle_SignPost" parent="." index="5" instance=ExtResource("5_ipxsi")]
+layout_mode = 0
+offset_left = 696.0
+offset_top = 744.0
+offset_right = 760.0
+offset_bottom = 808.0
+tooltip_text = "Sign"
+artifact_name = "castle0/signpost"
+
+[node name="ArtifactSparkle_Fish" parent="." index="6" instance=ExtResource("5_ipxsi")]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 704.0
+offset_right = 960.0
+offset_bottom = 768.0
+tooltip_text = "River full of fish"
+artifact_name = "castle0/fish"
+
+[node name="ArtifactSparkle_Raincloud" parent="." index="7" instance=ExtResource("5_ipxsi")]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 264.0
+offset_right = 376.0
+offset_bottom = 328.0
+tooltip_text = "Raincloud"
+artifact_name = "castle0/raincloud"

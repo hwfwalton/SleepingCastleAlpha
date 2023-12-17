@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://ds41sfndwx00q"]
+
+[ext_resource type="Script" path="res://world_items/hidden_sparkle.gd" id="1_me5bx"]
+
+[node name="HiddenSparkle" type="Control" groups=["artifact_sparkle"]]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+script = ExtResource("1_me5bx")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

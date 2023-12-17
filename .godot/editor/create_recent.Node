@@ -1,0 +1,14 @@
+TextureButton
+TextureRect
+Control
+RichTextLabel
+Label
+Sprite2D
+AudioStreamPlayer
+ArtifactSparkle
+ClueSparkle
+Panel
+MarginContainer
+VBoxContainer
+HBoxContainer
+TabContainer

@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://d0r4a0qq22si3"]
+
+[ext_resource type="PackedScene" uid="uid://c3t05rwnym6kn" path="res://stages/StageTemplate.tscn" id="1_wfnam"]
+[ext_resource type="Texture2D" uid="uid://b0tkpsd1m551c" path="res://assets/windows_xp_bliss-wide.jpg" id="3_nwrmr"]
+[ext_resource type="PackedScene" uid="uid://dw7qjdh5v703h" path="res://world_items/clue_sparkle.tscn" id="4_iwuvw"]
+[ext_resource type="PackedScene" uid="uid://bmra5comie0c5" path="res://GameHUD/nav_sparkle.tscn" id="4_ntgd1"]
+[ext_resource type="PackedScene" uid="uid://djgykbt25ntxy" path="res://BookView/book_view_clue_item_draggable.tscn" id="5_fsete"]
+[ext_resource type="PackedScene" uid="uid://d0dgllfc5m60b" path="res://BookView/book_view_clue_slot.tscn" id="6_6gn6y"]
+
+[node name="StageTemplate" instance=ExtResource("1_wfnam")]
+
+[node name="Background" parent="." index="0"]
+texture = ExtResource("3_nwrmr")
+
+[node name="NavSparkle" parent="." index="1" instance=ExtResource("4_ntgd1")]
+layout_mode = 0
+offset_left = 727.0
+offset_top = 493.0
+offset_right = 2727.0
+offset_bottom = 2493.0
+nav_destination_name = "castle1"
+
+[node name="ClueSparkle" parent="." index="2" instance=ExtResource("4_iwuvw")]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 397.0
+offset_right = 597.0
+offset_bottom = 461.0
+clue_item_value = "TestClueValue"
+
+[node name="ClueSparkle2" parent="." index="3" instance=ExtResource("4_iwuvw")]
+layout_mode = 0
+offset_left = 959.0
+offset_top = 390.0
+offset_right = 1023.0
+offset_bottom = 454.0
+clue_item_value = "OtherName"
+
+[node name="ClueSparkle3" parent="." index="4" instance=ExtResource("4_iwuvw")]
+layout_mode = 0
+offset_left = 811.0
+offset_top = 174.0
+offset_right = 875.0
+offset_bottom = 238.0
+clue_item_type = 1
+clue_item_value = "symbol0"
+
+[node name="ClueSparkle4" parent="." index="5" instance=ExtResource("4_iwuvw")]
+layout_mode = 0
+offset_left = 749.0
+offset_top = 643.0
+offset_right = 813.0
+offset_bottom = 707.0
+clue_item_type = 2
+clue_item_value = "title0"
+
+[node name="BookViewClueItemDraggable" parent="." index="6" instance=ExtResource("5_fsete")]
+position = Vector2(342, 785)
+
+[node name="BookViewClueSlot" parent="." index="7" instance=ExtResource("6_6gn6y")]
+position = Vector2(1018, 835)
+
+[connection signal="load_level_request" from="NavSparkle" to="." method="_on_nav_sparkle_load_level_request"]
+[connection signal="clue_item_found" from="ClueSparkle" to="." method="_on_clue_sparkle_clue_item_found"]

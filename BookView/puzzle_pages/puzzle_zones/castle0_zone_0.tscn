@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlnh1myybxj05"]
+
+[ext_resource type="PackedScene" uid="uid://duj8c10cix6c" path="res://BookView/puzzle_pages/PuzzleZoneTemplate.tscn" id="1_4u7w8"]
+[ext_resource type="PackedScene" uid="uid://d0mqgq2xl7fvd" path="res://BookView/book_view_clue_slot.tscn" id="2_2rq4j"]
+[ext_resource type="PackedScene" uid="uid://dnkda1q86p5fm" path="res://BookView/puzzle_pages/Portrait.tscn" id="3_2d3vv"]
+
+[node name="castle0_zone_0" instance=ExtResource("1_4u7w8")]
+custom_minimum_size = Vector2(518, 369)
+offset_bottom = -711.0
+puzzle_zone_id = "castle0_zone_0"
+
+[node name="Portrait_Albert" parent="." index="1" instance=ExtResource("3_2d3vv")]
+layout_mode = 1
+offset_left = 64.0
+offset_top = 32.0
+offset_right = -318.0
+offset_bottom = -177.0
+mouse_filter = 2
+required_clue_value = 1
+texture_resource_path = "res://assets/portraits/portrait.albert.png"
+
+[node name="Portrait_Philip" parent="." index="2" instance=ExtResource("3_2d3vv")]
+layout_mode = 1
+offset_left = 312.0
+offset_top = 32.0
+offset_right = -70.0
+offset_bottom = -177.0
+mouse_filter = 2
+required_clue_value = 6
+texture_resource_path = "res://assets/portraits/portrait.philip1216.png"
+
+[node name="ClueSlot_Albert" parent="." index="3" instance=ExtResource("2_2rq4j")]
+offset_left = 56.0
+offset_top = 208.0
+offset_right = 208.0
+offset_bottom = 248.0
+accepted_clue_types = Array[int]([0])
+
+[node name="ClueSlot_Glover" parent="." index="4" instance=ExtResource("2_2rq4j")]
+offset_left = 56.0
+offset_top = 259.0
+offset_right = 208.0
+offset_bottom = 299.0
+accepted_clue_types = Array[int]([0])
+
+[node name="ClueSlot_Philip" parent="." index="5" instance=ExtResource("2_2rq4j")]
+offset_left = 304.0
+offset_top = 208.0
+offset_right = 456.0
+offset_bottom = 248.0
+accepted_clue_types = Array[int]([0])
+
+[node name="ClueSlot_Lansing" parent="." index="6" instance=ExtResource("2_2rq4j")]
+offset_left = 304.0
+offset_top = 259.0
+offset_right = 456.0
+offset_bottom = 299.0
+accepted_clue_types = Array[int]([0])

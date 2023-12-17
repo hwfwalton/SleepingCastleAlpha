@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://qku1t3s371m4"]
+
+[ext_resource type="PackedScene" uid="uid://dua8h0obvspql" path="res://clue_containers/ClueContainerTemplate.tscn" id="1_gar8n"]
+[ext_resource type="Texture2D" uid="uid://cwef43br6545u" path="res://assets/clues/clue.bedsignBRONZE.png" id="2_7pbnq"]
+[ext_resource type="PackedScene" uid="uid://no2lghy85xom" path="res://world_items/artifact_sparkle.tscn" id="3_s4ixm"]
+[ext_resource type="Texture2D" uid="uid://coisdlnvquyo0" path="res://assets/clues/clue.painting.png" id="4_oqoeu"]
+
+[node name="ClueContainerTemplate" instance=ExtResource("1_gar8n")]
+
+[node name="Clue_bedsignBronze" type="Sprite2D" parent="." index="1"]
+position = Vector2(724, 330)
+scale = Vector2(0.591603, 0.591603)
+texture = ExtResource("2_7pbnq")
+
+[node name="ArtifactSparkle" parent="." index="2" instance=ExtResource("3_s4ixm")]
+layout_mode = 0
+offset_left = 936.0
+offset_top = 294.0
+offset_right = 1000.0
+offset_bottom = 358.0
+tooltip_text = "A bronze plaque on the edge of the bed"
+artifact_name = "guardroom/jace_zone_plaque"
+
+[node name="Clue_painting" type="Sprite2D" parent="." index="3"]
+position = Vector2(728, 672)
+scale = Vector2(0.79484, 0.79484)
+texture = ExtResource("4_oqoeu")
+
+[node name="ArtifactSparkle2" parent="." index="4" instance=ExtResource("3_s4ixm")]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 510.0
+offset_right = 960.0
+offset_bottom = 574.0
+tooltip_text = "A painting on the wall"
+artifact_name = "guardroom/jace_zone_painting"

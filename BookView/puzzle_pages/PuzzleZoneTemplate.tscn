@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://duj8c10cix6c"]
+
+[ext_resource type="Script" path="res://BookView/puzzle_pages/PuzzleZoneTemplate.gd" id="1_8kxw3"]
+[ext_resource type="Resource" uid="uid://d1ymuglidjrr0" path="res://resources/player_state.tres" id="3_l1abs"]
+
+[node name="PuzzleZone" type="Control"]
+custom_minimum_size = Vector2(518, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1402.0
+offset_bottom = -1080.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_8kxw3")
+player_state = ExtResource("3_l1abs")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_type_variation = &"PuzzleZoneIncomplete"

@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://droqdlt8ufuhw"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_ovexd"]
+[ext_resource type="Texture2D" uid="uid://de4o6t0ubtaew" path="res://assets/clues/clue.bedsignGOLD.png" id="2_aenum"]
+[ext_resource type="LabelSettings" uid="uid://bjtjwqls0u52h" path="res://themes/guardroom_plaque.tres" id="3_rokcb"]
+[ext_resource type="PackedScene" uid="uid://dw7qjdh5v703h" path="res://world_items/clue_sparkle.tscn" id="4_fs1tj"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_ovexd")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_aenum")
+
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer2/TextureRect" index="0"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 403.0
+offset_right = 768.0
+offset_bottom = 515.0
+text = "Sterling"
+label_settings = ExtResource("3_rokcb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "A gold plaque"
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = ""
+
+[node name="ClueSparkle" parent="." index="1" instance=ExtResource("4_fs1tj")]
+visible = false
+layout_mode = 0
+clue_item_name_value = 25

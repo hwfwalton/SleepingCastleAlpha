@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0piunep2ydqy"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_y87ng"]
+[ext_resource type="Texture2D" uid="uid://b8bvsltsp1ptg" path="res://assets/clues/clue.hairoil.png" id="2_87q6f"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_y87ng")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_87q6f")
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "A half-empty bottle of \"Goncharov's Gorgeous Hair Oil\""
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = ""

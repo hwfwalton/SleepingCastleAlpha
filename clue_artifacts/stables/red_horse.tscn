@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://brywc1c6jakea"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_ddybi"]
+[ext_resource type="Texture2D" uid="uid://bydgqdkosn432" path="res://assets/clues/clue.rubyredhorse.png" id="2_of4w8"]
+[ext_resource type="PackedScene" uid="uid://dw7qjdh5v703h" path="res://world_items/clue_sparkle.tscn" id="3_roepq"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_ddybi")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_of4w8")
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "Red Horse"
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = "A reddish-brown horse. There are flames on his bridle."
+
+[node name="ClueSparkle" parent="." index="1" instance=ExtResource("3_roepq")]
+layout_mode = 0
+clue_item_type = 1
+clue_item_symbol_value = 20
+
+[node name="ClueSparkle2" parent="." index="2" instance=ExtResource("3_roepq")]
+layout_mode = 0
+offset_left = 64.0
+offset_right = 128.0
+offset_bottom = 64.0
+clue_item_type = 1
+clue_item_symbol_value = 11

@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://bd1ju51o8wblp"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_plsue"]
+[ext_resource type="Texture2D" uid="uid://dqw74dxw4uu4o" path="res://assets/notepageonly.png" id="2_d10x6"]
+[ext_resource type="PackedScene" uid="uid://dw7qjdh5v703h" path="res://world_items/clue_sparkle.tscn" id="3_ejbdp"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_plsue")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_d10x6")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/MarginContainer2/TextureRect" index="0"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.229
+anchor_top = 0.122
+anchor_right = 0.229
+anchor_bottom = 0.122
+offset_left = -0.360016
+offset_top = -0.240005
+offset_right = 439.64
+offset_bottom = 703.76
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 23
+theme_override_font_sizes/bold_font_size = 23
+bbcode_enabled = true
+text = "[b]Robert[/b], 
+
+Prepare the horse and carriage at once!
+The Queen’s protection is no longer enough.
+	
+	The [b]Montgomerys[/b] have grown emboldened by [b]Claudius’s[/b] defeat. Long have they wished for our family's demise and I fear they will use this opportunity to finally satisfy their destructive delights. I beg you to deliver the rest of our family safely to the coast before this darkness spreads.
+
+	-Lord [b]Dane[/b]"
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "A hastily written note"
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = ""
+
+[node name="ClueSparkle" parent="." index="1" instance=ExtResource("3_ejbdp")]
+visible = false
+layout_mode = 0
+clue_item_name_value = 24
+clue_item_value = "Robert"
+
+[node name="ClueSparkle2" parent="." index="2" instance=ExtResource("3_ejbdp")]
+visible = false
+layout_mode = 0
+offset_left = 64.0
+offset_right = 128.0
+offset_bottom = 64.0
+clue_item_name_value = 5
+clue_item_value = "Claudius"
+
+[node name="ClueSparkle3" parent="." index="3" instance=ExtResource("3_ejbdp")]
+visible = false
+layout_mode = 0
+offset_left = 128.0
+offset_right = 192.0
+offset_bottom = 64.0
+clue_item_name_value = 21
+clue_item_value = "Montgomery"
+
+[node name="ClueSparkle4" parent="." index="4" instance=ExtResource("3_ejbdp")]
+visible = false
+layout_mode = 0
+offset_left = 192.0
+offset_right = 256.0
+offset_bottom = 64.0
+clue_item_name_value = 7
+clue_item_value = "Dane"

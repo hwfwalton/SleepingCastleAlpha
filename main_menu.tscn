@@ -1,0 +1,61 @@
+[gd_scene load_steps=4 format=3 uid="uid://vl7iq663bm5s"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_sly1o"]
+[ext_resource type="Theme" uid="uid://cl8j1lod7ob4" path="res://themes/game_theme.tres" id="2_rnp50"]
+[ext_resource type="Texture2D" uid="uid://bjcdhuyeu08lo" path="res://assets/roseglassBG.png" id="2_swm8l"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sly1o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_swm8l")
+offset = Vector2(960, 540)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -157.0
+offset_right = 150.0
+grow_vertical = 0
+theme = ExtResource("2_rnp50")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../QuitButton")
+text = "Start"
+
+[node name="OptionsButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Options"
+
+[node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../StartButton")
+text = "Quit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 398.0
+offset_top = 109.0
+offset_right = 1461.0
+offset_bottom = 197.0
+theme_override_font_sizes/font_size = 64
+text = "The Mystery of the Sleeping Castle"
+horizontal_alignment = 1
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

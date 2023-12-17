@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bad6us5da7u35"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_jh8m4"]
+[ext_resource type="Texture2D" uid="uid://dyr448ycnv00u" path="res://assets/clues/clue.eiffelsayshi.png" id="2_jyfdh"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_jh8m4")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_jyfdh")
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "Eiffel says hi!"
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = ""

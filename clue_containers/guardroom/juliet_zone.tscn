@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://dag1vbf31h8wi"]
+
+[ext_resource type="PackedScene" uid="uid://dua8h0obvspql" path="res://clue_containers/ClueContainerTemplate.tscn" id="1_7p5wf"]
+[ext_resource type="Texture2D" uid="uid://dnpqxkl1ec41b" path="res://assets/clues/clue.musicbox.png" id="2_huh0a"]
+[ext_resource type="Texture2D" uid="uid://de4o6t0ubtaew" path="res://assets/clues/clue.bedsignGOLD.png" id="3_7nig6"]
+[ext_resource type="Texture2D" uid="uid://dqw74dxw4uu4o" path="res://assets/notepageonly.png" id="4_bnl1h"]
+[ext_resource type="PackedScene" uid="uid://no2lghy85xom" path="res://world_items/artifact_sparkle.tscn" id="5_hf7n4"]
+
+[node name="ClueContainerTemplate" instance=ExtResource("1_7p5wf")]
+
+[node name="Clue_musicbox" type="Sprite2D" parent="." index="1"]
+position = Vector2(456, 688)
+scale = Vector2(0.68, 0.68)
+texture = ExtResource("2_huh0a")
+
+[node name="Clue_bedsignGold" type="Sprite2D" parent="." index="2"]
+position = Vector2(712, 360)
+scale = Vector2(0.623077, 0.623077)
+texture = ExtResource("3_7nig6")
+
+[node name="Notepageonly" type="Sprite2D" parent="." index="3"]
+position = Vector2(1000, 688)
+scale = Vector2(0.283418, 0.283418)
+texture = ExtResource("4_bnl1h")
+
+[node name="ArtifactSparkle" parent="." index="4" instance=ExtResource("5_hf7n4")]
+layout_mode = 0
+offset_left = 920.0
+offset_top = 248.0
+offset_right = 984.0
+offset_bottom = 312.0
+tooltip_text = "A gold plaque on the closet"
+artifact_name = "guardroom/juliet_zone_plaque"
+
+[node name="ArtifactSparkle2" parent="." index="5" instance=ExtResource("5_hf7n4")]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 512.0
+offset_right = 592.0
+offset_bottom = 576.0
+tooltip_text = "An ornate music box"
+artifact_name = "guardroom/juliet_zone_musicbox"
+
+[node name="ArtifactSparkle3" parent="." index="6" instance=ExtResource("5_hf7n4")]
+layout_mode = 0
+offset_left = 1076.0
+offset_top = 512.0
+offset_right = 1140.0
+offset_bottom = 576.0
+tooltip_text = "A note inside the music box"
+artifact_name = "guardroom/juliet_zone_note"

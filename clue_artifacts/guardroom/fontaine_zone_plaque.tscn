@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://tcarcbh8xjr3"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_3su42"]
+[ext_resource type="Texture2D" uid="uid://cbvbmqgrsabso" path="res://assets/clues/clue.bedsignSILVER.png" id="2_23cbv"]
+[ext_resource type="LabelSettings" uid="uid://bjtjwqls0u52h" path="res://themes/guardroom_plaque.tres" id="3_br2ar"]
+[ext_resource type="PackedScene" uid="uid://dw7qjdh5v703h" path="res://world_items/clue_sparkle.tscn" id="4_27oeg"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_3su42")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_23cbv")
+
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer2/TextureRect" index="0"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 403.0
+offset_right = 768.0
+offset_bottom = 515.0
+text = "Farnsworth"
+label_settings = ExtResource("3_br2ar")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "A silver plaque"
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = ""
+
+[node name="ClueSparkle" parent="." index="1" instance=ExtResource("4_27oeg")]
+visible = false
+layout_mode = 0
+clue_item_name_value = 28

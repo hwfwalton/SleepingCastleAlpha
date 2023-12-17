@@ -1,0 +1,103 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1ss311wewxdv"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_tyxh4"]
+[ext_resource type="Texture2D" uid="uid://dku2jjbqqxhwh" path="res://assets/clues/clue.chalkboard.png" id="2_g2xpw"]
+[ext_resource type="PackedScene" uid="uid://dw7qjdh5v703h" path="res://world_items/clue_sparkle.tscn" id="3_camaq"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_tyxh4")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_g2xpw")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/MarginContainer2/TextureRect" index="0"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 208.0
+offset_right = 776.0
+offset_bottom = 712.0
+theme_override_font_sizes/normal_font_size = 26
+theme_override_font_sizes/bold_font_size = 26
+bbcode_enabled = true
+text = "[b]Alyssa’s[/b] Rules for a Peaceful Stable!
+
+[ul]Don’t put horses of the same color next to each other – people have confused [b]Midnight[/b] and [b]Smokey[/b] too many times – Lord [b]Graves’[/b] horse is the smaller one![/ul]
+[ul]Don’t put [b]Driftwood[/b] and [b]Ruby[/b] next to each other either, they hate each other as much as their owners![/ul]
+[ul]Someone has been stealing all the [b]sugar[/b], so no more giving sugar to the horses![/ul]
+[ul]The Prince has requested we give his horse an extra [b]apple[/b] every evening while he’s ill[/ul]
+[ul]Always pet [b]Eiffel[/b], even when he looks like he doesn’t want to be pet.[/ul]"
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "Chalkboard"
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = ""
+
+[node name="ClueSparkle" parent="." index="1" instance=ExtResource("3_camaq")]
+visible = false
+layout_mode = 0
+clue_item_name_value = 2
+
+[node name="ClueSparkle2" parent="." index="2" instance=ExtResource("3_camaq")]
+visible = false
+layout_mode = 0
+offset_left = 64.0
+offset_right = 128.0
+offset_bottom = 64.0
+clue_item_name_value = 11
+
+[node name="ClueSparkle3" parent="." index="3" instance=ExtResource("3_camaq")]
+visible = false
+layout_mode = 0
+offset_left = 128.0
+offset_right = 192.0
+offset_bottom = 64.0
+clue_item_name_value = 8
+
+[node name="ClueSparkle4" parent="." index="4" instance=ExtResource("3_camaq")]
+visible = false
+layout_mode = 0
+offset_top = 64.0
+offset_right = 64.0
+offset_bottom = 128.0
+clue_item_type = 1
+clue_item_symbol_value = 3
+
+[node name="ClueSparkle5" parent="." index="5" instance=ExtResource("3_camaq")]
+visible = false
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 128.0
+offset_bottom = 128.0
+clue_item_type = 1
+clue_item_symbol_value = 25
+
+[node name="ClueSparkle6" parent="." index="6" instance=ExtResource("3_camaq")]
+visible = false
+layout_mode = 0
+offset_left = 128.0
+offset_top = 64.0
+offset_right = 192.0
+offset_bottom = 128.0
+clue_item_type = 1
+clue_item_symbol_value = 10
+
+[node name="ClueSparkle7" parent="." index="7" instance=ExtResource("3_camaq")]
+visible = false
+layout_mode = 0
+offset_left = 192.0
+offset_top = 64.0
+offset_right = 256.0
+offset_bottom = 128.0
+clue_item_type = 1
+clue_item_symbol_value = 23
+
+[node name="ClueSparkle8" parent="." index="8" instance=ExtResource("3_camaq")]
+visible = false
+layout_mode = 0
+offset_left = 256.0
+offset_top = 64.0
+offset_right = 320.0
+offset_bottom = 128.0
+clue_item_type = 1
+clue_item_symbol_value = 1

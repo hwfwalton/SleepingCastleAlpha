@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://djd8c87t46qmd"]
+
+[ext_resource type="PackedScene" uid="uid://duj8c10cix6c" path="res://BookView/puzzle_pages/PuzzleZoneTemplate.tscn" id="1_nip8b"]
+[ext_resource type="PackedScene" uid="uid://d0mqgq2xl7fvd" path="res://BookView/book_view_clue_slot.tscn" id="2_g3ix4"]
+[ext_resource type="LabelSettings" uid="uid://fofavbwv757m" path="res://themes/book_view_puzzle_text.tres" id="2_i1aaw"]
+
+[node name="castle0_zone_0" instance=ExtResource("1_nip8b")]
+custom_minimum_size = Vector2(518, 359)
+offset_bottom = -711.0
+metadata/_edit_lock_ = true
+
+[node name="Panel" parent="." index="0"]
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="." index="1"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 40.0
+offset_right = 464.0
+offset_bottom = 168.0
+text = "My brother was frantic to get his children out of the castle before <clue_item  > attacked."
+label_settings = ExtResource("2_i1aaw")
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="." index="2"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 184.0
+offset_right = 456.0
+offset_bottom = 329.0
+text = "The castle is locked tight, but those who know <clueItemF> best have a secret passworkd to get in"
+label_settings = ExtResource("2_i1aaw")
+autowrap_mode = 2
+
+[node name="BookViewClueSlot" parent="." index="3" instance=ExtResource("2_g3ix4")]
+offset_left = 56.0
+offset_top = 112.0
+offset_right = 208.0
+offset_bottom = 152.0
+correct_clue_name_values = Array[int]([0])
+accepted_clue_types = Array[int]([0])
+
+[node name="BookViewClueSlot2" parent="." index="4" instance=ExtResource("2_g3ix4")]
+offset_left = 254.0
+offset_top = 219.0
+offset_right = 406.0
+offset_bottom = 259.0
+accepted_clue_types = Array[int]([0])

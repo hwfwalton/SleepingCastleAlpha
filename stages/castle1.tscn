@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=3 uid="uid://bprwmodmsg35q"]
+
+[ext_resource type="PackedScene" uid="uid://c3t05rwnym6kn" path="res://stages/StageTemplate.tscn" id="1_4r1eu"]
+[ext_resource type="Texture2D" uid="uid://dkowbuau57cs2" path="res://assets/stage_backdrops/scene.courtyard12.16.2009.png" id="2_tccip"]
+[ext_resource type="PackedScene" uid="uid://bmra5comie0c5" path="res://GameHUD/nav_sparkle.tscn" id="4_hi8sc"]
+[ext_resource type="PackedScene" uid="uid://qgibjy1gropy" path="res://world_items/container_sparkle.tscn" id="4_l7g4q"]
+[ext_resource type="PackedScene" uid="uid://no2lghy85xom" path="res://world_items/artifact_sparkle.tscn" id="5_g5opu"]
+
+[node name="StageTemplate" instance=ExtResource("1_4r1eu")]
+
+[node name="Background" parent="." index="0"]
+texture = ExtResource("2_tccip")
+
+[node name="NavSparkle" parent="." index="1" instance=ExtResource("4_hi8sc")]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 984.0
+offset_right = 104.0
+offset_bottom = 1048.0
+tooltip_text = "Castle exterior"
+nav_destination_name = "castle0"
+
+[node name="ContainerSparkle_Robert" parent="." index="2" instance=ExtResource("4_l7g4q")]
+layout_mode = 0
+offset_left = 704.0
+offset_top = 848.0
+offset_right = 768.0
+offset_bottom = 912.0
+tooltip_text = "Man and horse"
+container_name = "castle1/robert"
+
+[node name="ArtifactSparkle_Carriage" parent="." index="3" instance=ExtResource("5_g5opu")]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 816.0
+offset_right = 384.0
+offset_bottom = 880.0
+tooltip_text = "Carriage"
+artifact_name = "castle1/carriage"
+
+[node name="ArtifactSparkle_Smoke" parent="." index="4" instance=ExtResource("5_g5opu")]
+layout_mode = 0
+offset_left = 928.0
+offset_top = 88.0
+offset_right = 992.0
+offset_bottom = 152.0
+tooltip_text = "Smoke"
+artifact_name = "castle1/smoke"
+
+[node name="ArtifactSparkle_Footprints" parent="." index="5" instance=ExtResource("5_g5opu")]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 976.0
+offset_right = 944.0
+offset_bottom = 1040.0
+tooltip_text = "Wet footprints"
+artifact_name = "castle1/footprints"
+
+[node name="NavSparkle2" parent="." index="6" instance=ExtResource("4_hi8sc")]
+layout_mode = 0
+offset_left = 584.0
+offset_top = 800.0
+offset_right = 648.0
+offset_bottom = 864.0
+tooltip_text = "Stables"
+nav_destination_name = "stables"
+
+[node name="NavSparkle3" parent="." index="7" instance=ExtResource("4_hi8sc")]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 848.0
+offset_right = 192.0
+offset_bottom = 912.0
+tooltip_text = "Guard quarters"
+nav_destination_name = "guardroom"

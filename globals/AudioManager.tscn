@@ -1,0 +1,48 @@
+[gd_scene load_steps=12 format=3 uid="uid://b36yrqijqvrvm"]
+
+[ext_resource type="Script" path="res://globals/AudioManager.gd" id="1_uxxgm"]
+[ext_resource type="AudioStream" uid="uid://b2k4ti0yxo8hv" path="res://assets/audio/book/sfx-book-close-10-dec-2023.ogg" id="1_xtgbg"]
+[ext_resource type="AudioStream" uid="uid://bh8cfmvvnr7ee" path="res://assets/audio/book/opening_sounds/sfx-page-turn-1-10-dec-2023.ogg" id="2_e8atr"]
+[ext_resource type="AudioStream" uid="uid://bo0ytrtid8l05" path="res://assets/audio/book/opening_sounds/sfx-page-turn-2-10-dec-2023.ogg" id="3_hrm0e"]
+[ext_resource type="AudioStream" uid="uid://bhas2qkqimbgn" path="res://assets/audio/book/opening_sounds/sfx-page-turn-3-10-dec-2023.ogg" id="4_louj6"]
+[ext_resource type="AudioStream" uid="uid://bsj4midiwgb" path="res://assets/audio/music/mus-neutral-loop-10-dec-2023.ogg" id="4_ycpmu"]
+[ext_resource type="AudioStream" uid="uid://dm72vwgqxicae" path="res://assets/audio/book/opening_sounds/sfx-page-shuffle-10-dec-2023.ogg" id="5_1b6ng"]
+[ext_resource type="AudioStream" uid="uid://e2tirfphvhad" path="res://assets/audio/book/opening_sounds/sfx-fumble-with-book-1-10-dec-2023.ogg" id="6_vntyb"]
+[ext_resource type="AudioStream" uid="uid://b0pqg6peev7s1" path="res://assets/audio/book/opening_sounds/sfx-fumble-with-book-2-10-dec-2023.ogg" id="7_bc1bh"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ln1g2"]
+streams_count = 3
+stream_0/stream = ExtResource("5_1b6ng")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("6_vntyb")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("7_bc1bh")
+stream_2/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_7vxds"]
+streams_count = 3
+stream_0/stream = ExtResource("2_e8atr")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("3_hrm0e")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("4_louj6")
+stream_2/weight = 1.0
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_uxxgm")
+
+[node name="sfx_book_open" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_ln1g2")
+bus = &"BookSounds"
+
+[node name="sfx_book_page_turn" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_7vxds")
+
+[node name="sfx_book_close" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_xtgbg")
+bus = &"BookSounds"
+
+[node name="stage_music_player" type="AudioStreamPlayer" parent="."]
+
+[node name="book_music_player" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ycpmu")

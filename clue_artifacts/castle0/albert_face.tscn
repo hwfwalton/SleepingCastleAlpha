@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlws33qstb8ym"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_u8urt"]
+[ext_resource type="Texture2D" uid="uid://c20d01e7r4s5s" path="res://assets/portraits/portrait.albert.png" id="2_82e2o"]
+[ext_resource type="PackedScene" uid="uid://dw7qjdh5v703h" path="res://world_items/clue_sparkle.tscn" id="3_db2e6"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_u8urt")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_82e2o")
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "The guard stands watch."
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = "Last words: \"This should be enough...\""
+
+[node name="ClueSparkle" parent="." index="1" instance=ExtResource("3_db2e6")]
+visible = false
+layout_mode = 0
+clue_item_type = 2
+clue_item_face_value = 1
+clue_item_value = "albert"

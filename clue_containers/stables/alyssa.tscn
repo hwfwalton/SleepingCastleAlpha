@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://uxj8y54y40we"]
+
+[ext_resource type="PackedScene" uid="uid://dua8h0obvspql" path="res://clue_containers/ClueContainerTemplate.tscn" id="1_g4ydm"]
+[ext_resource type="Texture2D" uid="uid://0lb66ontsc1r" path="res://assets/clues/clue.alyssa.png" id="2_86oa2"]
+[ext_resource type="Texture2D" uid="uid://61r47a5svp3u" path="res://assets/clues/clue.stabledwhitehorse.png" id="3_ifmh8"]
+[ext_resource type="Texture2D" uid="uid://mygqux4vksnm" path="res://assets/symbols/symbol.gold.png" id="4_e52cn"]
+[ext_resource type="PackedScene" uid="uid://no2lghy85xom" path="res://world_items/artifact_sparkle.tscn" id="5_7uer0"]
+
+[node name="ClueContainerTemplate" instance=ExtResource("1_g4ydm")]
+
+[node name="Clue_alyssa" type="Sprite2D" parent="." index="1"]
+position = Vector2(720, 576)
+scale = Vector2(0.719879, 0.719879)
+texture = ExtResource("2_86oa2")
+
+[node name="Clue_stabledwhitehorse" type="Sprite2D" parent="." index="2"]
+position = Vector2(320, 544)
+scale = Vector2(0.856546, 0.856546)
+texture = ExtResource("3_ifmh8")
+
+[node name="Symbol_gold" type="Sprite2D" parent="." index="3"]
+position = Vector2(960, 560)
+scale = Vector2(0.034897, 0.034897)
+texture = ExtResource("4_e52cn")
+
+[node name="ArtifactSparkle" parent="." index="4" instance=ExtResource("5_7uer0")]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 256.0
+offset_right = 544.0
+offset_bottom = 320.0
+tooltip_text = "White horse"
+artifact_name = "stables/alyssa_horse"
+
+[node name="ArtifactSparkle2" parent="." index="5" instance=ExtResource("5_7uer0")]
+layout_mode = 0
+offset_left = 784.0
+offset_top = 304.0
+offset_right = 848.0
+offset_bottom = 368.0
+tooltip_text = "Woman"
+artifact_name = "stables/alyssa_face"
+
+[node name="ArtifactSparkle3" parent="." index="6" instance=ExtResource("5_7uer0")]
+layout_mode = 0
+offset_left = 992.0
+offset_top = 480.0
+offset_right = 1056.0
+offset_bottom = 544.0
+tooltip_text = "Gold in the woman's pocket"
+artifact_name = "stables/alyssa_gold"

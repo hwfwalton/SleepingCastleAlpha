@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://dp5wwt04i0mvt"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_nmivu"]
+[ext_resource type="Texture2D" uid="uid://dqw74dxw4uu4o" path="res://assets/notepageonly.png" id="2_4fsmy"]
+[ext_resource type="PackedScene" uid="uid://dw7qjdh5v703h" path="res://world_items/clue_sparkle.tscn" id="3_ee0c3"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_nmivu")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_4fsmy")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/MarginContainer2/TextureRect" index="0"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 112.0
+offset_right = 640.0
+offset_bottom = 816.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "My faithful right hand, 
+	As a token of my gratitude for the lifelong service you have given me, i present to you this music box. It was a gift from someone who once meant a great deal to me, and I trust you will prove more worthy of it than they. The melody that once gave me solace in the night, now only causes me grief. May you find the comfort that i once did in its hauntingly beautiful notes. 
+
+			[b]Aurora Regina[/b]"
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "A carefully folded note inside the musicbox"
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = ""
+
+[node name="ClueSparkle" parent="." index="1" instance=ExtResource("3_ee0c3")]
+visible = false
+layout_mode = 0
+clue_item_name_value = 3
+
+[node name="ClueSparkle2" parent="." index="2" instance=ExtResource("3_ee0c3")]
+visible = false
+layout_mode = 0
+offset_left = 64.0
+offset_right = 128.0
+offset_bottom = 64.0
+clue_item_name_value = 23

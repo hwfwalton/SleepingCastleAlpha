@@ -1,0 +1,4 @@
+[gd_resource type="ButtonGroup" format=3 uid="uid://b61r8pqsftn30"]
+
+[resource]
+resource_name = "BookFilterButtons"

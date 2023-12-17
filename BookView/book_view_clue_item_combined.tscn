@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://1lxpebkihier"]
+
+[ext_resource type="Script" path="res://BookView/book_view_clue_item_combined.gd" id="1_a5aig"]
+[ext_resource type="PackedScene" uid="uid://d3tc64mctqeyy" path="res://BookView/book_view_clue_item.tscn" id="1_ihhgn"]
+[ext_resource type="PackedScene" uid="uid://djgykbt25ntxy" path="res://BookView/book_view_clue_item_draggable.tscn" id="2_7w4s7"]
+
+[node name="BookViewClueItemCombined" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1768.0
+offset_bottom = -1040.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_a5aig")
+
+[node name="BookViewClueItem" parent="." instance=ExtResource("1_ihhgn")]
+layout_mode = 2
+
+[node name="BookViewClueItemDraggable" parent="." instance=ExtResource("2_7w4s7")]
+position = Vector2(76, 20)
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

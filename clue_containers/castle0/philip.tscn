@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://40x5m3yq2sb5"]
+
+[ext_resource type="PackedScene" uid="uid://dua8h0obvspql" path="res://clue_containers/ClueContainerTemplate.tscn" id="1_y5b5e"]
+[ext_resource type="Texture2D" uid="uid://pk27xw5w6cy6" path="res://assets/clues/clue.scroll.blue.png" id="4_pj0lj"]
+[ext_resource type="PackedScene" uid="uid://no2lghy85xom" path="res://world_items/artifact_sparkle.tscn" id="4_rruxo"]
+[ext_resource type="Texture2D" uid="uid://d23p2kxndbb1h" path="res://assets/clues/clue.philip.png" id="5_f47io"]
+[ext_resource type="Texture2D" uid="uid://dqw74dxw4uu4o" path="res://assets/notepageonly.png" id="5_qubdx"]
+
+[node name="ClueContainerTemplate" instance=ExtResource("1_y5b5e")]
+
+[node name="ArtifactSparkle" parent="." index="1" instance=ExtResource("4_rruxo")]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 256.0
+offset_right = 528.0
+offset_bottom = 320.0
+tooltip_text = "Man"
+artifact_name = "castle0/philip_face"
+
+[node name="Clue_philip" type="Sprite2D" parent="." index="2"]
+position = Vector2(390.188, 544.761)
+scale = Vector2(1.17957, 1.17957)
+texture = ExtResource("5_f47io")
+
+[node name="ArtifactSparkle2" parent="." index="3" instance=ExtResource("4_rruxo")]
+layout_mode = 0
+offset_left = 592.0
+offset_top = 512.0
+offset_right = 656.0
+offset_bottom = 576.0
+tooltip_text = "White horse"
+artifact_name = "castle0/philip_horse"
+
+[node name="Clue_scroll_blue" type="Sprite2D" parent="." index="4"]
+position = Vector2(904, 320)
+texture = ExtResource("4_pj0lj")
+
+[node name="Notepageonly" type="Sprite2D" parent="." index="5"]
+position = Vector2(912, 664)
+scale = Vector2(0.3511, 0.3511)
+texture = ExtResource("5_qubdx")
+
+[node name="ArtifactSparkle3" parent="." index="6" instance=ExtResource("4_rruxo")]
+layout_mode = 0
+offset_left = 984.0
+offset_top = 336.0
+offset_right = 1048.0
+offset_bottom = 400.0
+tooltip_text = "Sealed Message"
+artifact_name = "castle0/philip_sealed_scroll"
+
+[node name="ArtifactSparkle4" parent="." index="7" instance=ExtResource("4_rruxo")]
+layout_mode = 0
+offset_left = 1008.0
+offset_top = 472.0
+offset_right = 1072.0
+offset_bottom = 536.0
+tooltip_text = "Scrap of Paper"
+artifact_name = "castle0/philip_scrap_note"

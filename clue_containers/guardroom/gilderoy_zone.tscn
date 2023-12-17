@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://dc8eg2wac6mrk"]
+
+[ext_resource type="PackedScene" uid="uid://dua8h0obvspql" path="res://clue_containers/ClueContainerTemplate.tscn" id="1_kg63j"]
+[ext_resource type="Texture2D" uid="uid://cwef43br6545u" path="res://assets/clues/clue.bedsignBRONZE.png" id="2_mwqw2"]
+[ext_resource type="PackedScene" uid="uid://no2lghy85xom" path="res://world_items/artifact_sparkle.tscn" id="3_lffuc"]
+[ext_resource type="Texture2D" uid="uid://b8bvsltsp1ptg" path="res://assets/clues/clue.hairoil.png" id="4_qecux"]
+
+[node name="ClueContainerTemplate" instance=ExtResource("1_kg63j")]
+
+[node name="Clue_bedsignBronze" type="Sprite2D" parent="." index="1"]
+position = Vector2(724, 330)
+scale = Vector2(0.591603, 0.591603)
+texture = ExtResource("2_mwqw2")
+
+[node name="ArtifactSparkle" parent="." index="2" instance=ExtResource("3_lffuc")]
+layout_mode = 0
+offset_left = 936.0
+offset_top = 294.0
+offset_right = 1000.0
+offset_bottom = 358.0
+tooltip_text = "A bronze plaque on the edge of the bed"
+artifact_name = "guardroom/gilderoy_zone_plaque"
+
+[node name="Clue_hairoil" type="Sprite2D" parent="." index="3"]
+position = Vector2(736, 648)
+scale = Vector2(0.665217, 0.665217)
+texture = ExtResource("4_qecux")
+
+[node name="ArtifactSparkle2" parent="." index="4" instance=ExtResource("3_lffuc")]
+layout_mode = 0
+offset_left = 792.0
+offset_top = 496.0
+offset_right = 856.0
+offset_bottom = 560.0
+tooltip_text = "Fancy hair products"
+artifact_name = "guardroom/gilderoy_zone_hairoil"

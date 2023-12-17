@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://cvr7nrrkjgc1j"]
+
+[ext_resource type="PackedScene" uid="uid://c3t05rwnym6kn" path="res://stages/StageTemplate.tscn" id="1_octe2"]
+[ext_resource type="Texture2D" uid="uid://cxp7e7y36epo1" path="res://assets/stage_backdrops/scene.stable.12.16.2125.png" id="2_ef6b0"]
+[ext_resource type="PackedScene" uid="uid://no2lghy85xom" path="res://world_items/artifact_sparkle.tscn" id="3_uhrw2"]
+[ext_resource type="PackedScene" uid="uid://qgibjy1gropy" path="res://world_items/container_sparkle.tscn" id="4_wmuos"]
+[ext_resource type="PackedScene" uid="uid://bmra5comie0c5" path="res://GameHUD/nav_sparkle.tscn" id="5_j2ig7"]
+[ext_resource type="PackedScene" uid="uid://ds41sfndwx00q" path="res://world_items/hidden_sparkle.tscn" id="6_5eil7"]
+
+[node name="StageTemplate" instance=ExtResource("1_octe2")]
+
+[node name="Background" parent="." index="0"]
+texture = ExtResource("2_ef6b0")
+
+[node name="ArtifactSparkle_SmallBlackHorse" parent="." index="1" instance=ExtResource("3_uhrw2")]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 568.0
+offset_right = 416.0
+offset_bottom = 632.0
+tooltip_text = "Small black horse"
+artifact_name = "stables/small_black_horse"
+
+[node name="ArtifactSparkle_LargeBlackHorse" parent="." index="2" instance=ExtResource("3_uhrw2")]
+layout_mode = 0
+offset_left = 920.0
+offset_top = 520.0
+offset_right = 984.0
+offset_bottom = 584.0
+tooltip_text = "Large black horse"
+artifact_name = "stables/large_black_horse"
+
+[node name="ArtifactSparkle_RedHorse" parent="." index="3" instance=ExtResource("3_uhrw2")]
+layout_mode = 0
+offset_left = 1168.0
+offset_top = 568.0
+offset_right = 1232.0
+offset_bottom = 632.0
+tooltip_text = "Red horse"
+artifact_name = "stables/red_horse"
+
+[node name="ArtifactSparkle_ChalkBoard" parent="." index="4" instance=ExtResource("3_uhrw2")]
+layout_mode = 0
+offset_left = 976.0
+offset_top = 184.0
+offset_right = 1040.0
+offset_bottom = 248.0
+tooltip_text = "Chalkboard"
+artifact_name = "stables/stables_chalkboard"
+
+[node name="ContainerSparkle_Tom" parent="." index="5" instance=ExtResource("4_wmuos")]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 152.0
+offset_right = 576.0
+offset_bottom = 216.0
+tooltip_text = "Boy asleep in stable"
+container_name = "stables/tom"
+
+[node name="ContainerSparkle_Ayssa" parent="." index="6" instance=ExtResource("4_wmuos")]
+layout_mode = 0
+offset_left = 688.0
+offset_top = 536.0
+offset_right = 752.0
+offset_bottom = 600.0
+tooltip_text = "White horse and woman"
+container_name = "stables/alyssa"
+
+[node name="NavSparkle" parent="." index="7" instance=ExtResource("5_j2ig7")]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 808.0
+offset_right = 184.0
+offset_bottom = 872.0
+tooltip_text = "Castle courtyard"
+nav_destination_name = "castle1"
+
+[node name="HiddenSparkle" parent="." index="8" instance=ExtResource("6_5eil7")]
+offset_left = 1184.0
+offset_top = 272.0
+offset_right = 1368.0
+offset_bottom = 368.0
+artifact_name = "stables/eiffel"

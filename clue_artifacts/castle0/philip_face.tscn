@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://beyqrq81kxad"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_60pr0"]
+[ext_resource type="Texture2D" uid="uid://d0qbf1eukruvp" path="res://assets/portraits/portrait.philip1216.png" id="2_v3m3k"]
+[ext_resource type="PackedScene" uid="uid://dw7qjdh5v703h" path="res://world_items/clue_sparkle.tscn" id="3_0y03y"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_60pr0")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_v3m3k")
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "The man rides away from the castle"
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = "Last words: ..."
+
+[node name="ClueSparkle" parent="." index="1" instance=ExtResource("3_0y03y")]
+visible = false
+layout_mode = 0
+clue_item_type = 2
+clue_item_face_value = 6
+clue_item_value = "philip"

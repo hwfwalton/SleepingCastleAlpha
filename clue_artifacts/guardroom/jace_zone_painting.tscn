@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://bilfd0u87ork5"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_b46e1"]
+[ext_resource type="Texture2D" uid="uid://coisdlnvquyo0" path="res://assets/clues/clue.painting.png" id="2_t5q3v"]
+[ext_resource type="PackedScene" uid="uid://dw7qjdh5v703h" path="res://world_items/clue_sparkle.tscn" id="3_wraev"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_b46e1")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_t5q3v")
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "A pretty painting hanging over the bunk"
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = ""
+
+[node name="ClueSparkle" parent="." index="1" instance=ExtResource("3_wraev")]
+visible = false
+layout_mode = 0
+clue_item_type = 1
+clue_item_symbol_value = 29
+
+[node name="ClueSparkle2" parent="." index="2" instance=ExtResource("3_wraev")]
+visible = false
+layout_mode = 0
+offset_left = 64.0
+offset_right = 128.0
+offset_bottom = 64.0
+clue_item_type = 1
+clue_item_symbol_value = 30

@@ -1,0 +1,75 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbd43y4biyid4"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_7s0po"]
+[ext_resource type="Texture2D" uid="uid://dqw74dxw4uu4o" path="res://assets/notepageonly.png" id="2_qadtf"]
+[ext_resource type="PackedScene" uid="uid://dw7qjdh5v703h" path="res://world_items/clue_sparkle.tscn" id="3_4xnop"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_7s0po")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_qadtf")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/MarginContainer2/TextureRect" index="0"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.21
+anchor_top = 0.104
+anchor_right = 0.21
+anchor_bottom = 0.104
+offset_left = -0.400009
+offset_top = 0.32
+offset_right = 463.6
+offset_bottom = 736.32
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 30
+bbcode_enabled = true
+text = "[b]Philip[/b], 
+
+	You must leave at once and deliver this letter to [b]Tristan[/b] in the woods to the west of the castle. 10 gold should be enough to bribe your way out the front door – take [b]Lightning[/b], they can outpace any mount in the stable, and you must make haste.
+	If Tristan does not receive this letter we’ll all be in danger, especially your brother. 
+
+							[i][b]Katherine[/b][/i]"
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "A hastily written note"
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = "
+"
+
+[node name="ClueSparkle" parent="." index="1" instance=ExtResource("3_4xnop")]
+visible = false
+layout_mode = 0
+clue_item_name_value = 22
+clue_item_value = "Philip"
+
+[node name="ClueSparkle2" parent="." index="2" instance=ExtResource("3_4xnop")]
+visible = false
+layout_mode = 0
+offset_left = 64.0
+offset_right = 128.0
+offset_bottom = 64.0
+clue_item_name_value = 27
+clue_item_value = "Tristan"
+
+[node name="ClueSparkle3" parent="." index="3" instance=ExtResource("3_4xnop")]
+visible = false
+layout_mode = 0
+offset_left = 128.0
+offset_right = 192.0
+offset_bottom = 64.0
+clue_item_name_value = 17
+clue_item_value = "Katherine"
+
+[node name="ClueSparkle4" parent="." index="4" instance=ExtResource("3_4xnop")]
+visible = false
+layout_mode = 0
+offset_top = 64.0
+offset_right = 64.0
+offset_bottom = 128.0
+clue_item_type = 1
+clue_item_symbol_value = 16
+clue_item_value = "lightning_bolt"

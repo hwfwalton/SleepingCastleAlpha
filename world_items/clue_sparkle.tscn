@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dw7qjdh5v703h"]
+
+[ext_resource type="Script" path="res://world_items/clue_sparkle.gd" id="1_achx3"]
+[ext_resource type="Texture2D" uid="uid://cpj4f255ojnqo" path="res://assets/search.png" id="2_13w3a"]
+
+[node name="ClueSparkle" type="PanelContainer" groups=["clue_item"]]
+mouse_filter = 1
+theme_type_variation = &"BookPanel"
+script = ExtResource("1_achx3")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_13w3a")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

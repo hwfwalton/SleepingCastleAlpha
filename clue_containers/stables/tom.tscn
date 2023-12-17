@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://w85iywr42wv5"]
+
+[ext_resource type="PackedScene" uid="uid://dua8h0obvspql" path="res://clue_containers/ClueContainerTemplate.tscn" id="1_v3oq7"]
+[ext_resource type="Texture2D" uid="uid://b1oku4iuvokvy" path="res://assets/clues/clue.tom.png" id="2_rbnbn"]
+[ext_resource type="Texture2D" uid="uid://dqw74dxw4uu4o" path="res://assets/notepageonly.png" id="3_pytvf"]
+[ext_resource type="PackedScene" uid="uid://no2lghy85xom" path="res://world_items/artifact_sparkle.tscn" id="4_74v7k"]
+
+[node name="ClueContainerTemplate" instance=ExtResource("1_v3oq7")]
+
+[node name="Clue_tom" type="Sprite2D" parent="." index="1"]
+position = Vector2(544, 568)
+scale = Vector2(0.90625, 0.90625)
+texture = ExtResource("2_rbnbn")
+
+[node name="Notepageonly" type="Sprite2D" parent="." index="2"]
+position = Vector2(856, 552)
+scale = Vector2(0.242809, 0.242809)
+texture = ExtResource("3_pytvf")
+
+[node name="ArtifactSparkle" parent="." index="3" instance=ExtResource("4_74v7k")]
+layout_mode = 0
+offset_left = 672.0
+offset_top = 288.0
+offset_right = 736.0
+offset_bottom = 352.0
+tooltip_text = "Boy"
+artifact_name = "stables/tom_face"
+
+[node name="ArtifactSparkle2" parent="." index="4" instance=ExtResource("4_74v7k")]
+layout_mode = 0
+offset_left = 936.0
+offset_top = 400.0
+offset_right = 1000.0
+offset_bottom = 464.0
+tooltip_text = "Note"
+artifact_name = "stables/tom_note"

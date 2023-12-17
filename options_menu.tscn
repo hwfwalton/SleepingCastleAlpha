@@ -1,0 +1,119 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0b3s6cv80j6e"]
+
+[ext_resource type="Script" path="res://scripts/options_menu.gd" id="1_ysv0m"]
+
+[sub_resource type="GDScript" id="GDScript_g1oic"]
+script/source = "extends SubViewportContainer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ysv0m")
+
+[node name="OptionsMenuSubViewportContainer" type="SubViewportContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+stretch = true
+script = SubResource("GDScript_g1oic")
+
+[node name="SubViewport" type="SubViewport" parent="OptionsMenuSubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="Panel" type="Panel" parent="OptionsMenuSubViewportContainer/SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"MenuShade"
+
+[node name="OptionsPanelContainer" type="PanelContainer" parent="OptionsMenuSubViewportContainer/SubViewport"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.0
+offset_top = -74.5
+offset_right = 87.0
+offset_bottom = 74.5
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 1
+mouse_filter = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="OptionsMenuSubViewportContainer/SubViewport/OptionsPanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsMenuSubViewportContainer/SubViewport/OptionsPanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Options Title" type="Label" parent="OptionsMenuSubViewportContainer/SubViewport/OptionsPanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Our Cool Options"
+
+[node name="NothingButton" type="Button" parent="OptionsMenuSubViewportContainer/SubViewport/OptionsPanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../BackButton")
+focus_neighbor_right = NodePath("../../../../MarginContainer/QuitButtonContainer/MarginContainer/QuitButton")
+focus_next = NodePath("../BackButton")
+text = "TesterButton"
+
+[node name="BackButton" type="Button" parent="OptionsMenuSubViewportContainer/SubViewport/OptionsPanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_right = NodePath("../../../../MarginContainer/QuitButtonContainer/MarginContainer/QuitButton")
+focus_neighbor_bottom = NodePath("../NothingButton")
+focus_next = NodePath("../../../../MarginContainer/QuitButtonContainer/MarginContainer/QuitButton")
+text = "Back"
+
+[node name="MarginContainer" type="MarginContainer" parent="OptionsMenuSubViewportContainer/SubViewport"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -172.0
+offset_top = -111.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="QuitButtonContainer" type="PanelContainer" parent="OptionsMenuSubViewportContainer/SubViewport/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="OptionsMenuSubViewportContainer/SubViewport/MarginContainer/QuitButtonContainer"]
+layout_mode = 2
+
+[node name="QuitButton" type="Button" parent="OptionsMenuSubViewportContainer/SubViewport/MarginContainer/QuitButtonContainer/MarginContainer"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../../../../OptionsPanelContainer/MarginContainer/VBoxContainer/BackButton")
+focus_neighbor_top = NodePath("../../../../OptionsPanelContainer/MarginContainer/VBoxContainer/BackButton")
+focus_next = NodePath("../../../../OptionsPanelContainer/MarginContainer/VBoxContainer/NothingButton")
+focus_previous = NodePath("../../../../OptionsPanelContainer/MarginContainer/VBoxContainer/BackButton")
+text = "Quit Game
+"
+
+[connection signal="pressed" from="OptionsMenuSubViewportContainer/SubViewport/OptionsPanelContainer/MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="OptionsMenuSubViewportContainer/SubViewport/MarginContainer/QuitButtonContainer/MarginContainer/QuitButton" to="." method="_on_button_pressed"]

@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdrrfij407gm5"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_3sqbv"]
+[ext_resource type="Texture2D" uid="uid://d23p2kxndbb1h" path="res://assets/clues/clue.philip.png" id="2_jexik"]
+[ext_resource type="PackedScene" uid="uid://dw7qjdh5v703h" path="res://world_items/clue_sparkle.tscn" id="3_ng2v3"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_3sqbv")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_jexik")
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "A white horse"
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = "There is a symbol on their saddle pad. "
+
+[node name="ClueSparkle" parent="." index="1" instance=ExtResource("3_ng2v3")]
+visible = false
+layout_mode = 0
+clue_item_type = 1
+clue_item_symbol_value = 31
+clue_item_value = "white_horse"
+
+[node name="ClueSparkle2" parent="." index="2" instance=ExtResource("3_ng2v3")]
+visible = false
+layout_mode = 0
+offset_left = 64.0
+offset_right = 128.0
+offset_bottom = 64.0
+clue_item_type = 1
+clue_item_symbol_value = 16
+clue_item_value = "lightning_bolt"

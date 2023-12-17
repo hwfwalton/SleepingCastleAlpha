@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://cnnnvgyuaeja"]
+
+[ext_resource type="PackedScene" uid="uid://dua8h0obvspql" path="res://clue_containers/ClueContainerTemplate.tscn" id="1_a1exg"]
+[ext_resource type="Texture2D" uid="uid://s4roo4je4u27" path="res://assets/clues/clue.gilderoy.png" id="2_k68ot"]
+[ext_resource type="Texture2D" uid="uid://mygqux4vksnm" path="res://assets/symbols/symbol.gold.png" id="3_xok28"]
+[ext_resource type="PackedScene" uid="uid://no2lghy85xom" path="res://world_items/artifact_sparkle.tscn" id="4_vbuxo"]
+
+[node name="ClueContainerTemplate" instance=ExtResource("1_a1exg")]
+
+[node name="Clue_gilderoy" type="Sprite2D" parent="." index="1"]
+position = Vector2(496, 544)
+scale = Vector2(0.951128, 0.951128)
+texture = ExtResource("2_k68ot")
+
+[node name="Symbol_gold" type="Sprite2D" parent="." index="2"]
+position = Vector2(773.335, 611.25)
+scale = Vector2(0.062357, 0.062357)
+texture = ExtResource("3_xok28")
+
+[node name="ArtifactSparkle" parent="." index="3" instance=ExtResource("4_vbuxo")]
+layout_mode = 0
+offset_left = 592.0
+offset_top = 257.0
+offset_right = 656.0
+offset_bottom = 321.0
+tooltip_text = "Man"
+artifact_name = "guardroom/gilderoy_face"
+
+[node name="ArtifactSparkle2" parent="." index="4" instance=ExtResource("4_vbuxo")]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 512.0
+offset_right = 872.0
+offset_bottom = 576.0
+tooltip_text = "Gold in the man's pocket"
+artifact_name = "guardroom/gilderoy_gold"

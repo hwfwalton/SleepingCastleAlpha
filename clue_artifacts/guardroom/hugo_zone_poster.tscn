@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://c875ppcbe6dnb"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_6116d"]
+[ext_resource type="Texture2D" uid="uid://dckxppox0y7yy" path="res://assets/clues/clue.poster.png" id="2_87vgx"]
+[ext_resource type="PackedScene" uid="uid://dw7qjdh5v703h" path="res://world_items/clue_sparkle.tscn" id="3_fqasy"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_6116d")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_87vgx")
+
+[node name="MarginContainer" parent="HBoxContainer" index="1"]
+visible = false
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = ""
+
+[node name="ClueSparkle" parent="." index="1" instance=ExtResource("3_fqasy")]
+visible = false
+layout_mode = 0
+clue_item_name_value = 12
+
+[node name="ClueSparkle2" parent="." index="2" instance=ExtResource("3_fqasy")]
+visible = false
+layout_mode = 0
+offset_left = 64.0
+offset_right = 128.0
+offset_bottom = 64.0
+clue_item_type = 1
+clue_item_symbol_value = 17

@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfagcjk1uorf7"]
+
+[ext_resource type="Script" path="res://GameHUD/hud_buttons.gd" id="1_abdik"]
+[ext_resource type="Texture2D" uid="uid://0gaq0fsese4n" path="res://assets/gear-outline_44724_128.png" id="2_68tgd"]
+[ext_resource type="Texture2D" uid="uid://dhudex7spjwr8" path="res://assets/book_828370_128.png" id="3_6f6jg"]
+
+[node name="MarginContainer" type="MarginContainer"]
+offset_right = 168.0
+offset_bottom = 168.0
+script = ExtResource("1_abdik")
+
+[node name="HUDButtons" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="OptionsButton" type="TextureButton" parent="HUDButtons"]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "Options"
+texture_normal = ExtResource("2_68tgd")
+stretch_mode = 0
+
+[node name="BookButton" type="TextureButton" parent="HUDButtons"]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "Options"
+texture_normal = ExtResource("3_6f6jg")
+stretch_mode = 0
+
+[connection signal="pressed" from="HUDButtons/OptionsButton" to="HUDButtons" method="_on_options_button_pressed"]
+[connection signal="pressed" from="HUDButtons/BookButton" to="HUDButtons" method="_on_book_button_pressed"]

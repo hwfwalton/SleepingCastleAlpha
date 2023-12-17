@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2x8pck3k60aa"]
+
+[ext_resource type="PackedScene" uid="uid://dua8h0obvspql" path="res://clue_containers/ClueContainerTemplate.tscn" id="1_imxl5"]
+[ext_resource type="Texture2D" uid="uid://cwef43br6545u" path="res://assets/clues/clue.bedsignBRONZE.png" id="2_8tt4i"]
+[ext_resource type="PackedScene" uid="uid://no2lghy85xom" path="res://world_items/artifact_sparkle.tscn" id="3_ckjb2"]
+[ext_resource type="Texture2D" uid="uid://dbnkp7e5pe4i7" path="res://assets/clues/clue.boxingtrophy.png" id="4_qgk08"]
+[ext_resource type="Texture2D" uid="uid://dqw74dxw4uu4o" path="res://assets/notepageonly.png" id="5_7tm8k"]
+
+[node name="ClueContainerTemplate" instance=ExtResource("1_imxl5")]
+
+[node name="Clue_bedsignBronze" type="Sprite2D" parent="." index="1"]
+position = Vector2(724, 330)
+scale = Vector2(0.591603, 0.591603)
+texture = ExtResource("2_8tt4i")
+
+[node name="ArtifactSparkle" parent="." index="2" instance=ExtResource("3_ckjb2")]
+layout_mode = 0
+offset_left = 936.0
+offset_top = 294.0
+offset_right = 1000.0
+offset_bottom = 358.0
+tooltip_text = "A bronze plaque on the edge of the bed"
+artifact_name = "guardroom/leona_zone_plaque"
+
+[node name="Clue_boxingtrophy" type="Sprite2D" parent="." index="3"]
+position = Vector2(552, 640)
+scale = Vector2(0.721453, 0.721453)
+texture = ExtResource("4_qgk08")
+
+[node name="ArtifactSparkle2" parent="." index="4" instance=ExtResource("3_ckjb2")]
+layout_mode = 0
+offset_left = 680.0
+offset_top = 416.0
+offset_right = 744.0
+offset_bottom = 480.0
+tooltip_text = "Trophy"
+artifact_name = "guardroom/leona_zone_trophy"
+
+[node name="Notepageonly" type="Sprite2D" parent="." index="5"]
+position = Vector2(920, 632)
+scale = Vector2(0.310914, 0.310914)
+texture = ExtResource("5_7tm8k")
+
+[node name="ArtifactSparkle3" parent="." index="6" instance=ExtResource("3_ckjb2")]
+layout_mode = 0
+offset_left = 1012.0
+offset_top = 464.0
+offset_right = 1076.0
+offset_bottom = 528.0
+tooltip_text = "A note laying on the bed"
+artifact_name = "guardroom/leona_zone_note"

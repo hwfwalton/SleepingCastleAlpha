@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://11frytvvjrdg"]
+
+[ext_resource type="PackedScene" uid="uid://dua8h0obvspql" path="res://clue_containers/ClueContainerTemplate.tscn" id="1_x75fi"]
+[ext_resource type="Texture2D" uid="uid://cyp5ikoyh8ir" path="res://assets/clues/clue.albert.png" id="2_jc5yg"]
+[ext_resource type="PackedScene" uid="uid://no2lghy85xom" path="res://world_items/artifact_sparkle.tscn" id="4_2a1x6"]
+[ext_resource type="Texture2D" uid="uid://mygqux4vksnm" path="res://assets/symbols/symbol.gold.png" id="4_5p4yd"]
+
+[node name="ClueContainerTemplate" instance=ExtResource("1_x75fi")]
+
+[node name="Clue_albert" type="Sprite2D" parent="." index="1"]
+position = Vector2(520, 544)
+scale = Vector2(0.944064, 0.944064)
+texture = ExtResource("2_jc5yg")
+
+[node name="ArtifactSparkle" parent="." index="2" instance=ExtResource("4_2a1x6")]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 258.0
+offset_right = 664.0
+offset_bottom = 322.0
+tooltip_text = "Man"
+artifact_name = "castle0/albert_face"
+
+[node name="ArtifactSparkle2" parent="." index="3" instance=ExtResource("4_2a1x6")]
+layout_mode = 0
+offset_left = 784.0
+offset_top = 448.0
+offset_right = 848.0
+offset_bottom = 512.0
+tooltip_text = "Gold in the man's pocket"
+artifact_name = "castle0/albert_gold"
+
+[node name="Symbol_gold" type="Sprite2D" parent="." index="4"]
+position = Vector2(768, 544)
+scale = Vector2(0.0499143, 0.0499143)
+texture = ExtResource("4_5p4yd")

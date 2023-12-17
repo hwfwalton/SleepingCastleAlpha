@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://db67hces4n7i0"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_ywof0"]
+[ext_resource type="Texture2D" uid="uid://c0cx1qpnifem7" path="res://assets/clues/clue.fish.png" id="2_g40fo"]
+[ext_resource type="PackedScene" uid="uid://dw7qjdh5v703h" path="res://world_items/clue_sparkle.tscn" id="3_h4bjm"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_ywof0")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_g40fo")
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "Glub glub. The fish are still swimming!"
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = ""
+
+[node name="ClueSparkle" parent="." index="1" instance=ExtResource("3_h4bjm")]
+visible = false
+layout_mode = 0
+clue_item_type = 1
+clue_item_symbol_value = 12
+clue_item_value = "fish"

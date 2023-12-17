@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1u4gqyxqjt5h"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_md8bh"]
+[ext_resource type="Texture2D" uid="uid://dqw74dxw4uu4o" path="res://assets/notepageonly.png" id="2_o6305"]
+[ext_resource type="PackedScene" uid="uid://dw7qjdh5v703h" path="res://world_items/clue_sparkle.tscn" id="3_vq25w"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_md8bh")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_o6305")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/MarginContainer2/TextureRect" index="0"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 112.0
+offset_right = 632.0
+offset_bottom = 816.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+bbcode_enabled = true
+text = "My beloved, 
+
+	I must leave on a special mission, I've left you this [b]rose[/b] as a symbol of my love for you and as a promise. Before the last petal wilts I will hold you in my arms once more.  Take care of it, as you would my heart. 
+
+					Yours, 
+				[b]Tristan Lockhart[/b]"
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "A folded note under a blooming rose in a vase"
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = ""
+
+[node name="ClueSparkle" parent="." index="1" instance=ExtResource("3_vq25w")]
+layout_mode = 0
+clue_item_name_value = 27
+
+[node name="ClueSparkle2" parent="." index="2" instance=ExtResource("3_vq25w")]
+layout_mode = 0
+offset_left = 64.0
+offset_right = 128.0
+offset_bottom = 64.0
+clue_item_name_value = 20
+
+[node name="ClueSparkle3" parent="." index="3" instance=ExtResource("3_vq25w")]
+layout_mode = 0
+offset_top = 64.0
+offset_right = 64.0
+offset_bottom = 128.0
+clue_item_type = 1
+clue_item_symbol_value = 21

@@ -1,0 +1,48 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://cl8j1lod7ob4"]
+
+[ext_resource type="StyleBox" uid="uid://cihkw8lu2kqi" path="res://themes/menu_shade.tres" id="1_30q1j"]
+[ext_resource type="StyleBox" uid="uid://b230d772h6vh6" path="res://themes/puzzle_box_incomplete.tres" id="2_58i0l"]
+[ext_resource type="StyleBox" uid="uid://bk01cn1spbqc0" path="res://themes/new_style_box_flat.tres" id="2_ada5x"]
+[ext_resource type="StyleBox" uid="uid://dalg2sdgcells" path="res://themes/puzzle_portrait.tres" id="2_xpf2g"]
+[ext_resource type="StyleBox" uid="uid://bm6ahllekyo5l" path="res://themes/puzzle_box_complete.tres" id="3_7mjhe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r1kp4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3weie"]
+
+[resource]
+ArtifactViewMargsin/base_type = &"MarginContainer"
+ArtifactViewMargsin/constants/margin_bottom = 80
+ArtifactViewMargsin/constants/margin_left = 80
+ArtifactViewMargsin/constants/margin_right = 80
+ArtifactViewMargsin/constants/margin_top = 80
+BookPanel/base_type = &"PanelContainer"
+BookPanel/styles/panel = SubResource("StyleBoxEmpty_r1kp4")
+BookViewMargins/base_type = &"MarginContainer"
+BookViewMargins/constants/margin_bottom = 160
+BookViewMargins/constants/margin_left = 40
+BookViewMargins/constants/margin_right = 40
+BookViewMargins/constants/margin_top = 120
+ClearPanel/base_type = &"TabContainer"
+ClearPanel/styles/panel = SubResource("StyleBoxEmpty_3weie")
+ClueItemMargins/base_type = &"MarginContainer"
+ClueItemMargins/constants/margin_bottom = 2
+ClueItemMargins/constants/margin_left = 2
+ClueItemMargins/constants/margin_right = 2
+ClueItemMargins/constants/margin_top = 2
+ClueLetterText/base_type = &"Node"
+ClueLetterText/colors/default_color = Color(0, 0, 0, 1)
+MarginContainer/constants/margin_bottom = 20
+MarginContainer/constants/margin_left = 20
+MarginContainer/constants/margin_right = 20
+MarginContainer/constants/margin_top = 20
+MenuShade/base_type = &"Panel"
+MenuShade/styles/panel = ExtResource("1_30q1j")
+PuzzlePortrait/base_type = &"PanelContainer"
+PuzzlePortrait/styles/panel = ExtResource("2_xpf2g")
+PuzzleZoneComplete/base_type = &"Panel"
+PuzzleZoneComplete/styles/panel = ExtResource("3_7mjhe")
+PuzzleZoneIncomplete/base_type = &"Panel"
+PuzzleZoneIncomplete/styles/panel = ExtResource("2_58i0l")
+VBoxContainer/constants/separation = 12
+WordBankItem/styles/panel = ExtResource("2_ada5x")

@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://bs14dnol384gh"]
+
+[ext_resource type="PackedScene" uid="uid://dua8h0obvspql" path="res://clue_containers/ClueContainerTemplate.tscn" id="1_ftcka"]
+[ext_resource type="Texture2D" uid="uid://cbvbmqgrsabso" path="res://assets/clues/clue.bedsignSILVER.png" id="2_oi2lp"]
+[ext_resource type="PackedScene" uid="uid://no2lghy85xom" path="res://world_items/artifact_sparkle.tscn" id="3_1t6v1"]
+[ext_resource type="Texture2D" uid="uid://dqw74dxw4uu4o" path="res://assets/notepageonly.png" id="4_msggv"]
+
+[node name="ClueContainerTemplate" instance=ExtResource("1_ftcka")]
+
+[node name="Clue_bedsignSilver" type="Sprite2D" parent="." index="1"]
+position = Vector2(744, 360)
+scale = Vector2(0.623077, 0.623077)
+texture = ExtResource("2_oi2lp")
+
+[node name="ArtifactSparkle" parent="." index="2" instance=ExtResource("3_1t6v1")]
+layout_mode = 0
+offset_left = 976.0
+offset_top = 320.0
+offset_right = 1040.0
+offset_bottom = 384.0
+tooltip_text = "A silver plaque on the edge of the bed"
+artifact_name = "guardroom/albert_zone_plaque"
+
+[node name="Notepageonly" type="Sprite2D" parent="." index="3"]
+position = Vector2(752, 640)
+scale = Vector2(0.344754, 0.344754)
+texture = ExtResource("4_msggv")
+
+[node name="ArtifactSparkle2" parent="." index="4" instance=ExtResource("3_1t6v1")]
+layout_mode = 0
+offset_left = 864.0
+offset_top = 512.0
+offset_right = 928.0
+offset_bottom = 576.0
+tooltip_text = "Note under pillow"
+artifact_name = "guardroom/albert_zone_note"
