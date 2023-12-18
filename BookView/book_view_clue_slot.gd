@@ -8,20 +8,19 @@ var found_clue_item: FoundClueItem
 @export var correct_clue_symbol_values: Array[ClueItem.CLUE_SYMBOL] = []
 @export var accepted_clue_types: Array[ClueItem.CLUE_TYPE] = []
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
-	modulate = Color(Color.MEDIUM_PURPLE, 0.7)
 	clue_slot_collider.clue_submitted.connect(_on_book_view_clue_slot_found_clue_submitted)
-	#book_view_clue_item.hideBackgroundRect()
 	updateFoundClue(found_clue_item)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta):
 	if GlobalState.is_dragging:
-		modulate = Color(Color.AQUA, 0.7)
+		modulate = Color.AQUA
 	else: 
-		modulate = Color(Color.MEDIUM_PURPLE, 0.7)
+		# Reset to default when not dragging
+		modulate = Color.WHITE
 
 
 func _on_book_view_clue_slot_found_clue_submitted(g_found_clue_item):
