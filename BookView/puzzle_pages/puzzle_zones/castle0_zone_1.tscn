@@ -37,7 +37,7 @@ offset_left = 56.0
 offset_top = 112.0
 offset_right = 208.0
 offset_bottom = 152.0
-correct_clue_name_values = Array[int]([0])
+correct_clue_name_values = Array[int]([5])
 accepted_clue_types = Array[int]([0])
 
 [node name="BookViewClueSlot2" parent="." index="4" instance=ExtResource("2_g3ix4")]
@@ -45,4 +45,5 @@ offset_left = 254.0
 offset_top = 219.0
 offset_right = 406.0
 offset_bottom = 259.0
+correct_clue_name_values = Array[int]([3])
 accepted_clue_types = Array[int]([0])
