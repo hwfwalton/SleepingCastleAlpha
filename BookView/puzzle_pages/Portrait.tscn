@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnkda1q86p5fm"]
+[gd_scene load_steps=4 format=3 uid="uid://dnkda1q86p5fm"]
 
 [ext_resource type="Script" path="res://BookView/puzzle_pages/Portrait.gd" id="1_qk8dw"]
 [ext_resource type="Resource" uid="uid://d1ymuglidjrr0" path="res://resources/player_state.tres" id="2_kxiu3"]
-[ext_resource type="Texture2D" uid="uid://dnwsnympe8vlb" path="res://assets/Blank_portrait,_male_(rectangular).png" id="3_cj78k"]
 [ext_resource type="Texture2D" uid="uid://c3u4jtfpgmmih" path="res://assets/portraits/emptyportrait.png" id="3_l42yr"]
 
 [node name="Portrait" type="PanelContainer" groups=["puzzle_portrait"]]
@@ -21,7 +20,6 @@ player_state = ExtResource("2_kxiu3")
 [node name="TextureRect_character" type="TextureRect" parent="."]
 visible = false
 layout_mode = 2
-texture = ExtResource("3_cj78k")
 expand_mode = 1
 stretch_mode = 6
 
