@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj1ox1hc36k0v"
-path="res://.godot/imported/portrait.tom.png-f1e7d686f5a540de8fe239691677497a.ctex"
+uid="uid://ndpvr8osqnog"
+path="res://.godot/imported/clue.tom12.17.1330.png-19ee31f6d12396a06c76d093a9c7fa22.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/portraits/portrait.tom.png"
-dest_files=["res://.godot/imported/portrait.tom.png-f1e7d686f5a540de8fe239691677497a.ctex"]
+source_file="res://assets/clues/clue.tom12.17.1330.png"
+dest_files=["res://.godot/imported/clue.tom12.17.1330.png-19ee31f6d12396a06c76d093a9c7fa22.ctex"]
 
 [params]
 

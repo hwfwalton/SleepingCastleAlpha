@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://bpee3vpc76hcp"]
 
 [ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_jod4u"]
-[ext_resource type="Texture2D" uid="uid://bj1ox1hc36k0v" path="res://assets/portraits/portrait.tom.png" id="2_r5txt"]
+[ext_resource type="Texture2D" uid="uid://7tp74fkh05aw" path="res://assets/portraits/portrait.tom12.17.1331.png" id="2_1hwje"]
 [ext_resource type="PackedScene" uid="uid://dw7qjdh5v703h" path="res://world_items/clue_sparkle.tscn" id="3_e7f16"]
 
 [node name="ArtifactViewTemplate" instance=ExtResource("1_jod4u")]
 
 [node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
-texture = ExtResource("2_r5txt")
+texture = ExtResource("2_1hwje")
 
 [node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
 text = "The boy exclaims with red-stained hands"

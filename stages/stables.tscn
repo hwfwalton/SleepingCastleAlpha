@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cvr7nrrkjgc1j"]
 
 [ext_resource type="PackedScene" uid="uid://c3t05rwnym6kn" path="res://stages/StageTemplate.tscn" id="1_octe2"]
-[ext_resource type="Texture2D" uid="uid://cxp7e7y36epo1" path="res://assets/stage_backdrops/scene.stable.12.16.2125.png" id="2_ef6b0"]
+[ext_resource type="Texture2D" uid="uid://c07gn3fpjlace" path="res://assets/stage_backdrops/scene.stable.12.17.1938.png" id="2_4u4bj"]
 [ext_resource type="PackedScene" uid="uid://no2lghy85xom" path="res://world_items/artifact_sparkle.tscn" id="3_uhrw2"]
 [ext_resource type="PackedScene" uid="uid://qgibjy1gropy" path="res://world_items/container_sparkle.tscn" id="4_wmuos"]
 [ext_resource type="PackedScene" uid="uid://bmra5comie0c5" path="res://GameHUD/nav_sparkle.tscn" id="5_j2ig7"]
@@ -10,7 +10,7 @@
 [node name="StageTemplate" instance=ExtResource("1_octe2")]
 
 [node name="Background" parent="." index="0"]
-texture = ExtResource("2_ef6b0")
+texture = ExtResource("2_4u4bj")
 
 [node name="ArtifactSparkle_SmallBlackHorse" parent="." index="1" instance=ExtResource("3_uhrw2")]
 layout_mode = 0
