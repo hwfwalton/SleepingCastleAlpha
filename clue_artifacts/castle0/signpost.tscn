@@ -75,7 +75,16 @@ offset_bottom = 64.0
 clue_item_name_value = 25
 clue_item_value = "Sterling"
 
-[node name="ClueSparkle3" parent="." index="4" instance=ExtResource("3_7s1yc")]
+[node name="ClueSparkle7" parent="." index="4" instance=ExtResource("3_7s1yc")]
+visible = false
+layout_mode = 0
+offset_left = 128.0
+offset_right = 192.0
+offset_bottom = 64.0
+clue_item_name_value = 31
+clue_item_value = "Sterling"
+
+[node name="ClueSparkle3" parent="." index="5" instance=ExtResource("3_7s1yc")]
 visible = false
 layout_mode = 0
 offset_top = 64.0
@@ -85,7 +94,7 @@ clue_item_type = 1
 clue_item_symbol_value = 22
 clue_item_value = "rose_sigil"
 
-[node name="ClueSparkle4" parent="." index="5" instance=ExtResource("3_7s1yc")]
+[node name="ClueSparkle4" parent="." index="6" instance=ExtResource("3_7s1yc")]
 visible = false
 layout_mode = 0
 offset_left = 64.0
@@ -96,7 +105,7 @@ clue_item_type = 1
 clue_item_symbol_value = 5
 clue_item_value = "clock_12"
 
-[node name="ClueSparkle5" parent="." index="6" instance=ExtResource("3_7s1yc")]
+[node name="ClueSparkle5" parent="." index="7" instance=ExtResource("3_7s1yc")]
 visible = false
 layout_mode = 0
 offset_left = 128.0
@@ -107,7 +116,7 @@ clue_item_type = 1
 clue_item_symbol_value = 9
 clue_item_value = "clock_8"
 
-[node name="ClueSparkle6" parent="." index="7" instance=ExtResource("3_7s1yc")]
+[node name="ClueSparkle6" parent="." index="8" instance=ExtResource("3_7s1yc")]
 visible = false
 layout_mode = 0
 offset_left = 192.0
