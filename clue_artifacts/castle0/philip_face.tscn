@@ -13,7 +13,7 @@ texture = ExtResource("2_v3m3k")
 text = "The man rides away from the castle"
 
 [node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
-text = "Last words: ..."
+text = "He is frozen in motion as though sleeping, and will only repeat his last words spoken...\"Please don't let it be too late...\""
 
 [node name="ClueSparkle" parent="." index="1" instance=ExtResource("3_0y03y")]
 visible = false
