@@ -37,12 +37,15 @@ bus = &"BookSounds"
 
 [node name="sfx_book_page_turn" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_7vxds")
+bus = &"BookSounds"
 
 [node name="sfx_book_close" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_xtgbg")
 bus = &"BookSounds"
 
 [node name="stage_music_player" type="AudioStreamPlayer" parent="."]
+bus = &"Music"
 
 [node name="book_music_player" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ycpmu")
+bus = &"Music"

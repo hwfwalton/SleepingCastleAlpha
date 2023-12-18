@@ -82,6 +82,48 @@ focus_neighbor_right = NodePath("../../../../MarginContainer/QuitButtonContainer
 focus_next = NodePath("../BackButton")
 text = "TesterButton"
 
+[node name="HBoxContainer" type="HBoxContainer" parent="OptionsMenuSubViewportContainer/SubViewport/OptionsPanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsMenuSubViewportContainer/SubViewport/OptionsPanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Master Volume"
+
+[node name="MasterSlider" type="HSlider" parent="OptionsMenuSubViewportContainer/SubViewport/OptionsPanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+max_value = 1.0
+step = 0.01
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="OptionsMenuSubViewportContainer/SubViewport/OptionsPanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsMenuSubViewportContainer/SubViewport/OptionsPanelContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Sound Effects"
+
+[node name="SfxSlider" type="HSlider" parent="OptionsMenuSubViewportContainer/SubViewport/OptionsPanelContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+max_value = 1.0
+step = 0.01
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="OptionsMenuSubViewportContainer/SubViewport/OptionsPanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsMenuSubViewportContainer/SubViewport/OptionsPanelContainer/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Music"
+
+[node name="MusicSlider" type="HSlider" parent="OptionsMenuSubViewportContainer/SubViewport/OptionsPanelContainer/MarginContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+max_value = 1.0
+step = 0.01
+
 [node name="BackButton" type="Button" parent="OptionsMenuSubViewportContainer/SubViewport/OptionsPanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 focus_neighbor_right = NodePath("../../../../MarginContainer/QuitButtonContainer/MarginContainer/QuitButton")
@@ -115,5 +157,8 @@ focus_previous = NodePath("../../../../OptionsPanelContainer/MarginContainer/VBo
 text = "Quit Game
 "
 
+[connection signal="value_changed" from="OptionsMenuSubViewportContainer/SubViewport/OptionsPanelContainer/MarginContainer/VBoxContainer/HBoxContainer/MasterSlider" to="." method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="OptionsMenuSubViewportContainer/SubViewport/OptionsPanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/SfxSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="value_changed" from="OptionsMenuSubViewportContainer/SubViewport/OptionsPanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/MusicSlider" to="." method="_on_music_slider_value_changed"]
 [connection signal="pressed" from="OptionsMenuSubViewportContainer/SubViewport/OptionsPanelContainer/MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="OptionsMenuSubViewportContainer/SubViewport/MarginContainer/QuitButtonContainer/MarginContainer/QuitButton" to="." method="_on_button_pressed"]

@@ -9,10 +9,8 @@ var mus_expository_song: AudioStream = preload("res://assets/audio/music/mus-exp
 @onready var sfx_book_page_turn: AudioStreamPlayer = $sfx_book_page_turn
 @onready var sfx_book_close: AudioStreamPlayer = $sfx_book_close
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#mus_flute_lead
 	stage_music_player.play()
 	book_music_player.play()
 	book_music_player.stream_paused = true
