@@ -3,11 +3,11 @@
 [ext_resource type="Script" path="res://BookView/book_view_clue_item.gd" id="1_g813t"]
 
 [node name="BookViewClueItem" type="PanelContainer"]
-custom_minimum_size = Vector2(152, 40)
+custom_minimum_size = Vector2(160, 40)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1768.0
+offset_right = -1760.0
 offset_bottom = -1040.0
 grow_horizontal = 2
 grow_vertical = 2
