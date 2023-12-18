@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://0lvlbnj150ub"]
+
+[ext_resource type="PackedScene" uid="uid://6t532a6ecv3c" path="res://BookView/puzzle_pages/PuzzlePageTemplate.tscn" id="1_0613q"]
+[ext_resource type="PackedScene" uid="uid://caxqv7th87phd" path="res://BookView/puzzle_pages/puzzle_zones/castle1_zone0.tscn" id="2_52dn6"]
+
+[node name="PuzzlePageTemplate" instance=ExtResource("1_0613q")]
+
+[node name="Label" parent="VBoxContainer" index="0"]
+text = "Courtyard"
+
+[node name="PuzzleZone" parent="VBoxContainer/Control" index="0" instance=ExtResource("2_52dn6")]
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = -354.0
