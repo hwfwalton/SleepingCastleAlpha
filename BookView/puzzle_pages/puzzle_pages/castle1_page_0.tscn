@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://0lvlbnj150ub"]
+[gd_scene load_steps=5 format=3 uid="uid://0lvlbnj150ub"]
 
 [ext_resource type="PackedScene" uid="uid://6t532a6ecv3c" path="res://BookView/puzzle_pages/PuzzlePageTemplate.tscn" id="1_0613q"]
 [ext_resource type="PackedScene" uid="uid://caxqv7th87phd" path="res://BookView/puzzle_pages/puzzle_zones/castle1_zone0.tscn" id="2_52dn6"]
+[ext_resource type="PackedScene" uid="uid://biqkl32ph72sx" path="res://BookView/puzzle_pages/puzzle_zones/castle1_zone1.tscn" id="3_k2x8v"]
+[ext_resource type="PackedScene" uid="uid://c86wlaufytmxx" path="res://BookView/puzzle_pages/puzzle_zones/castle1_zone2.tscn" id="4_ss8pe"]
 
 [node name="PuzzlePageTemplate" instance=ExtResource("1_0613q")]
 
@@ -11,4 +13,26 @@ text = "Courtyard"
 [node name="PuzzleZone" parent="VBoxContainer/Control" index="0" instance=ExtResource("2_52dn6")]
 layout_mode = 1
 offset_right = 0.0
-offset_bottom = -354.0
+offset_bottom = -364.0
+
+[node name="PuzzleZone2" parent="VBoxContainer/Control" index="1" instance=ExtResource("3_k2x8v")]
+layout_mode = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_top = 359.0
+offset_right = 518.0
+offset_bottom = 543.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="PuzzleZone3" parent="VBoxContainer/Control" index="2" instance=ExtResource("4_ss8pe")]
+layout_mode = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_top = 543.0
+offset_right = 518.0
+offset_bottom = 727.0
+grow_horizontal = 1
+grow_vertical = 1

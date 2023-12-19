@@ -4,9 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://dnkda1q86p5fm" path="res://BookView/puzzle_pages/Portrait.tscn" id="2_ikgfu"]
 [ext_resource type="PackedScene" uid="uid://d0mqgq2xl7fvd" path="res://BookView/book_view_clue_slot.tscn" id="3_jbme5"]
 
-[node name="PuzzleZone" instance=ExtResource("1_v2teg")]
+[node name="castle1_zone_0" instance=ExtResource("1_v2teg")]
 custom_minimum_size = Vector2(518, 359)
 offset_bottom = -721.0
+puzzle_zone_id = "castle1_zone0"
 
 [node name="Portrait" parent="." index="1" instance=ExtResource("2_ikgfu")]
 layout_mode = 1
@@ -21,6 +22,7 @@ grow_horizontal = 1
 grow_vertical = 1
 required_clue_value = 7
 texture_resource_path = "res://assets/portraits/portrait.robert.png"
+metadata/_edit_lock_ = true
 
 [node name="BookViewClueSlot" parent="." index="2" instance=ExtResource("3_jbme5")]
 offset_left = 56.0
@@ -29,6 +31,7 @@ offset_right = 216.0
 offset_bottom = 248.0
 correct_clue_name_values = Array[int]([24])
 accepted_clue_types = Array[int]([0])
+metadata/_edit_lock_ = true
 
 [node name="BookViewClueSlot2" parent="." index="3" instance=ExtResource("3_jbme5")]
 offset_left = 56.0
@@ -37,3 +40,4 @@ offset_right = 216.0
 offset_bottom = 304.0
 correct_clue_name_values = Array[int]([7])
 accepted_clue_types = Array[int]([0])
+metadata/_edit_lock_ = true

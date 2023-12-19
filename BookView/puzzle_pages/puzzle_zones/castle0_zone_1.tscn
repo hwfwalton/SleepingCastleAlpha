@@ -4,9 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://d0mqgq2xl7fvd" path="res://BookView/book_view_clue_slot.tscn" id="2_g3ix4"]
 [ext_resource type="LabelSettings" uid="uid://fofavbwv757m" path="res://themes/book_view_puzzle_text.tres" id="2_i1aaw"]
 
-[node name="castle0_zone_0" instance=ExtResource("1_nip8b")]
+[node name="castle0_zone_1" instance=ExtResource("1_nip8b")]
 custom_minimum_size = Vector2(518, 369)
 offset_bottom = -711.0
+puzzle_zone_id = "castle0_zone_1"
 metadata/_edit_lock_ = true
 
 [node name="Panel" parent="." index="0"]
@@ -33,9 +34,9 @@ label_settings = ExtResource("2_i1aaw")
 autowrap_mode = 2
 
 [node name="BookViewClueSlot" parent="." index="3" instance=ExtResource("2_g3ix4")]
-offset_left = 47.0
+offset_left = 55.0
 offset_top = 112.0
-offset_right = 207.0
+offset_right = 215.0
 offset_bottom = 152.0
 correct_clue_name_values = Array[int]([5])
 accepted_clue_types = Array[int]([0])
