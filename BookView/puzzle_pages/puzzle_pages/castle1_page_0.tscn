@@ -1,38 +1,31 @@
 [gd_scene load_steps=5 format=3 uid="uid://0lvlbnj150ub"]
 
 [ext_resource type="PackedScene" uid="uid://6t532a6ecv3c" path="res://BookView/puzzle_pages/PuzzlePageTemplate.tscn" id="1_0613q"]
-[ext_resource type="PackedScene" uid="uid://caxqv7th87phd" path="res://BookView/puzzle_pages/puzzle_zones/castle1_zone0.tscn" id="2_52dn6"]
-[ext_resource type="PackedScene" uid="uid://biqkl32ph72sx" path="res://BookView/puzzle_pages/puzzle_zones/castle1_zone1.tscn" id="3_k2x8v"]
-[ext_resource type="PackedScene" uid="uid://c86wlaufytmxx" path="res://BookView/puzzle_pages/puzzle_zones/castle1_zone2.tscn" id="4_ss8pe"]
+[ext_resource type="PackedScene" uid="uid://caxqv7th87phd" path="res://BookView/puzzle_pages/puzzle_zones/castle1_zone_0.tscn" id="2_78t8c"]
+[ext_resource type="PackedScene" uid="uid://biqkl32ph72sx" path="res://BookView/puzzle_pages/puzzle_zones/castle1_zone_1.tscn" id="3_or3jn"]
+[ext_resource type="PackedScene" uid="uid://c86wlaufytmxx" path="res://BookView/puzzle_pages/puzzle_zones/castle1_zone_2.tscn" id="4_3ut28"]
 
 [node name="PuzzlePageTemplate" instance=ExtResource("1_0613q")]
 
 [node name="Label" parent="VBoxContainer" index="0"]
 text = "Courtyard"
 
-[node name="PuzzleZone" parent="VBoxContainer/Control" index="0" instance=ExtResource("2_52dn6")]
+[node name="castle1_zone_0" parent="VBoxContainer/Control" index="0" instance=ExtResource("2_78t8c")]
 layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_right = 0.0
 offset_bottom = -364.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="PuzzleZone2" parent="VBoxContainer/Control" index="1" instance=ExtResource("3_k2x8v")]
+[node name="castle1_zone_1" parent="VBoxContainer/Control" index="1" instance=ExtResource("3_or3jn")]
 layout_mode = 1
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
 offset_top = 359.0
-offset_right = 518.0
 offset_bottom = 543.0
-grow_horizontal = 1
-grow_vertical = 1
 
-[node name="PuzzleZone3" parent="VBoxContainer/Control" index="2" instance=ExtResource("4_ss8pe")]
+[node name="castle1_zone_2" parent="VBoxContainer/Control" index="2" instance=ExtResource("4_3ut28")]
 layout_mode = 1
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
 offset_top = 543.0
-offset_right = 518.0
 offset_bottom = 727.0
-grow_horizontal = 1
-grow_vertical = 1

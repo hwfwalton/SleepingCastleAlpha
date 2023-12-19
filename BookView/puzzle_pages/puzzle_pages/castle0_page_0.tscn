@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cd0qwo0augsda"]
 
 [ext_resource type="PackedScene" uid="uid://6t532a6ecv3c" path="res://BookView/puzzle_pages/PuzzlePageTemplate.tscn" id="1_infxr"]
-[ext_resource type="PackedScene" uid="uid://dlnh1myybxj05" path="res://BookView/puzzle_pages/puzzle_zones/castle0_zone_0.tscn" id="2_n5a5p"]
+[ext_resource type="PackedScene" uid="uid://cg87ujbn0m3qe" path="res://BookView/puzzle_pages/puzzle_zones/castle0_zone_0.tscn" id="2_n5a5p"]
 [ext_resource type="PackedScene" uid="uid://djd8c87t46qmd" path="res://BookView/puzzle_pages/puzzle_zones/castle0_zone_1.tscn" id="3_lh834"]
 
 [node name="PuzzlePageTemplate" instance=ExtResource("1_infxr")]
@@ -9,13 +9,10 @@
 [node name="Label" parent="VBoxContainer" index="0"]
 text = "Castle Entrance"
 
-[node name="PuzzleZone" parent="VBoxContainer/Control" index="0" instance=ExtResource("2_n5a5p")]
-layout_mode = 1
-offset_right = 0.0
-offset_bottom = -364.0
+[node name="castle0_zone_0" parent="VBoxContainer/Control" index="0" instance=ExtResource("2_n5a5p")]
+offset_bottom = 359.0
 
 [node name="PuzzleZone2" parent="VBoxContainer/Control" index="1" instance=ExtResource("3_lh834")]
 layout_mode = 1
-offset_top = 362.5
-offset_right = 0.0
-offset_bottom = -1.5
+offset_top = 359.0
+offset_bottom = 728.0
