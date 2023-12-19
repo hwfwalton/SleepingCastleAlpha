@@ -15,7 +15,7 @@ offset_left = 56.0
 offset_top = 40.0
 offset_right = 464.0
 offset_bottom = 168.0
-text = "My brother was frantic to get his son out of the castle before <clue_item  >   attacked."
+text = "My brother was frantic to get his son out of the castle before <clue_item>  attacked."
 label_settings = ExtResource("2_i1aaw")
 autowrap_mode = 2
 
@@ -25,14 +25,14 @@ offset_left = 56.0
 offset_top = 184.0
 offset_right = 456.0
 offset_bottom = 329.0
-text = "The castle is locked tight, but those who know <clueItemF> best have a secret passworkd to get in"
+text = "The castle is locked tight, but those who know  <clueItemF> best have a secret passworkd to get in"
 label_settings = ExtResource("2_i1aaw")
 autowrap_mode = 2
 
 [node name="BookViewClueSlot" parent="." index="3" instance=ExtResource("2_g3ix4")]
-offset_left = 55.0
+offset_left = 56.0
 offset_top = 112.0
-offset_right = 215.0
+offset_right = 200.0
 offset_bottom = 152.0
 correct_clue_name_values = Array[int]([5])
 accepted_clue_types = Array[int]([0])
@@ -40,7 +40,7 @@ accepted_clue_types = Array[int]([0])
 [node name="BookViewClueSlot2" parent="." index="4" instance=ExtResource("2_g3ix4")]
 offset_left = 255.0
 offset_top = 219.0
-offset_right = 415.0
+offset_right = 399.0
 offset_bottom = 259.0
 correct_clue_name_values = Array[int]([3])
 accepted_clue_types = Array[int]([0])

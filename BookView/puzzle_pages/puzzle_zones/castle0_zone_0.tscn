@@ -35,33 +35,33 @@ required_clue_value = 6
 texture_resource_path = "res://assets/portraits/portrait.philip1216.png"
 
 [node name="ClueSlot_Albert" parent="." index="3" instance=ExtResource("2_2rq4j")]
-offset_left = 56.0
+offset_left = 64.0
 offset_top = 208.0
-offset_right = 216.0
+offset_right = 208.0
 offset_bottom = 248.0
 correct_clue_name_values = Array[int]([1])
 accepted_clue_types = Array[int]([0])
 
 [node name="ClueSlot_Glover" parent="." index="4" instance=ExtResource("2_2rq4j")]
-offset_left = 56.0
+offset_left = 64.0
 offset_top = 264.0
-offset_right = 216.0
+offset_right = 208.0
 offset_bottom = 304.0
 correct_clue_name_values = Array[int]([29])
 accepted_clue_types = Array[int]([0])
 
 [node name="ClueSlot_Philip" parent="." index="5" instance=ExtResource("2_2rq4j")]
-offset_left = 296.0
+offset_left = 304.0
 offset_top = 208.0
-offset_right = 456.0
+offset_right = 448.0
 offset_bottom = 248.0
 correct_clue_name_values = Array[int]([22])
 accepted_clue_types = Array[int]([0])
 
 [node name="ClueSlot_Lansing" parent="." index="6" instance=ExtResource("2_2rq4j")]
-offset_left = 296.0
+offset_left = 304.0
 offset_top = 264.0
-offset_right = 456.0
+offset_right = 448.0
 offset_bottom = 304.0
 correct_clue_name_values = Array[int]([18])
 accepted_clue_types = Array[int]([0])

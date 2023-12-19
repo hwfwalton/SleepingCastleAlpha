@@ -22,22 +22,19 @@ grow_horizontal = 1
 grow_vertical = 1
 required_clue_value = 7
 texture_resource_path = "res://assets/portraits/portrait.robert.png"
-metadata/_edit_lock_ = true
 
 [node name="BookViewClueSlot" parent="." index="2" instance=ExtResource("3_q6lpl")]
-offset_left = 56.0
+offset_left = 64.0
 offset_top = 208.0
-offset_right = 216.0
+offset_right = 208.0
 offset_bottom = 248.0
 correct_clue_name_values = Array[int]([24])
 accepted_clue_types = Array[int]([0])
-metadata/_edit_lock_ = true
 
 [node name="BookViewClueSlot2" parent="." index="3" instance=ExtResource("3_q6lpl")]
-offset_left = 56.0
+offset_left = 64.0
 offset_top = 264.0
-offset_right = 216.0
+offset_right = 208.0
 offset_bottom = 304.0
 correct_clue_name_values = Array[int]([7])
 accepted_clue_types = Array[int]([0])
-metadata/_edit_lock_ = true
