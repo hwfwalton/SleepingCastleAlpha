@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dv4lqeidsuem1"]
+
+[ext_resource type="PackedScene" uid="uid://6t532a6ecv3c" path="res://BookView/puzzle_pages/PuzzlePageTemplate.tscn" id="1_kkl1c"]
+[ext_resource type="PackedScene" uid="uid://bducuc4q7klmp" path="res://BookView/puzzle_pages/puzzle_zones/guardroom_zone_0.tscn" id="2_1f2q7"]
+
+[node name="guardroom_page_0" instance=ExtResource("1_kkl1c")]
+
+[node name="guardroom_zone_0" parent="VBoxContainer/Control" index="0" instance=ExtResource("2_1f2q7")]
