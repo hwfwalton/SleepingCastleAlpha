@@ -1,8 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://dv4lqeidsuem1"]
+[gd_scene load_steps=4 format=3 uid="uid://dv4lqeidsuem1"]
 
 [ext_resource type="PackedScene" uid="uid://6t532a6ecv3c" path="res://BookView/puzzle_pages/PuzzlePageTemplate.tscn" id="1_kkl1c"]
 [ext_resource type="PackedScene" uid="uid://bducuc4q7klmp" path="res://BookView/puzzle_pages/puzzle_zones/guardroom_zone_0.tscn" id="2_1f2q7"]
+[ext_resource type="PackedScene" uid="uid://b2xqsju8mfsrl" path="res://BookView/puzzle_pages/puzzle_zones/guardroom_zone_1.tscn" id="3_x8xrr"]
 
 [node name="guardroom_page_0" instance=ExtResource("1_kkl1c")]
 
+[node name="Label" parent="VBoxContainer" index="0"]
+text = "Guardroom"
+
 [node name="guardroom_zone_0" parent="VBoxContainer/Control" index="0" instance=ExtResource("2_1f2q7")]
+offset_bottom = 304.0
+
+[node name="guardroom_zone_1" parent="VBoxContainer/Control" index="1" instance=ExtResource("3_x8xrr")]
+offset_top = 304.0
+offset_bottom = 722.0
