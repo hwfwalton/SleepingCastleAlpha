@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://biqkl32ph72sx" path="res://BookView/puzzle_pages/puzzle_zones/castle1_zone_1.tscn" id="3_or3jn"]
 [ext_resource type="PackedScene" uid="uid://c86wlaufytmxx" path="res://BookView/puzzle_pages/puzzle_zones/castle1_zone_2.tscn" id="4_3ut28"]
 
-[node name="PuzzlePageTemplate" instance=ExtResource("1_0613q")]
+[node name="castle1_page_0" instance=ExtResource("1_0613q")]
 
 [node name="Label" parent="VBoxContainer" index="0"]
 text = "Courtyard"

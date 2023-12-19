@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cg87ujbn0m3qe" path="res://BookView/puzzle_pages/puzzle_zones/castle0_zone_0.tscn" id="2_n5a5p"]
 [ext_resource type="PackedScene" uid="uid://djd8c87t46qmd" path="res://BookView/puzzle_pages/puzzle_zones/castle0_zone_1.tscn" id="3_lh834"]
 
-[node name="PuzzlePageTemplate" instance=ExtResource("1_infxr")]
+[node name="castle0_page_0" instance=ExtResource("1_infxr")]
 
 [node name="Label" parent="VBoxContainer" index="0"]
 text = "Castle Entrance"
