@@ -38,3 +38,6 @@ offset_right = 160.0
 offset_bottom = 40.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[connection signal="draw" from="BookViewClueSlotCollider" to="BookViewClueSlotCollider" method="_on_draw"]
+[connection signal="hidden" from="BookViewClueSlotCollider" to="BookViewClueSlotCollider" method="_on_hidden"]
