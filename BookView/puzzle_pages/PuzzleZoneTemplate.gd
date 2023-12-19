@@ -10,7 +10,6 @@ var portrait_nodes: Array = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(panel_node.theme_type_variation)
 	#clue_slots = _get_clue_slots() as Array[BookViewClueSlot]
 	clue_slots = get_children().filter(func(node: Node):
 		return node.is_in_group("clue_slot")
@@ -35,7 +34,6 @@ func _on_clue_slot_clue_submitted(found_clue_item: FoundClueItem, slot_name: Str
 func _rerender_with_state_from_cache():
 	var cached_slot_items = player_state.getSlotValuesForPuzzleZone(puzzle_zone_id)
 	clue_slots.map(func(clue_slot: BookViewClueSlot):
-		print(clue_slot.name)
 		var cached_item = cached_slot_items.get(clue_slot.name, null)
 		clue_slot.updateFoundClue(cached_item)
 	)
