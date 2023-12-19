@@ -17,6 +17,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_qo7gd")
 player_state = ExtResource("2_dv4bw")
+metadata/_edit_lock_ = true
 
 [node name="BookViewSubViewportContainer" type="SubViewportContainer" parent="."]
 layout_mode = 1
@@ -27,6 +28,7 @@ grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 0
 stretch = true
+metadata/_edit_lock_ = true
 
 [node name="SubViewport" type="SubViewport" parent="BookViewSubViewportContainer"]
 transparent_bg = true
