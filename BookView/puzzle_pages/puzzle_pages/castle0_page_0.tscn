@@ -12,7 +12,7 @@ text = "Castle Entrance"
 [node name="PuzzleZone" parent="VBoxContainer/Control" index="0" instance=ExtResource("2_n5a5p")]
 layout_mode = 1
 offset_right = 0.0
-offset_bottom = -369.0
+offset_bottom = -364.0
 
 [node name="PuzzleZone2" parent="VBoxContainer/Control" index="1" instance=ExtResource("3_lh834")]
 layout_mode = 1

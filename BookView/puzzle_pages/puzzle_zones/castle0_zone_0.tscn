@@ -5,25 +5,30 @@
 [ext_resource type="PackedScene" uid="uid://dnkda1q86p5fm" path="res://BookView/puzzle_pages/Portrait.tscn" id="3_2d3vv"]
 
 [node name="castle0_zone_0" instance=ExtResource("1_4u7w8")]
-custom_minimum_size = Vector2(518, 369)
-offset_bottom = -711.0
+custom_minimum_size = Vector2(518, 359)
+offset_bottom = -721.0
 puzzle_zone_id = "castle0_zone_0"
 
 [node name="Portrait_Albert" parent="." index="1" instance=ExtResource("3_2d3vv")]
 layout_mode = 1
-offset_left = 64.0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 68.0
 offset_top = 32.0
-offset_right = -318.0
-offset_bottom = -177.0
+offset_right = 204.0
+offset_bottom = 182.0
+grow_horizontal = 1
+grow_vertical = 1
 mouse_filter = 2
 required_clue_value = 1
 texture_resource_path = "res://assets/portraits/portrait.albert.png"
 
 [node name="Portrait_Philip" parent="." index="2" instance=ExtResource("3_2d3vv")]
 layout_mode = 1
-offset_left = 312.0
+offset_left = 308.0
 offset_top = 32.0
-offset_right = -70.0
+offset_right = -74.0
 offset_bottom = -177.0
 mouse_filter = 2
 required_clue_value = 6
@@ -32,21 +37,21 @@ texture_resource_path = "res://assets/portraits/portrait.philip1216.png"
 [node name="ClueSlot_Albert" parent="." index="3" instance=ExtResource("2_2rq4j")]
 offset_left = 56.0
 offset_top = 208.0
-offset_right = 208.0
+offset_right = 216.0
 offset_bottom = 248.0
 correct_clue_name_values = Array[int]([1])
 accepted_clue_types = Array[int]([0])
 
 [node name="ClueSlot_Glover" parent="." index="4" instance=ExtResource("2_2rq4j")]
 offset_left = 56.0
-offset_top = 259.0
-offset_right = 208.0
-offset_bottom = 299.0
+offset_top = 264.0
+offset_right = 216.0
+offset_bottom = 304.0
 correct_clue_name_values = Array[int]([29])
 accepted_clue_types = Array[int]([0])
 
 [node name="ClueSlot_Philip" parent="." index="5" instance=ExtResource("2_2rq4j")]
-offset_left = 304.0
+offset_left = 296.0
 offset_top = 208.0
 offset_right = 456.0
 offset_bottom = 248.0
@@ -54,7 +59,7 @@ correct_clue_name_values = Array[int]([22])
 accepted_clue_types = Array[int]([0])
 
 [node name="ClueSlot_Lansing" parent="." index="6" instance=ExtResource("2_2rq4j")]
-offset_left = 304.0
+offset_left = 296.0
 offset_top = 259.0
 offset_right = 456.0
 offset_bottom = 299.0

@@ -5,7 +5,7 @@
 [ext_resource type="LabelSettings" uid="uid://fofavbwv757m" path="res://themes/book_view_puzzle_text.tres" id="2_i1aaw"]
 
 [node name="castle0_zone_0" instance=ExtResource("1_nip8b")]
-custom_minimum_size = Vector2(518, 359)
+custom_minimum_size = Vector2(518, 369)
 offset_bottom = -711.0
 metadata/_edit_lock_ = true
 
