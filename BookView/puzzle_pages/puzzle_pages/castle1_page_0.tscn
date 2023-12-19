@@ -16,14 +16,14 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = 0.0
-offset_bottom = -364.0
+offset_bottom = -419.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="castle1_zone_1" parent="VBoxContainer/Control" index="1" instance=ExtResource("3_or3jn")]
 layout_mode = 1
-offset_top = 359.0
-offset_bottom = 543.0
+offset_top = 334.0
+offset_bottom = 518.0
 
 [node name="castle1_zone_2" parent="VBoxContainer/Control" index="2" instance=ExtResource("4_3ut28")]
 layout_mode = 1

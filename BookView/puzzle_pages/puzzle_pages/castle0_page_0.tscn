@@ -10,7 +10,6 @@
 text = "Castle Entrance"
 
 [node name="castle0_zone_0" parent="VBoxContainer/Control" index="0" instance=ExtResource("2_n5a5p")]
-offset_bottom = 359.0
 
 [node name="castle0_zone_1" parent="VBoxContainer/Control" index="1" instance=ExtResource("3_lh834")]
 layout_mode = 1
