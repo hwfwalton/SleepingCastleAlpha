@@ -31,10 +31,10 @@ container_name = "castle1/robert"
 
 [node name="ArtifactSparkle_Carriage" parent="." index="3" instance=ExtResource("5_g5opu")]
 layout_mode = 0
-offset_left = 320.0
-offset_top = 816.0
-offset_right = 384.0
-offset_bottom = 880.0
+offset_left = 432.0
+offset_top = 888.0
+offset_right = 496.0
+offset_bottom = 952.0
 tooltip_text = "Carriage"
 artifact_name = "castle1/carriage"
 
@@ -58,10 +58,10 @@ artifact_name = "castle1/footprints"
 
 [node name="NavSparkle2" parent="." index="6" instance=ExtResource("4_hi8sc")]
 layout_mode = 0
-offset_left = 584.0
-offset_top = 800.0
-offset_right = 648.0
-offset_bottom = 864.0
+offset_left = 1240.0
+offset_top = 952.0
+offset_right = 1304.0
+offset_bottom = 1016.0
 tooltip_text = "Stables"
 nav_destination_name = "stables"
 
@@ -73,3 +73,11 @@ offset_right = 192.0
 offset_bottom = 912.0
 tooltip_text = "Guard quarters"
 nav_destination_name = "guardroom"
+
+[node name="ContainerSparkle_Windows" parent="." index="8" instance=ExtResource("4_l7g4q")]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 776.0
+offset_right = 448.0
+offset_bottom = 840.0
+container_name = "castle1/windows"

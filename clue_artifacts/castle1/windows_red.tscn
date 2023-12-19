@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2o5ytdvmwr71"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_f6g1y"]
+[ext_resource type="Texture2D" uid="uid://dgfqsuu3u20du" path="res://assets/clues/clue.window1.png" id="2_akjkw"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_f6g1y")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_akjkw")
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "A young girl with red-stained hands"
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = ""

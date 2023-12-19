@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://iamydh12mpqf"]
+
+[ext_resource type="PackedScene" uid="uid://dua8h0obvspql" path="res://clue_containers/ClueContainerTemplate.tscn" id="1_7x38n"]
+[ext_resource type="Texture2D" uid="uid://dgfqsuu3u20du" path="res://assets/clues/clue.window1.png" id="2_h36wm"]
+[ext_resource type="Texture2D" uid="uid://cet18ukdew6rm" path="res://assets/clues/clue.window2.png" id="3_d72at"]
+[ext_resource type="Texture2D" uid="uid://chmdupnrkqg8w" path="res://assets/clues/clue.window3.png" id="4_86y7v"]
+[ext_resource type="Texture2D" uid="uid://cck8qmfwcumnx" path="res://assets/clues/clue.window4.png" id="5_sn732"]
+[ext_resource type="PackedScene" uid="uid://no2lghy85xom" path="res://world_items/artifact_sparkle.tscn" id="6_io3im"]
+
+[node name="ClueContainerTemplate" instance=ExtResource("1_7x38n")]
+
+[node name="Clue_window1" type="Sprite2D" parent="." index="1"]
+position = Vector2(264, 544)
+scale = Vector2(0.502447, 0.502447)
+texture = ExtResource("2_h36wm")
+
+[node name="Clue_window2" type="Sprite2D" parent="." index="2"]
+position = Vector2(571, 544)
+scale = Vector2(0.502, 0.502)
+texture = ExtResource("3_d72at")
+
+[node name="Clue_window3" type="Sprite2D" parent="." index="3"]
+position = Vector2(886, 544)
+scale = Vector2(0.502, 0.502)
+texture = ExtResource("4_86y7v")
+
+[node name="Clue_window4" type="Sprite2D" parent="." index="4"]
+position = Vector2(1197, 544)
+scale = Vector2(0.502, 0.502)
+texture = ExtResource("5_sn732")
+
+[node name="ArtifactSparkle" parent="." index="5" instance=ExtResource("6_io3im")]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 736.0
+offset_right = 304.0
+offset_bottom = 800.0
+artifact_name = "castle1/windows_red"
+
+[node name="ArtifactSparkle2" parent="." index="6" instance=ExtResource("6_io3im")]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 736.0
+offset_right = 624.0
+offset_bottom = 800.0
+
+[node name="ArtifactSparkle3" parent="." index="7" instance=ExtResource("6_io3im")]
+layout_mode = 0
+offset_left = 856.0
+offset_top = 736.0
+offset_right = 920.0
+offset_bottom = 800.0
+
+[node name="ArtifactSparkle4" parent="." index="8" instance=ExtResource("6_io3im")]
+layout_mode = 0
+offset_left = 1168.0
+offset_top = 736.0
+offset_right = 1232.0
+offset_bottom = 800.0
