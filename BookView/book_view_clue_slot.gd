@@ -4,6 +4,8 @@ signal clue_submitted(found_clue_item: FoundClueItem, slot_name: String)
 var found_clue_item: FoundClueItem
 @onready var clue_slot_collider = $BookViewClueSlotCollider
 @onready var book_view_clue_item: BookViewClueItem = $BookViewClueItem
+@onready var clue_item_color_rect = $BookViewClueItem/ColorRect
+
 @export var correct_clue_name_values: Array[ClueItem.CLUE_NAME] = []
 @export var correct_clue_symbol_values: Array[ClueItem.CLUE_SYMBOL] = []
 @export var accepted_clue_types: Array[ClueItem.CLUE_TYPE] = []
@@ -12,7 +14,7 @@ var found_clue_item: FoundClueItem
 func _ready():
 	clue_slot_collider.clue_submitted.connect(_on_book_view_clue_slot_found_clue_submitted)
 	updateFoundClue(found_clue_item)
-
+	_update_slot_color_for_accepted_types()
 
 
 func _process(delta):
@@ -21,6 +23,12 @@ func _process(delta):
 	else: 
 		# Reset to default when not dragging
 		modulate = Color.WHITE
+
+func _update_slot_color_for_accepted_types():
+	if accepted_clue_types.size() == 1:
+		clue_item_color_rect.color = ClueItem.clue_type_colors.get(accepted_clue_types[0])
+	elif (accepted_clue_types.size() == 2):
+		clue_item_color_rect.color = ClueItem.clue_type_colors.get("BOTH")
 
 
 func _on_book_view_clue_slot_found_clue_submitted(g_found_clue_item):

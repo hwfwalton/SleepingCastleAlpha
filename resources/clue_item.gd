@@ -25,6 +25,12 @@ enum CLUE_FACE {
 	ALBERT, ALYSSA, FONTAINE, GILDEROY, LEONA, PHILIP, ROBERT, TOM,
 }
 
+static var clue_type_colors = {
+	CLUE_TYPE.NAME: Color.html("#9BB7DF"),
+	CLUE_TYPE.SYMBOL: Color.html("#C77DBF"),
+	"BOTH": Color.html("#9179B4"),
+}
+
 var clue_name_display_names = {
 	CLUE_NAME.ALBERT: "Albert",
 	CLUE_NAME.ALYSSA: "Alyssa",

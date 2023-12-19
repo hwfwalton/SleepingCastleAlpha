@@ -16,6 +16,7 @@ func _ready():
 
 func updateLabel():
 	if (found_clue_item):
+		color_rect.color = ClueItem.clue_type_colors.get(found_clue_item.clue_item.type)
 		if (found_clue_item.clue_item.type == ClueItem.CLUE_TYPE.NAME):
 			item_label_value = found_clue_item.clue_item.getClueNameDisplayValue()
 		elif (found_clue_item.clue_item.type == ClueItem.CLUE_TYPE.SYMBOL):
