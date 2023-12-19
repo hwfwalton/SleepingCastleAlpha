@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dppvl8up7h4br"]
+[gd_scene load_steps=8 format=3 uid="uid://dppvl8up7h4br"]
 
 [ext_resource type="Texture2D" uid="uid://dq4h7g2625nft" path="res://assets/booknobackground.svg" id="1_84uaa"]
 [ext_resource type="Script" path="res://BookView/book_view.gd" id="1_qo7gd"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://civmffyad70rv" path="res://assets/close_128.png" id="3_5nm8o"]
 [ext_resource type="PackedScene" uid="uid://cd0qwo0augsda" path="res://BookView/puzzle_pages/puzzle_pages/castle0_page_0.tscn" id="4_rpv8k"]
 [ext_resource type="PackedScene" uid="uid://0lvlbnj150ub" path="res://BookView/puzzle_pages/puzzle_pages/castle1_page_0.tscn" id="5_ppxmw"]
+[ext_resource type="PackedScene" uid="uid://b81tumioqdgjl" path="res://BookView/puzzle_pages/puzzle_pages/stables_page0.tscn" id="6_bijfd"]
 
 [node name="BookView" type="Control"]
 layout_mode = 3
@@ -132,6 +133,10 @@ theme_type_variation = &"ClearPanel"
 layout_mode = 2
 
 [node name="Courtyard" parent="BookViewSubViewportContainer/SubViewport/BookPort/PagesContainer/RightBookMargin/TabContainer_Puzzles" instance=ExtResource("5_ppxmw")]
+visible = false
+layout_mode = 2
+
+[node name="Stables" parent="BookViewSubViewportContainer/SubViewport/BookPort/PagesContainer/RightBookMargin/TabContainer_Puzzles" instance=ExtResource("6_bijfd")]
 visible = false
 layout_mode = 2
 

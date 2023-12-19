@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlnh1myybxj05"]
+
+[ext_resource type="PackedScene" uid="uid://duj8c10cix6c" path="res://BookView/puzzle_pages/PuzzleZoneTemplate.tscn" id="1_lckb4"]
+[ext_resource type="PackedScene" uid="uid://dnkda1q86p5fm" path="res://BookView/puzzle_pages/Portrait.tscn" id="2_w2v0j"]
+[ext_resource type="PackedScene" uid="uid://d0mqgq2xl7fvd" path="res://BookView/book_view_clue_slot.tscn" id="3_u44ev"]
+
+[node name="stables_zone_0" instance=ExtResource("1_lckb4")]
+custom_minimum_size = Vector2(518, 359)
+offset_bottom = -721.0
+puzzle_zone_id = "stables_zone_0"
+
+[node name="Portrait_Alyssa" parent="." index="1" instance=ExtResource("2_w2v0j")]
+layout_mode = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 68.0
+offset_top = 32.0
+offset_right = 204.0
+offset_bottom = 182.0
+grow_horizontal = 1
+grow_vertical = 1
+mouse_filter = 2
+required_clue_value = 2
+texture_resource_path = "res://assets/portraits/portrait.albert.png"
+
+[node name="Portrait_Tom" parent="." index="2" instance=ExtResource("2_w2v0j")]
+layout_mode = 1
+offset_left = 308.0
+offset_top = 32.0
+offset_right = -74.0
+offset_bottom = -177.0
+mouse_filter = 2
+required_clue_value = 8
+texture_resource_path = "res://assets/portraits/portrait.philip1216.png"
+
+[node name="ClueSlot_Alyssa" parent="." index="3" instance=ExtResource("3_u44ev")]
+offset_left = 64.0
+offset_top = 208.0
+offset_right = 208.0
+offset_bottom = 248.0
+correct_clue_name_values = Array[int]([2])
+accepted_clue_types = Array[int]([0])
+
+[node name="ClueSlot_Warmblood" parent="." index="4" instance=ExtResource("3_u44ev")]
+offset_left = 64.0
+offset_top = 264.0
+offset_right = 208.0
+offset_bottom = 304.0
+correct_clue_name_values = Array[int]([31])
+accepted_clue_types = Array[int]([0])
+
+[node name="ClueSlot_Tom" parent="." index="5" instance=ExtResource("3_u44ev")]
+offset_left = 304.0
+offset_top = 208.0
+offset_right = 448.0
+offset_bottom = 248.0
+correct_clue_name_values = Array[int]([26])
+accepted_clue_types = Array[int]([0])
+
+[node name="ClueSlot_Culpepper" parent="." index="6" instance=ExtResource("3_u44ev")]
+offset_left = 304.0
+offset_top = 264.0
+offset_right = 448.0
+offset_bottom = 304.0
+correct_clue_name_values = Array[int]([6])
+accepted_clue_types = Array[int]([0])
