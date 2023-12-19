@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbxyf7txivy3j"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_tliw6"]
+[ext_resource type="Texture2D" uid="uid://cck8qmfwcumnx" path="res://assets/clues/clue.window4.png" id="2_fuflk"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_tliw6")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_fuflk")
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "A woman welcomes her baby"
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = ""

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://pplr5qg0hfmk"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_iujqm"]
+[ext_resource type="Texture2D" uid="uid://chmdupnrkqg8w" path="res://assets/clues/clue.window3.png" id="2_fslat"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_iujqm")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_fslat")
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "The window is broken... It doesn't look like a way in"
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = ""
