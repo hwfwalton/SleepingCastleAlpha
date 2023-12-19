@@ -5,10 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://d3tc64mctqeyy" path="res://BookView/book_view_clue_item.tscn" id="3_3hknp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rqjxy"]
-size = Vector2(160, 40)
+size = Vector2(144, 40)
 
 [node name="BookViewClueSlot" type="Control" groups=["clue_slot"]]
-custom_minimum_size = Vector2(160, 40)
+custom_minimum_size = Vector2(144, 40)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -17,16 +17,16 @@ mouse_filter = 2
 script = ExtResource("1_0kqaq")
 
 [node name="BookViewClueSlotCollider" type="StaticBody2D" parent="." groups=["droppable"]]
-position = Vector2(80, 20)
+position = Vector2(72, 20)
 script = ExtResource("2_jw3ni")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BookViewClueSlotCollider"]
 shape = SubResource("RectangleShape2D_rqjxy")
 
 [node name="ColorRect" type="ColorRect" parent="BookViewClueSlotCollider"]
-offset_left = -80.0
+offset_left = -72.0
 offset_top = -20.0
-offset_right = 80.0
+offset_right = 72.0
 offset_bottom = 20.0
 
 [node name="BookViewClueItem" parent="." instance=ExtResource("3_3hknp")]
@@ -34,7 +34,7 @@ layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_right = 160.0
+offset_right = 144.0
 offset_bottom = 40.0
 grow_horizontal = 1
 grow_vertical = 1
