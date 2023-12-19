@@ -18,7 +18,7 @@ offset_left = 56.0
 offset_top = 40.0
 offset_right = 464.0
 offset_bottom = 168.0
-text = "My brother was frantic to get his children out of the castle before <clue_item  > attacked."
+text = "My brother was frantic to get his son out of the castle before <clue_item  >   attacked."
 label_settings = ExtResource("2_i1aaw")
 autowrap_mode = 2
 

@@ -43,6 +43,7 @@ offset_left = 560.0
 offset_top = 736.0
 offset_right = 624.0
 offset_bottom = 800.0
+artifact_name = "castle1/windows_horse"
 
 [node name="ArtifactSparkle3" parent="." index="7" instance=ExtResource("6_io3im")]
 layout_mode = 0
@@ -50,6 +51,7 @@ offset_left = 856.0
 offset_top = 736.0
 offset_right = 920.0
 offset_bottom = 800.0
+artifact_name = "castle1/windows_heart"
 
 [node name="ArtifactSparkle4" parent="." index="8" instance=ExtResource("6_io3im")]
 layout_mode = 0
@@ -57,3 +59,4 @@ offset_left = 1168.0
 offset_top = 736.0
 offset_right = 1232.0
 offset_bottom = 800.0
+artifact_name = "castle1/windows_baby"

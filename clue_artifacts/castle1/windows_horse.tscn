@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7gtv4wdwdg3t"]
+
+[ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_vf5di"]
+[ext_resource type="Texture2D" uid="uid://cet18ukdew6rm" path="res://assets/clues/clue.window2.png" id="2_26re1"]
+
+[node name="ArtifactViewTemplate" instance=ExtResource("1_vf5di")]
+
+[node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
+texture = ExtResource("2_26re1")
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "A young woman rides her horse"
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = ""
