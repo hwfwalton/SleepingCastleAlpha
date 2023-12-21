@@ -22,10 +22,10 @@ nav_destination_name = "castle0"
 
 [node name="ContainerSparkle_Robert" parent="." index="2" instance=ExtResource("4_l7g4q")]
 layout_mode = 0
-offset_left = 704.0
-offset_top = 848.0
-offset_right = 768.0
-offset_bottom = 912.0
+offset_left = 728.0
+offset_top = 912.0
+offset_right = 792.0
+offset_bottom = 976.0
 tooltip_text = "Man and horse"
 container_name = "castle1/robert"
 
@@ -81,3 +81,11 @@ offset_top = 776.0
 offset_right = 448.0
 offset_bottom = 840.0
 container_name = "castle1/windows"
+
+[node name="ArtifactSparkle_FinalDoor" parent="." index="9" instance=ExtResource("5_g5opu")]
+layout_mode = 0
+offset_left = 584.0
+offset_top = 784.0
+offset_right = 648.0
+offset_bottom = 848.0
+alt_icon_resource_path = "res://assets/dooricon.png"
