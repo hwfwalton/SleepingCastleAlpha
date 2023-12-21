@@ -31,7 +31,7 @@ static var clue_type_colors = {
 	"BOTH": Color.html("#9179B4"),
 }
 
-var clue_name_display_names = {
+var clue_name_display_text = {
 	CLUE_NAME.ALBERT: "Albert",
 	CLUE_NAME.ALYSSA: "Alyssa",
 	CLUE_NAME.AURORA: "Aurora",
@@ -64,6 +64,54 @@ var clue_name_display_names = {
 	CLUE_NAME.HARDIN: "Hardin",
 	CLUE_NAME.WARMBLOOD: "Warmblood",
 	CLUE_NAME.NONE: "NON_NAME_TYPE_CLUE",
+}
+
+var clue_symbol_display_text = {
+	CLUE_SYMBOL.APPLE: "Apple",
+	CLUE_SYMBOL.BROWN_HORSE: "Brown horse",
+	CLUE_SYMBOL.CLOCK_0: "Clock 0",
+	CLUE_SYMBOL.CLOCK_10: "Clock 10",
+	CLUE_SYMBOL.CLOCK_12: "Clock 12",
+	CLUE_SYMBOL.CLOCK_2: "Clock 2",
+	CLUE_SYMBOL.CLOCK_4: "Clock 4",
+	CLUE_SYMBOL.CLOCK_6: "Clock 6",
+	CLUE_SYMBOL.CLOCK_8: "Clock 8",
+	CLUE_SYMBOL.DRIFTWOOD: "Driftwood",
+	CLUE_SYMBOL.FIRE: "Fire",
+	CLUE_SYMBOL.FISH: "Fish",
+	CLUE_SYMBOL.GOLD: "Gold",
+	CLUE_SYMBOL.HEART: "Heart",
+	CLUE_SYMBOL.LARGE_BLACK_HORSE: "Large black horse",
+	CLUE_SYMBOL.LIGHTNING_BOLT: "Lightning bolt",
+	CLUE_SYMBOL.LUTE: "Lute",
+	CLUE_SYMBOL.MOON: "Moon",
+	CLUE_SYMBOL.RAIN: "Rain",
+	CLUE_SYMBOL.RED_HORSE: "Red horse",
+	CLUE_SYMBOL.ROSE: "Rose",
+	CLUE_SYMBOL.ROSE_SIGIL: "Rose sigil",
+	CLUE_SYMBOL.RUBY: "Ruby",
+	CLUE_SYMBOL.SMALL_BLACK_HORSE: "Small black horse",
+	CLUE_SYMBOL.SMOKE: "Smoke",
+	CLUE_SYMBOL.SMOKING_SKULL: "Smoking skull",
+	CLUE_SYMBOL.STABLED_WHITE_HORSE: "Stabled white horse",
+	CLUE_SYMBOL.SUGAR_CUBE: "Sugar cube",
+	CLUE_SYMBOL.SUNRISE: "Sunrise",
+	CLUE_SYMBOL.SUNSET: "Sunset",
+	CLUE_SYMBOL.WHITE_HORSE: "White horse",
+	CLUE_SYMBOL.RASPBERRY: "Raspberry",
+	CLUE_SYMBOL.STRAWBERRY: "Strawberry",
+	CLUE_SYMBOL.NONE: "Non symbol type clue",
+}
+
+var clue_face_display_text = {
+	CLUE_FACE.ALBERT: "Albert",
+	CLUE_FACE.ALYSSA: "Alyssa",
+	CLUE_FACE.FONTAINE: "Fontaine",
+	CLUE_FACE.GILDEROY: "Gilderoy",
+	CLUE_FACE.LEONA: "Leona",
+	CLUE_FACE.PHILIP: "Philip",
+	CLUE_FACE.ROBERT: "Robert",
+	CLUE_FACE.TOM: "Tom",
 }
 
 var clue_symbol_resource_paths = {
@@ -103,6 +151,7 @@ var clue_symbol_resource_paths = {
 	CLUE_SYMBOL.NONE: "NON_SYMBOL_TYPE_CLUE"
 }
 
+
 var type: CLUE_TYPE
 var value: String
 var name_value: CLUE_NAME
@@ -121,8 +170,14 @@ func _init(
 	face_value = clue_face_value
 	#value = clue_value
 
-func getClueNameDisplayValue():
-	return clue_name_display_names.get(name_value)
+func getClueDisplayText():
+	if (type == ClueItem.CLUE_TYPE.NAME):
+		return clue_name_display_text.get(name_value)
+	elif (type == ClueItem.CLUE_TYPE.SYMBOL):
+		return clue_symbol_display_text.get(symbol_value)
+	elif (type == ClueItem.CLUE_TYPE.FACE):
+		return clue_face_display_text.get(face_value)
+	return 
 	#return clue_name_display_names[name_value]
 
 func getClueSymbolResourcePath():
@@ -131,7 +186,7 @@ func getClueSymbolResourcePath():
 
 func getClueDebugValue():
 	if (type == ClueItem.CLUE_TYPE.NAME):
-		return getClueNameDisplayValue()
+		return getClueDisplayText()
 	elif (type == ClueItem.CLUE_TYPE.SYMBOL):
 		return getClueSymbolResourcePath()
 	elif (type == ClueItem.CLUE_TYPE.FACE):
@@ -148,3 +203,4 @@ func isSameClue(clue_item_to_compare: ClueItem):
 		return symbol_value == clue_item_to_compare.symbol_value
 	elif (type == ClueItem.CLUE_TYPE.FACE):
 		return face_value == clue_item_to_compare.face_value
+
