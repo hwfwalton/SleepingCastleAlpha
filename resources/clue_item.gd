@@ -100,7 +100,7 @@ var clue_symbol_display_text = {
 	CLUE_SYMBOL.SMOKE: "Smoke",
 	CLUE_SYMBOL.SMOKING_SKULL: "Smoking skull",
 	CLUE_SYMBOL.STABLED_WHITE_HORSE: "Stabled white horse",
-	CLUE_SYMBOL.SUGAR_CUBE: "Sugar cube",
+	CLUE_SYMBOL.SUGAR_CUBE: "Sugar cubes",
 	CLUE_SYMBOL.SUNRISE: "Sunrise",
 	CLUE_SYMBOL.SUNSET: "Sunset",
 	CLUE_SYMBOL.WHITE_HORSE: "White horse",

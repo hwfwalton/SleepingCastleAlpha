@@ -1,62 +1,62 @@
-[gd_scene load_steps=4 format=3 uid="uid://biqkl32ph72sx"]
+[gd_scene load_steps=5 format=3 uid="uid://biqkl32ph72sx"]
 
 [ext_resource type="PackedScene" uid="uid://duj8c10cix6c" path="res://BookView/puzzle_pages/PuzzleZoneTemplate.tscn" id="1_qrwjl"]
 [ext_resource type="PackedScene" uid="uid://d0mqgq2xl7fvd" path="res://BookView/book_view_clue_slot.tscn" id="2_bubko"]
 [ext_resource type="LabelSettings" uid="uid://fofavbwv757m" path="res://themes/book_view_puzzle_text.tres" id="3_8y2bk"]
+[ext_resource type="PackedScene" uid="uid://c42cx8n2cnc3p" path="res://BookView/SymbolItems/symbol_item_slot.tscn" id="3_su1gp"]
 
 [node name="castle1_zone_1" instance=ExtResource("1_qrwjl")]
-custom_minimum_size = Vector2(518, 184)
+custom_minimum_size = Vector2(518, 192)
 offset_bottom = -896.0
 puzzle_zone_id = "castle1_zone_1"
 
 [node name="BookViewClueSlot" parent="." index="1" instance=ExtResource("2_bubko")]
 offset_left = 32.0
-offset_top = 40.0
+offset_top = 44.0
 offset_right = 176.0
-offset_bottom = 80.0
+offset_bottom = 84.0
 correct_clue_name_values = Array[int]([1])
 accepted_clue_types = Array[int]([0])
 
-[node name="BookViewClueSlot2" parent="." index="2" instance=ExtResource("2_bubko")]
+[node name="SymbolItemSlot" parent="." index="2" instance=ExtResource("3_su1gp")]
 offset_left = 264.0
-offset_top = 40.0
-offset_right = 408.0
-offset_bottom = 80.0
+offset_top = 16.0
+offset_right = 360.0
+offset_bottom = 112.0
 correct_clue_symbol_values = Array[int]([32])
-accepted_clue_types = Array[int]([1])
 
 [node name="BookViewClueSlot3" parent="." index="3" instance=ExtResource("2_bubko")]
-offset_left = 328.0
-offset_top = 112.0
-offset_right = 472.0
-offset_bottom = 152.0
+offset_left = 336.0
+offset_top = 120.0
+offset_right = 480.0
+offset_bottom = 160.0
 correct_clue_name_values = Array[int]([26])
 accepted_clue_types = Array[int]([0])
 
 [node name="Label" type="Label" parent="." index="4"]
 layout_mode = 0
 offset_left = 192.0
-offset_top = 44.0
+offset_top = 48.0
 offset_right = 250.0
-offset_bottom = 78.0
+offset_bottom = 82.0
 text = "stole"
 label_settings = ExtResource("3_8y2bk")
 
 [node name="Label2" type="Label" parent="." index="5"]
 layout_mode = 0
 offset_left = 32.0
-offset_top = 116.0
+offset_top = 124.0
 offset_right = 317.0
-offset_bottom = 150.0
-text = "the kitchen and give it to"
+offset_bottom = 158.0
+text = "the kitchen and gave it to"
 label_settings = ExtResource("3_8y2bk")
 
 [node name="Label3" type="Label" parent="." index="6"]
 layout_mode = 0
-offset_left = 424.0
-offset_top = 44.0
-offset_right = 481.0
-offset_bottom = 78.0
+offset_left = 376.0
+offset_top = 52.0
+offset_right = 433.0
+offset_bottom = 86.0
 text = "from
 "
 label_settings = ExtResource("3_8y2bk")
