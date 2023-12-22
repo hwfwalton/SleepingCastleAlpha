@@ -1,8 +1,8 @@
 extends PanelContainer
 class_name BookViewClueItemCombined
 
-@onready var static_clue_item = $BookViewClueItem
-@onready var draggable_clue_item = $BookViewClueItemDraggable
+@onready var static_clue_item: BookViewClueItem = $BookViewClueItem
+@onready var draggable_clue_item: BookViewDraggableItem = $BookViewClueItemDraggable
 var found_clue_item: FoundClueItem
 
 func init(g_found_clue_item: FoundClueItem):

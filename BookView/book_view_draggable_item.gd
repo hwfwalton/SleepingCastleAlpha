@@ -1,7 +1,7 @@
 extends Node2D
-class_name SymbolItemDraggable
+class_name BookViewDraggableItem
 
-@onready var symbol_item_label: SymbolItemLabel = $symbol_item_label
+@onready var item_label = $ItemLabel
 var draggable = false
 var overlapped_droppables_stack = []
 var offset: Vector2
@@ -10,17 +10,17 @@ var initial_position: Vector2
 var found_clue_item: FoundClueItem
 
 
-func init(g_found_clue_item):
+func init(g_found_clue_item: FoundClueItem):
 	found_clue_item = g_found_clue_item
 	return self
 
-func updateTextureAndTooltip():
-	if (symbol_item_label && found_clue_item):
-		symbol_item_label.init(found_clue_item).updateTextureAndTooltip()
+func updateLabel():
+	if (item_label && found_clue_item):
+		item_label.init(found_clue_item).updateLabel()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	updateTextureAndTooltip()
+	updateLabel()
 
 
 func setInitialPosition():
@@ -40,7 +40,7 @@ func _process(delta):
 			z_index = 1
 			offset = Vector2(0,0)
 			GlobalState.is_dragging = false
-			_on_symbol_item_label_mouse_exited()
+			_on_item_label_mouse_exited()
 			var tween = get_tree().create_tween()
 			if (overlapped_droppables_stack.size() > 0):
 				var overlapped_body_ref = overlapped_droppables_stack[0]
@@ -66,7 +66,7 @@ func _on_area_2d_body_entered(body):
 
 func _on_area_2d_body_exited(body):
 	var compatible_drop_group = found_clue_item.clue_item.getClueCompatibleDropGroup()
-
+	
 	if body.is_in_group(compatible_drop_group):
 		# Remove the exitted body from the "overlapped_droppables_stack"
 		overlapped_droppables_stack = overlapped_droppables_stack.filter(func(overlapped_body: StaticBody2D):
@@ -75,13 +75,13 @@ func _on_area_2d_body_exited(body):
 		body.modulate = Color(Color.MEDIUM_PURPLE, 0.7)
 
 
-func _on_symbol_item_label_mouse_entered():
+func _on_item_label_mouse_entered():
 	if not GlobalState.is_dragging:
 		draggable = true
 		scale = Vector2(1.05, 1.05)
 
 
-func _on_symbol_item_label_mouse_exited():
+func _on_item_label_mouse_exited():
 	if not GlobalState.is_dragging:
 		draggable = false
 		scale = Vector2(1, 1)

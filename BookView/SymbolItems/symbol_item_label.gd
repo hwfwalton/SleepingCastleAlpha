@@ -14,7 +14,7 @@ func _ready():
 	pass # Replace with function body.
 
 
-func updateTextureAndTooltip():
+func updateLabel():
 	if (found_clue_item):
 		tooltip_text = found_clue_item.clue_item.getClueDisplayText()
 		texture_rect.texture = found_clue_item.clue_item.getClueSymbolResource()

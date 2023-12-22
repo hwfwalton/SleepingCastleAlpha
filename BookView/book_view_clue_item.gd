@@ -9,7 +9,6 @@ func init(g_found_clue_item: FoundClueItem):
 	found_clue_item = g_found_clue_item
 	return self
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	updateLabel()
