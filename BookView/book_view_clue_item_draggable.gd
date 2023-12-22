@@ -32,10 +32,12 @@ func _process(delta):
 	if draggable:
 		if Input.is_action_just_pressed("click"):
 			offset = get_global_mouse_position() - global_position
+			z_index = 2
 			GlobalState.is_dragging = true
 		if Input.is_action_pressed("click"):
 			global_position = get_global_mouse_position() - offset
 		elif Input.is_action_just_released("click"):
+			z_index = 1
 			GlobalState.is_dragging = false
 			_on_book_view_clue_item_mouse_exited()
 			var tween = get_tree().create_tween()
