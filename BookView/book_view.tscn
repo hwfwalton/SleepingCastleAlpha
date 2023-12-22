@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://BookView/book_view.gd" id="1_qo7gd"]
 [ext_resource type="Resource" uid="uid://d1ymuglidjrr0" path="res://resources/player_state.tres" id="2_dv4bw"]
 [ext_resource type="Texture2D" uid="uid://civmffyad70rv" path="res://assets/close_128.png" id="3_5nm8o"]
-[ext_resource type="Texture2D" uid="uid://byvg7qb5j2l1e" path="res://assets/book3pagesresized12.21.png" id="3_agk65"]
+[ext_resource type="Texture2D" uid="uid://dh722q7rnak78" path="res://assets/book3pagesresized12.21.2230.png" id="3_cbiwx"]
 [ext_resource type="PackedScene" uid="uid://cd0qwo0augsda" path="res://BookView/puzzle_pages/puzzle_pages/castle0_page_0.tscn" id="4_rpv8k"]
 [ext_resource type="PackedScene" uid="uid://0lvlbnj150ub" path="res://BookView/puzzle_pages/puzzle_pages/castle1_page_0.tscn" id="5_ppxmw"]
 [ext_resource type="PackedScene" uid="uid://b81tumioqdgjl" path="res://BookView/puzzle_pages/puzzle_pages/stables_page_0.tscn" id="6_bijfd"]
@@ -85,7 +85,7 @@ mouse_filter = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="BookViewSubViewportContainer/SubViewport/BookPort/BookBackgroundAnchor"]
 scale = Vector2(1.2, 1.2)
-texture = ExtResource("3_agk65")
+texture = ExtResource("3_cbiwx")
 
 [node name="PagesContainer" type="HBoxContainer" parent="BookViewSubViewportContainer/SubViewport/BookPort"]
 layout_mode = 1
