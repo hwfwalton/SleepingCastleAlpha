@@ -14,6 +14,7 @@ func _ready():
 	if (found_clue_item):
 		static_symbol_item.init(found_clue_item).updateLabel()
 		draggable_symbol_item.init(found_clue_item).updateLabel()
+		call_deferred("setInitialPosition")
 
 func setInitialPosition():
 	if (draggable_symbol_item):
