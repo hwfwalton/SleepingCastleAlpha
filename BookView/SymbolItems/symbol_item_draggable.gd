@@ -16,7 +16,7 @@ func init(g_found_clue_item):
 
 func updateTextureAndTooltip():
 	if (symbol_item_label && found_clue_item):
-		symbol_item_label.init(found_clue_item.clue_item).updateTextureAndTooltip()
+		symbol_item_label.init(found_clue_item).updateTextureAndTooltip()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
