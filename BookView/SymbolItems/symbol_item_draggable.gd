@@ -55,18 +55,6 @@ func _return_to_start():
 	global_position = initial_position
 
 
-func _on_symbol_item_label_mouse_entered():
-	if not GlobalState.is_dragging:
-		draggable = true
-		scale = Vector2(1.05, 1.05)
-
-
-func _on_symbol_item_label_mouse_exited():
-	if not GlobalState.is_dragging:
-		draggable = false
-		scale = Vector2(1, 1)
-
-
 func _on_area_2d_body_entered(body):
 	var compatible_drop_group = found_clue_item.clue_item.getClueCompatibleDropGroup()
 
@@ -85,3 +73,15 @@ func _on_area_2d_body_exited(body):
 			return overlapped_body != body
 		)
 		body.modulate = Color(Color.MEDIUM_PURPLE, 0.7)
+
+
+func _on_symbol_item_label_mouse_entered():
+	if not GlobalState.is_dragging:
+		draggable = true
+		scale = Vector2(1.05, 1.05)
+
+
+func _on_symbol_item_label_mouse_exited():
+	if not GlobalState.is_dragging:
+		draggable = false
+		scale = Vector2(1, 1)

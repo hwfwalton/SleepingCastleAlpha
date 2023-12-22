@@ -1,13 +1,13 @@
 extends Node2D
-
-@export var item_label_value: String = ""
-var found_clue_item: FoundClueItem
+class_name BookViewClueItemDraggable
 
 @onready var book_view_clue_item = $BookViewClueItem
 var draggable = false
 var overlapped_droppables_stack = []
 var offset: Vector2
 var initial_position: Vector2
+
+var found_clue_item: FoundClueItem
 
 
 func init(g_found_clue_item: FoundClueItem):
@@ -85,4 +85,3 @@ func _on_book_view_clue_item_mouse_exited():
 	if not GlobalState.is_dragging:
 		draggable = false
 		scale = Vector2(1, 1)
-
