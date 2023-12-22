@@ -71,6 +71,7 @@ func _on_clue_tab_change(selected_tab_idx: int):
 
 func _on_puzzle_tab_change(selected_tab_idx: int):
 	AudioManager.sfx_book_page_turn.play()
+	player_state.book_last_viewed_puz_tab_idx = selected_tab_idx
 
 
 func _on_close_button_pressed():
