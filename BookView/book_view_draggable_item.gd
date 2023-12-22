@@ -59,7 +59,6 @@ func _on_area_2d_body_entered(body):
 	var compatible_drop_group = found_clue_item.clue_item.getClueCompatibleDropGroup()
 
 	if body.is_in_group(compatible_drop_group):
-		print("INSIDE VALID DROPPABLE")
 		overlapped_droppables_stack.push_front(body)
 		body.modulate = Color(Color.REBECCA_PURPLE, 1)
 
