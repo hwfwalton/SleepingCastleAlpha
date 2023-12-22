@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c42cx8n2cnc3p" path="res://BookView/SymbolItems/symbol_item_slot.tscn" id="3_wkobo"]
 
 [node name="guardroom_zone_1" instance=ExtResource("1_c1j74")]
-custom_minimum_size = Vector2(518, 418)
+custom_minimum_size = Vector2(518, 443)
 puzzle_zone_id = "guardroom_zone_1"
 
 [node name="Label" type="Label" parent="." index="1"]
