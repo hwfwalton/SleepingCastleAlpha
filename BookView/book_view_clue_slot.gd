@@ -2,9 +2,9 @@ class_name BookViewClueSlot extends Control
 
 signal clue_submitted(found_clue_item: FoundClueItem, slot_name: String)
 var found_clue_item: FoundClueItem
-@onready var clue_slot_collider = $BookViewClueSlotCollider
-@onready var book_view_clue_item: BookViewClueItem = $BookViewClueItem
-@onready var clue_item_color_rect = $BookViewClueItem/ColorRect
+@onready var item_slot_collider = $ItemSlotCollider
+@onready var book_view_clue_item: BookViewClueItem = $ItemLabel
+@onready var clue_item_color_rect = $ItemLabel/ColorRect
 
 @export var correct_clue_name_values: Array[ClueItem.CLUE_NAME] = []
 @export var correct_clue_symbol_values: Array[ClueItem.CLUE_SYMBOL] = []
@@ -12,13 +12,13 @@ var found_clue_item: FoundClueItem
 
 
 func _ready():
-	clue_slot_collider.clue_submitted.connect(_on_book_view_clue_slot_found_clue_submitted)
+	item_slot_collider.clue_submitted.connect(_on_found_clue_submitted)
 	updateFoundClue(found_clue_item)
 	_update_slot_color_for_accepted_types()
 	
 	accepted_clue_types.map(func(clue_type: ClueItem.CLUE_TYPE):
 		var drop_group = ClueItem.clue_type_drop_groups.get(clue_type)
-		clue_slot_collider.add_to_group(drop_group)
+		item_slot_collider.add_to_group(drop_group)
 	)
 
 
@@ -29,6 +29,7 @@ func _process(delta):
 		# Reset to default when not dragging
 		modulate = Color.WHITE
 
+
 func _update_slot_color_for_accepted_types():
 	if accepted_clue_types.size() == 1:
 		clue_item_color_rect.color = ClueItem.clue_type_colors.get(accepted_clue_types[0])
@@ -36,13 +37,15 @@ func _update_slot_color_for_accepted_types():
 		clue_item_color_rect.color = ClueItem.clue_type_colors.get("BOTH")
 
 
-func _on_book_view_clue_slot_found_clue_submitted(g_found_clue_item):
+func _on_found_clue_submitted(g_found_clue_item):
 	found_clue_item = g_found_clue_item
 	clue_submitted.emit(found_clue_item, name)
+
 
 func updateFoundClue(g_found_clue_item: FoundClueItem):
 	found_clue_item = g_found_clue_item
 	book_view_clue_item.init(found_clue_item).updateLabel()
+
 
 func isCorrect():
 	if (!found_clue_item):

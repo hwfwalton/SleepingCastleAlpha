@@ -4,6 +4,9 @@ signal clue_submitted(found_clue_item: FoundClueItem)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	hidden.connect(_on_hidden)
+	draw.connect(_on_draw)
+
 	if not is_visible_in_tree():
 		_on_hidden()
 
