@@ -11,3 +11,4 @@ script = ExtResource("1_ig00q")
 layout_mode = 2
 
 [node name="SymbolItemDraggable" parent="." instance=ExtResource("2_728cg")]
+position = Vector2(48, 48)

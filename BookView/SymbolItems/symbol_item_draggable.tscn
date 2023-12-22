@@ -10,11 +10,12 @@ size = Vector2(96, 96)
 script = ExtResource("1_gkvwa")
 
 [node name="symbol_item_label" parent="." instance=ExtResource("1_87tts")]
-offset_right = 96.0
-offset_bottom = 96.0
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 48.0
+offset_bottom = 48.0
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(48, 48)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_26es3")
