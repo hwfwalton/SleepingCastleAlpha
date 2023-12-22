@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://c42cx8n2cnc3p"]
+
+[ext_resource type="Script" path="res://BookView/book_view_slot_collider.gd" id="1_o58tq"]
+[ext_resource type="PackedScene" uid="uid://d03b82yf4jv7b" path="res://BookView/SymbolItems/symbol_item_label.tscn" id="1_tsr1d"]
+[ext_resource type="Script" path="res://BookView/SymbolItems/symbol_item_slot.gd" id="1_u0hq5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i1k2t"]
+size = Vector2(96, 96)
+
+[node name="SymbolItemSlot" type="Control" groups=["clue_slot", "droppable_symbol"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+script = ExtResource("1_u0hq5")
+
+[node name="ItemSlotCollider" type="StaticBody2D" parent="." groups=["droppable_symbol"]]
+position = Vector2(48, 48)
+script = ExtResource("1_o58tq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemSlotCollider"]
+shape = SubResource("RectangleShape2D_i1k2t")
+
+[node name="ColorRect" type="ColorRect" parent="ItemSlotCollider"]
+custom_minimum_size = Vector2(96, 96)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 48.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.780392, 0.490196, 0.74902, 1)
+
+[node name="ItemLabel" parent="." instance=ExtResource("1_tsr1d")]
+layout_mode = 2
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2

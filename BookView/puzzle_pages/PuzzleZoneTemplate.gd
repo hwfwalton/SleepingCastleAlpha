@@ -19,7 +19,8 @@ func _ready():
 		return node.is_in_group("puzzle_portrait")
 	)
 
-	clue_slots.map(func(clue_slot: BookViewClueSlot):
+	# clue_slot can be BookViewClueSlot or SymbolItemSlot
+	clue_slots.map(func(clue_slot):
 		clue_slot.clue_submitted.connect(self._on_clue_slot_clue_submitted)
 	)
 	_rerender_with_state_from_cache()
@@ -33,7 +34,8 @@ func _on_clue_slot_clue_submitted(found_clue_item: FoundClueItem, slot_name: Str
 
 func _rerender_with_state_from_cache():
 	var cached_slot_items = player_state.getSlotValuesForPuzzleZone(puzzle_zone_id)
-	clue_slots.map(func(clue_slot: BookViewClueSlot):
+	# clue_slot can be BookViewClueSlot or SymbolItemSlot
+	clue_slots.map(func(clue_slot):
 		var cached_item = cached_slot_items.get(clue_slot.name, null)
 		clue_slot.updateFoundClue(cached_item)
 	)
@@ -47,7 +49,8 @@ func zoneIsComplete() -> bool:
 	var portraits_complete: bool = portrait_nodes.all(func(portrait: PuzzlePortrait):
 		return portrait.isCorrect()
 	)
-	var slots_complete: bool = clue_slots.all(func(clue_slot: BookViewClueSlot):
+	# clue_slot can be BookViewClueSlot or SymbolItemSlot
+	var slots_complete: bool = clue_slots.all(func(clue_slot):
 		return clue_slot.isCorrect()
 	)
 	return portraits_complete && slots_complete
