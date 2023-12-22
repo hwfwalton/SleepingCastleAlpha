@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_sly1o"]
 [ext_resource type="Theme" uid="uid://cl8j1lod7ob4" path="res://themes/game_theme.tres" id="2_rnp50"]
-[ext_resource type="Texture2D" uid="uid://bjcdhuyeu08lo" path="res://assets/roseglassBG.png" id="2_swm8l"]
+[ext_resource type="Texture2D" uid="uid://bfg5klmbsen6k" path="res://assets/startscreen_wide.png" id="2_tbyk4"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -14,17 +14,21 @@ grow_vertical = 2
 script = ExtResource("1_sly1o")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_swm8l")
+texture = ExtResource("2_tbyk4")
 offset = Vector2(960, 540)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -157.0
-offset_right = 150.0
+anchors_preset = -1
+anchor_left = 0.234
+anchor_top = 0.649
+anchor_right = 0.272
+anchor_bottom = 0.649
+offset_left = -238.08
+offset_top = 37.4
+offset_right = -88.08
+offset_bottom = 194.4
 grow_vertical = 0
 theme = ExtResource("2_rnp50")
 
@@ -44,16 +48,6 @@ text = "Options"
 layout_mode = 2
 focus_neighbor_bottom = NodePath("../StartButton")
 text = "Quit"
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 398.0
-offset_top = 109.0
-offset_right = 1461.0
-offset_bottom = 197.0
-theme_override_font_sizes/font_size = 64
-text = "The Mystery of the Sleeping Castle"
-horizontal_alignment = 1
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]

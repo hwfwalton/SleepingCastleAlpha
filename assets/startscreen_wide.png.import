@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjcdhuyeu08lo"
-path="res://.godot/imported/roseglassBG.png-ecc398f17cca71be0b0147ca28e3dd04.ctex"
+uid="uid://bfg5klmbsen6k"
+path="res://.godot/imported/startscreen_wide.png-32def8ceafa329cebd605aa045b46807.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/roseglassBG.png"
-dest_files=["res://.godot/imported/roseglassBG.png-ecc398f17cca71be0b0147ca28e3dd04.ctex"]
+source_file="res://assets/startscreen_wide.png"
+dest_files=["res://.godot/imported/startscreen_wide.png-32def8ceafa329cebd605aa045b46807.ctex"]
 
 [params]
 
