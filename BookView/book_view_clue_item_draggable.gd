@@ -56,14 +56,18 @@ func _return_to_start():
 
 
 func _on_area_2d_body_entered(body):
-	if body.is_in_group('droppable'):
+	var compatible_drop_group = found_clue_item.clue_item.getClueCompatibleDropGroup()
+
+	if body.is_in_group(compatible_drop_group):
 		print("INSIDE VALID DROPPABLE")
 		overlapped_droppables_stack.push_front(body)
 		body.modulate = Color(Color.REBECCA_PURPLE, 1)
 
 
 func _on_area_2d_body_exited(body):
-	if body.is_in_group('droppable'):
+	var compatible_drop_group = found_clue_item.clue_item.getClueCompatibleDropGroup()
+	
+	if body.is_in_group(compatible_drop_group):
 		# Remove the exitted body from the "overlapped_droppables_stack"
 		overlapped_droppables_stack = overlapped_droppables_stack.filter(func(overlapped_body: StaticBody2D):
 			return overlapped_body != body

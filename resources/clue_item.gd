@@ -31,6 +31,12 @@ static var clue_type_colors = {
 	"BOTH": Color.html("#9179B4"),
 }
 
+static var clue_type_drop_groups = {
+	CLUE_TYPE.NAME: "droppable_name",
+	CLUE_TYPE.SYMBOL: "droppable_symbol",
+	CLUE_TYPE.FACE: "droppable_face",
+}
+
 var clue_name_display_text = {
 	CLUE_NAME.ALBERT: "Albert",
 	CLUE_NAME.ALYSSA: "Alyssa",
@@ -180,6 +186,9 @@ func getClueDisplayText():
 
 func getClueSymbolResource():
 	return clue_symbol_resources.get(symbol_value)
+
+func getClueCompatibleDropGroup():
+	return clue_type_drop_groups.get(type)
 
 func getClueDebugValue():
 	if (type == ClueItem.CLUE_TYPE.NAME):

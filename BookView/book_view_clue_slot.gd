@@ -15,6 +15,11 @@ func _ready():
 	clue_slot_collider.clue_submitted.connect(_on_book_view_clue_slot_found_clue_submitted)
 	updateFoundClue(found_clue_item)
 	_update_slot_color_for_accepted_types()
+	
+	accepted_clue_types.map(func(clue_type: ClueItem.CLUE_TYPE):
+		var drop_group = ClueItem.clue_type_drop_groups.get(clue_type)
+		clue_slot_collider.add_to_group(drop_group)
+	)
 
 
 func _process(delta):
