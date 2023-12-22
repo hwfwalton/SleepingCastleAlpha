@@ -1,4 +1,4 @@
-extends Control
+class_name PuzzleZone extends Control
 
 @export var puzzle_zone_id: String = ""
 @export var player_state: PlayerState
@@ -7,6 +7,8 @@ extends Control
 var clue_slots: Array = []
 # Array[PuzzlePortrait]
 var portrait_nodes: Array = []
+
+signal zone_completed()
 
 # Original guardroom_zone1 first question wording
 # Which shift had started before the castle was put to sleep?
@@ -44,9 +46,13 @@ func _rerender_with_state_from_cache():
 	)
 	
 	if (zoneIsComplete()):
-		panel_node.theme_type_variation = "PuzzleZoneComplete"
-	else:
-		panel_node.theme_type_variation = "PuzzleZoneIncomplete"
+		zone_completed.emit()
+	
+	if panel_node:
+		if (zoneIsComplete()):
+			panel_node.theme_type_variation = "PuzzleZoneComplete"
+		else:
+			panel_node.theme_type_variation = "PuzzleZoneIncomplete"
 
 func zoneIsComplete() -> bool:
 	var portraits_complete: bool = portrait_nodes.all(func(portrait: PuzzlePortrait):
