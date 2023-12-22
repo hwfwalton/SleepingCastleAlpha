@@ -4,7 +4,7 @@ extends Control
 # https://www.flaticon.com/free-icon/close_2976286
 
 @export var player_state: PlayerState
-@onready var book_view_clue_item_scene = preload("res://BookView/book_view_clue_item_combined.tscn")
+@onready var book_view_clue_item_scene: PackedScene = preload("res://BookView/book_view_clue_item_combined.tscn")
 @onready var book_port = $BookViewSubViewportContainer/SubViewport/BookPort
 @onready var clues_tab_container = $BookViewSubViewportContainer/SubViewport/BookPort/PagesContainer/LeftBookMargin/TabContainer_Clues
 @onready var puzzles_tab_container = $BookViewSubViewportContainer/SubViewport/BookPort/PagesContainer/RightBookMargin/TabContainer_Puzzles
@@ -37,8 +37,23 @@ func _populateTabWithType(clue_type: ClueItem.CLUE_TYPE, tab_node: Control, last
 		var clue_item_node = book_view_clue_item_scene.instantiate().init(found_clue_item)
 		tab_node.add_child(clue_item_node)
 	)
+	tab_node.draw.connect(_on_clue_tab_visible)
 	if (found_clue_items_of_type.size() > last_viewed_count):
 		tab_node.name += "*"
+
+
+func _defered_update_clue_initial_postions():
+	call_deferred("__update_clue_initial_positions")
+
+
+func __update_clue_initial_positions():
+	clues_tab_container.get_current_tab_control().get_children().map(func(clue_node: BookViewClueItemCombined):
+		clue_node.setInitialPosition()
+	)
+
+
+func _on_clue_tab_visible():
+	_defered_update_clue_initial_postions()
 
 
 func _on_clue_tab_change(selected_tab_idx: int):
@@ -52,6 +67,7 @@ func _on_clue_tab_change(selected_tab_idx: int):
 	
 	departing_tab_node.name = departing_tab_node.name.replace("*", "")
 	player_state.book_last_viewed_clue_tab_idx = selected_tab_idx
+
 
 func _on_puzzle_tab_change(selected_tab_idx: int):
 	AudioManager.sfx_book_page_turn.play()

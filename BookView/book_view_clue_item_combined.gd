@@ -1,4 +1,5 @@
 extends PanelContainer
+class_name BookViewClueItemCombined
 
 @onready var static_clue_item = $BookViewClueItem
 @onready var draggable_clue_item = $BookViewClueItemDraggable
@@ -14,3 +15,6 @@ func _ready():
 		static_clue_item.init(found_clue_item).updateLabel()
 		draggable_clue_item.init(found_clue_item).updateLabel()
 
+func setInitialPosition():
+	if (draggable_clue_item):
+		draggable_clue_item.setInitialPosition()

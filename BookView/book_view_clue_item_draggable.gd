@@ -9,6 +9,7 @@ var overlapped_droppables_stack = []
 var offset: Vector2
 var initial_position: Vector2
 
+
 func init(g_found_clue_item: FoundClueItem):
 	found_clue_item = g_found_clue_item
 	return self
@@ -22,11 +23,14 @@ func _ready():
 	updateLabel()
 
 
+func setInitialPosition():
+	initial_position = global_position
+
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if draggable:
 		if Input.is_action_just_pressed("click"):
-			initial_position = global_position
 			offset = get_global_mouse_position() - global_position
 			GlobalState.is_dragging = true
 		if Input.is_action_pressed("click"):
