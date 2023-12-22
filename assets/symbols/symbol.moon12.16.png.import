@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdq1rqypmrbh5"
-path="res://.godot/imported/symbol.stabledwhitehorse.png-71a5ca598a14b502c7f0a13d15aadc93.ctex"
+uid="uid://ccfoebkwcehi8"
+path="res://.godot/imported/symbol.moon12.16.png-88912dafb1e168e555372796e7bc6fb0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/symbols/symbol.stabledwhitehorse.png"
-dest_files=["res://.godot/imported/symbol.stabledwhitehorse.png-71a5ca598a14b502c7f0a13d15aadc93.ctex"]
+source_file="res://assets/symbols/symbol.moon12.16.png"
+dest_files=["res://.godot/imported/symbol.moon12.16.png-88912dafb1e168e555372796e7bc6fb0.ctex"]
 
 [params]
 

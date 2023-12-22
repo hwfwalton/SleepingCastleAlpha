@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdn4cho18k0yj"
-path="res://.godot/imported/symbol.rose1216.png-e6b9b94f8b9b83a8e0d8adc6cc3216c0.ctex"
+uid="uid://cdq1rqypmrbh5"
+path="res://.godot/imported/symbol.stabled_white_horse.png-1b362547161b8f8e3f3f3893deb002d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/symbols/symbol.rose1216.png"
-dest_files=["res://.godot/imported/symbol.rose1216.png-e6b9b94f8b9b83a8e0d8adc6cc3216c0.ctex"]
+source_file="res://assets/symbols/symbol.stabled_white_horse.png"
+dest_files=["res://.godot/imported/symbol.stabled_white_horse.png-1b362547161b8f8e3f3f3893deb002d8.ctex"]
 
 [params]
 

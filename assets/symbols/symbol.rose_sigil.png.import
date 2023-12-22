@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2leajafpuwry"
-path="res://.godot/imported/symbol.redhorse.png-9abd2c6669c60d74a17cd04696ab38f8.ctex"
+uid="uid://cdn4cho18k0yj"
+path="res://.godot/imported/symbol.rose_sigil.png-8e7e329b35cf50c027fcfd80a5a53ac1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/symbols/symbol.redhorse.png"
-dest_files=["res://.godot/imported/symbol.redhorse.png-9abd2c6669c60d74a17cd04696ab38f8.ctex"]
+source_file="res://assets/symbols/symbol.rose_sigil.png"
+dest_files=["res://.godot/imported/symbol.rose_sigil.png-8e7e329b35cf50c027fcfd80a5a53ac1.ctex"]
 
 [params]
 

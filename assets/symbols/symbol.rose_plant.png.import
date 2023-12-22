@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjkc0r6gmogtt"
-path="res://.godot/imported/symbol.roseplant.png-e2093211e6becbc66191fe8d81db82d1.ctex"
+path="res://.godot/imported/symbol.rose_plant.png-bc089c801827100046c40e3978cb3dfc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/symbols/symbol.roseplant.png"
-dest_files=["res://.godot/imported/symbol.roseplant.png-e2093211e6becbc66191fe8d81db82d1.ctex"]
+source_file="res://assets/symbols/symbol.rose_plant.png"
+dest_files=["res://.godot/imported/symbol.rose_plant.png-bc089c801827100046c40e3978cb3dfc.ctex"]
 
 [params]
 

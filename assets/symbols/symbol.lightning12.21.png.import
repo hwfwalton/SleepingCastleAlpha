@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8yvw7sswkqpa"
-path="res://.godot/imported/symbol.brownhorse.png-4083a1f699f9d6b0b5d3b5db92f0e526.ctex"
+uid="uid://dcxxwxj3ft2s6"
+path="res://.godot/imported/symbol.lightning12.21.png-38cc8ed31fa3440e0b926650d0bc8dc6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/symbols/symbol.brownhorse.png"
-dest_files=["res://.godot/imported/symbol.brownhorse.png-4083a1f699f9d6b0b5d3b5db92f0e526.ctex"]
+source_file="res://assets/symbols/symbol.lightning12.21.png"
+dest_files=["res://.godot/imported/symbol.lightning12.21.png-38cc8ed31fa3440e0b926650d0bc8dc6.ctex"]
 
 [params]
 

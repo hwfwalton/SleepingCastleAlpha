@@ -114,41 +114,41 @@ var clue_face_display_text = {
 	CLUE_FACE.TOM: "Tom",
 }
 
-var clue_symbol_resource_paths = {
-	CLUE_SYMBOL.APPLE: "APPLE",
-	CLUE_SYMBOL.BROWN_HORSE: "BROWN_HORSE",
-	CLUE_SYMBOL.CLOCK_0: "CLOCK_0",
-	CLUE_SYMBOL.CLOCK_10: "CLOCK_10",
-	CLUE_SYMBOL.CLOCK_12: "CLOCK_12",
-	CLUE_SYMBOL.CLOCK_2: "CLOCK_2",
-	CLUE_SYMBOL.CLOCK_4: "CLOCK_4",
-	CLUE_SYMBOL.CLOCK_6: "CLOCK_6",
-	CLUE_SYMBOL.CLOCK_8: "CLOCK_8",
-	CLUE_SYMBOL.DRIFTWOOD: "DRIFTWOOD",
-	CLUE_SYMBOL.FIRE: "FIRE",
-	CLUE_SYMBOL.FISH: "FISH",
-	CLUE_SYMBOL.GOLD: "GOLD",
-	CLUE_SYMBOL.HEART: "HEART",
-	CLUE_SYMBOL.LARGE_BLACK_HORSE: "LARGE_BLACK_HORSE",
-	CLUE_SYMBOL.LIGHTNING_BOLT: "LIGHTNING_BOLT",
-	CLUE_SYMBOL.LUTE: "LUTE",
-	CLUE_SYMBOL.MOON: "MOON",
-	CLUE_SYMBOL.RAIN: "RAIN",
-	CLUE_SYMBOL.RED_HORSE: "RED_HORSE",
-	CLUE_SYMBOL.ROSE: "ROSE",
-	CLUE_SYMBOL.ROSE_SIGIL: "ROSE_SIGIL",
-	CLUE_SYMBOL.RUBY: "RUBY",
-	CLUE_SYMBOL.SMALL_BLACK_HORSE: "SMALL_BLACK_HORSE",
-	CLUE_SYMBOL.SMOKE: "SMOKE",
-	CLUE_SYMBOL.SMOKING_SKULL: "SMOKING_SKULL",
-	CLUE_SYMBOL.STABLED_WHITE_HORSE: "STABLED_WHITE_HORSE",
-	CLUE_SYMBOL.SUGAR_CUBE: "SUGAR_CUBE",
-	CLUE_SYMBOL.SUNRISE: "SUNRISE",
-	CLUE_SYMBOL.SUNSET: "SUNSET",
-	CLUE_SYMBOL.WHITE_HORSE: "WHITE_HORSE",
-	CLUE_SYMBOL.RASPBERRY: "RASPBERRY",
-	CLUE_SYMBOL.STRAWBERRY: "STRAWBERRY",
-	CLUE_SYMBOL.NONE: "NON_SYMBOL_TYPE_CLUE"
+var clue_symbol_resources = {
+	CLUE_SYMBOL.APPLE: preload("res://assets/symbols/symbol.apple.png"),
+	CLUE_SYMBOL.BROWN_HORSE: preload("res://assets/symbols/symbol.brown_horse.png"),
+	CLUE_SYMBOL.CLOCK_0: preload("res://assets/symbols/symbol.clock_0.png"),
+	CLUE_SYMBOL.CLOCK_10: preload("res://assets/symbols/symbol.clock_10.png"),
+	CLUE_SYMBOL.CLOCK_12: preload("res://assets/symbols/symbol.clock_12.png"),
+	CLUE_SYMBOL.CLOCK_2: preload("res://assets/symbols/symbol.clock_2.png"),
+	CLUE_SYMBOL.CLOCK_4: preload("res://assets/symbols/symbol.clock_4.png"),
+	CLUE_SYMBOL.CLOCK_6: preload("res://assets/symbols/symbol.clock_6.png"),
+	CLUE_SYMBOL.CLOCK_8: preload("res://assets/symbols/symbol.clock_8.png"),
+	CLUE_SYMBOL.DRIFTWOOD: preload("res://assets/symbols/symbol.driftwood.png"),
+	CLUE_SYMBOL.FIRE: preload("res://assets/symbols/symbol.fire.png"),
+	CLUE_SYMBOL.FISH: preload("res://assets/symbols/symbol.fish.png"),
+	CLUE_SYMBOL.GOLD: preload("res://assets/symbols/symbol.gold.png"),
+	CLUE_SYMBOL.HEART: preload("res://assets/symbols/symbol.heart.png"),
+	CLUE_SYMBOL.LARGE_BLACK_HORSE: preload("res://assets/symbols/symbol.large_black_horse.png"),
+	CLUE_SYMBOL.LIGHTNING_BOLT: preload("res://assets/symbols/symbol.lightning12.21.png"),
+	CLUE_SYMBOL.LUTE: preload("res://assets/symbols/symbol.lute.png"),
+	CLUE_SYMBOL.MOON: preload("res://assets/symbols/symbol.moon12.16.png"),
+	CLUE_SYMBOL.RAIN: preload("res://assets/symbols/symbol.raindrop.png"),
+	CLUE_SYMBOL.RED_HORSE: preload("res://assets/symbols/symbol.red_horse.png"),
+	CLUE_SYMBOL.ROSE: preload("res://assets/symbols/symbol.rose_plant.png"),
+	CLUE_SYMBOL.ROSE_SIGIL: preload("res://assets/symbols/symbol.rose_sigil.png"),
+	CLUE_SYMBOL.RUBY: preload("res://assets/symbols/symbol.ruby.png"),
+	CLUE_SYMBOL.SMALL_BLACK_HORSE: preload("res://assets/symbols/symbol.small_black_horse.png"),
+	CLUE_SYMBOL.SMOKE: preload("res://assets/symbols/symbol.smoke.png"),
+	CLUE_SYMBOL.SMOKING_SKULL: preload("res://assets/symbols/symbol.smoking_skull.png"),
+	CLUE_SYMBOL.STABLED_WHITE_HORSE: preload("res://assets/symbols/symbol.stabled_white_horse.png"),
+	CLUE_SYMBOL.SUGAR_CUBE: preload("res://assets/symbols/symbol.sugar.png"),
+	CLUE_SYMBOL.SUNRISE: preload("res://assets/symbols/symbol.sunrise.png"),
+	CLUE_SYMBOL.SUNSET: preload("res://assets/symbols/symbol.sunset.png"),
+	CLUE_SYMBOL.WHITE_HORSE: preload("res://assets/symbols/symbol.white_horse.png"),
+	CLUE_SYMBOL.RASPBERRY: preload("res://assets/symbols/symbol.raspberry.png"),
+	CLUE_SYMBOL.STRAWBERRY: preload("res://assets/symbols/symbol.strawberry.png"),
+	CLUE_SYMBOL.NONE: preload("res://assets/close_128.png"),
 }
 
 
@@ -177,20 +177,17 @@ func getClueDisplayText():
 		return clue_symbol_display_text.get(symbol_value)
 	elif (type == ClueItem.CLUE_TYPE.FACE):
 		return clue_face_display_text.get(face_value)
-	return 
-	#return clue_name_display_names[name_value]
 
-func getClueSymbolResourcePath():
-	return clue_symbol_resource_paths.get(symbol_value)
-	#return clue_symbol_resource_paths[symbol_value]
+func getClueSymbolResource():
+	return clue_symbol_resources.get(symbol_value)
 
 func getClueDebugValue():
 	if (type == ClueItem.CLUE_TYPE.NAME):
 		return getClueDisplayText()
 	elif (type == ClueItem.CLUE_TYPE.SYMBOL):
-		return getClueSymbolResourcePath()
+		return getClueDisplayText()
 	elif (type == ClueItem.CLUE_TYPE.FACE):
-		return face_value
+		return getClueDisplayText
 
 func isSameClue(clue_item_to_compare: ClueItem):
 	var clue_item_types_match = clue_item_to_compare.type == type

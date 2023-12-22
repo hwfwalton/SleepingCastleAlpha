@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh1kwaryp65hx"
-path="res://.godot/imported/symbol.smallblackhorse.png-0111fc035c5cca3c9e02230cebf54f8c.ctex"
+uid="uid://c8yvw7sswkqpa"
+path="res://.godot/imported/symbol.brown_horse.png-29b7dba1d2ddce4059e40d7a2e3d873e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/symbols/symbol.smallblackhorse.png"
-dest_files=["res://.godot/imported/symbol.smallblackhorse.png-0111fc035c5cca3c9e02230cebf54f8c.ctex"]
+source_file="res://assets/symbols/symbol.brown_horse.png"
+dest_files=["res://.godot/imported/symbol.brown_horse.png-29b7dba1d2ddce4059e40d7a2e3d873e.ctex"]
 
 [params]
 

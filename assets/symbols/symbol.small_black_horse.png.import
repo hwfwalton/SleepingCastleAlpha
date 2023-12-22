@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dx6qeqj3plu6f"
-path="res://.godot/imported/symbol.smokingskull.png-5eff2241f17f739a61acaa0921db8bf5.ctex"
+uid="uid://dh1kwaryp65hx"
+path="res://.godot/imported/symbol.small_black_horse.png-fb1bb8e2652dd9c71988bcf5905f74b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/symbols/symbol.smokingskull.png"
-dest_files=["res://.godot/imported/symbol.smokingskull.png-5eff2241f17f739a61acaa0921db8bf5.ctex"]
+source_file="res://assets/symbols/symbol.small_black_horse.png"
+dest_files=["res://.godot/imported/symbol.small_black_horse.png-fb1bb8e2652dd9c71988bcf5905f74b3.ctex"]
 
 [params]
 
