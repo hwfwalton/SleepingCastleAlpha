@@ -16,6 +16,8 @@ func _ready():
 	book_music_player.stream_paused = true
 
 func playMainMenuMusic():
+	if (stage_music_player.stream == mus_flute_lead && stage_music_player.playing):
+		return
 	stage_music_player.stream = mus_flute_lead
 	stage_music_player.stream_paused = false
 	stage_music_player.play()
