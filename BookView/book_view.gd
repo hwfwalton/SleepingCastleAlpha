@@ -19,27 +19,26 @@ func _ready():
 	AudioManager.playBookMusic()
 	book_port.grab_focus()
 	
-	_populateTabWithType(ClueItem.CLUE_TYPE.NAME, names_tab, book_last_seen_clue_count_by_idx[0], 0)
-	_populateTabWithType(ClueItem.CLUE_TYPE.SYMBOL, symbols_tab, book_last_seen_clue_count_by_idx[1], 1)
+	_populateTabWithType(ClueItem.CLUE_TYPE.NAME, names_tab)
+	_populateTabWithType(ClueItem.CLUE_TYPE.SYMBOL, symbols_tab)
 	
 	clues_tab_container.current_tab = player_state.book_last_viewed_clue_tab_idx
 	clues_tab_container.tab_changed.connect(_on_clue_tab_change)
 	
 	puzzles_tab_container.current_tab = player_state.book_last_viewed_puz_tab_idx
 	puzzles_tab_container.tab_changed.connect(_on_puzzle_tab_change)
+	
+	_update_has_unseen_items_marks()
 
 
-func _populateTabWithType(clue_type: ClueItem.CLUE_TYPE, tab_node: Control, last_viewed_count: int, tab_index):
+func _populateTabWithType(clue_type: ClueItem.CLUE_TYPE, tab_node: Control):
 	var found_clue_items_of_type = player_state.getFoundCluesOfType(clue_type)
-	#clues_tab_container.set_tab_hidden(tab_index, found_clue_items_of_type.size() == 0)
 
 	found_clue_items_of_type.map(func(found_clue_item: FoundClueItem):
 		var clue_item_node = book_view_clue_item_scene.instantiate().init(found_clue_item)
 		tab_node.add_child(clue_item_node)
 	)
 	tab_node.draw.connect(_on_clue_tab_visible)
-	if (found_clue_items_of_type.size() > last_viewed_count):
-		tab_node.name += "*"
 
 
 func _defered_update_clue_initial_postions():
@@ -49,6 +48,18 @@ func _defered_update_clue_initial_postions():
 func __update_clue_initial_positions():
 	clues_tab_container.get_current_tab_control().get_children().map(func(clue_node: BookViewClueItemCombined):
 		clue_node.setInitialPosition()
+	)
+
+
+func _update_has_unseen_items_marks():
+	clues_tab_container.get_children().map(func(tab_node: Control):
+		var tab_idx = clues_tab_container.get_tab_idx_from_control(tab_node)
+		var last_seen_item_count = book_last_seen_clue_count_by_idx[tab_idx]
+		var items_in_tab = tab_node.get_child_count()
+		if (items_in_tab > last_seen_item_count):
+			clues_tab_container.set_tab_title(tab_idx, tab_node.name + "*")
+		else:
+			clues_tab_container.set_tab_title(tab_idx, tab_node.name)
 	)
 
 
@@ -65,7 +76,8 @@ func _on_clue_tab_change(selected_tab_idx: int):
 	book_last_seen_clue_count_by_idx[departing_tab_idx] = departing_tab_item_count
 	player_state.book_last_seen_clue_count_by_idx = book_last_seen_clue_count_by_idx
 	
-	departing_tab_node.name = departing_tab_node.name.replace("*", "")
+	_update_has_unseen_items_marks()
+	
 	player_state.book_last_viewed_clue_tab_idx = selected_tab_idx
 
 
