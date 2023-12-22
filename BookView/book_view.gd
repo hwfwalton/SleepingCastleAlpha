@@ -74,7 +74,6 @@ func _on_puzzle_tab_change(selected_tab_idx: int):
 
 
 func _on_close_button_pressed():
-	player_state.book_last_viewed_clue_tab_idx = clues_tab_container.current_tab
 	AudioManager.sfx_book_close.play()
 	AudioManager.playStageMusic()
 	queue_free()
