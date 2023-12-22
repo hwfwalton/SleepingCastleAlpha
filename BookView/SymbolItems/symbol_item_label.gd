@@ -11,7 +11,7 @@ func init(g_found_clue_item: FoundClueItem):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	updateLabel()
 
 
 func updateLabel():
