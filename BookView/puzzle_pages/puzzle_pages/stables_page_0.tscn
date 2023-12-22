@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://6t532a6ecv3c" path="res://BookView/puzzle_pages/PuzzlePageTemplate.tscn" id="1_f7tuj"]
 [ext_resource type="PackedScene" uid="uid://dlnh1myybxj05" path="res://BookView/puzzle_pages/puzzle_zones/stables_zone_0.tscn" id="2_7jn3i"]
-[ext_resource type="PackedScene" uid="uid://cpxq2evk6gs20" path="res://BookView/puzzle_pages/puzzle_zones/stables_zone_1_alt.tscn" id="3_oq5al"]
+[ext_resource type="PackedScene" uid="uid://cpxq2evk6gs20" path="res://BookView/puzzle_pages/puzzle_zones/stables_zone_1.tscn" id="3_4rhkh"]
 
 [node name="stables_page_0" instance=ExtResource("1_f7tuj")]
 
@@ -12,7 +12,7 @@ text = "Stables"
 [node name="stables_zone_0" parent="VBoxContainer/Control" index="0" instance=ExtResource("2_7jn3i")]
 offset_bottom = 280.0
 
-[node name="stables_zone_1_alt" parent="VBoxContainer/Control" index="1" instance=ExtResource("3_oq5al")]
+[node name="stables_zone_1_alt" parent="VBoxContainer/Control" index="1" instance=ExtResource("3_4rhkh")]
 layout_mode = 1
 offset_top = 280.0
 offset_bottom = 723.0
