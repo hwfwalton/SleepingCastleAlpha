@@ -13,5 +13,6 @@ text = "Stables"
 offset_bottom = 280.0
 
 [node name="stables_zone_1_alt" parent="VBoxContainer/Control" index="1" instance=ExtResource("3_oq5al")]
-offset_top = 358.0
-offset_bottom = 727.0
+layout_mode = 1
+offset_top = 280.0
+offset_bottom = 723.0
