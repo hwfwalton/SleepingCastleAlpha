@@ -38,6 +38,7 @@ func _process(delta):
 			global_position = get_global_mouse_position() - offset
 		elif Input.is_action_just_released("click"):
 			z_index = 1
+			offset = Vector2(0,0)
 			GlobalState.is_dragging = false
 			_on_book_view_clue_item_mouse_exited()
 			var tween = get_tree().create_tween()
