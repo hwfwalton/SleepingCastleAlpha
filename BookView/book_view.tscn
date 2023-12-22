@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://byvg7qb5j2l1e" path="res://assets/book3pagesresized12.21.png" id="3_agk65"]
 [ext_resource type="PackedScene" uid="uid://cd0qwo0augsda" path="res://BookView/puzzle_pages/puzzle_pages/castle0_page_0.tscn" id="4_rpv8k"]
 [ext_resource type="PackedScene" uid="uid://0lvlbnj150ub" path="res://BookView/puzzle_pages/puzzle_pages/castle1_page_0.tscn" id="5_ppxmw"]
-[ext_resource type="PackedScene" path="res://BookView/puzzle_pages/puzzle_pages/stables_page_0.tscn" id="6_bijfd"]
-[ext_resource type="PackedScene" path="res://BookView/puzzle_pages/puzzle_pages/guardroom_page_0.tscn" id="7_xwycs"]
+[ext_resource type="PackedScene" uid="uid://b81tumioqdgjl" path="res://BookView/puzzle_pages/puzzle_pages/stables_page_0.tscn" id="6_bijfd"]
+[ext_resource type="PackedScene" uid="uid://dv4lqeidsuem1" path="res://BookView/puzzle_pages/puzzle_pages/guardroom_page_0.tscn" id="7_xwycs"]
 
 [node name="BookView" type="Control"]
 layout_mode = 3
@@ -102,7 +102,9 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
 theme_type_variation = &"BookViewMargins"
-theme_override_constants/margin_left = 160
+theme_override_constants/margin_left = 220
+theme_override_constants/margin_top = 140
+theme_override_constants/margin_right = 0
 
 [node name="TabContainer_Clues" type="TabContainer" parent="BookViewSubViewportContainer/SubViewport/BookPort/PagesContainer/LeftBookMargin"]
 layout_mode = 2

@@ -13,5 +13,5 @@ text = "Castle Entrance"
 
 [node name="castle0_zone_1" parent="VBoxContainer/Control" index="1" instance=ExtResource("3_lh834")]
 layout_mode = 1
-offset_top = 359.0
-offset_bottom = 728.0
+offset_top = 358.0
+offset_bottom = 727.0
