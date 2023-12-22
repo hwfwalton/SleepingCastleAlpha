@@ -1,10 +1,11 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://cl8j1lod7ob4"]
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://cl8j1lod7ob4"]
 
 [ext_resource type="StyleBox" uid="uid://cihkw8lu2kqi" path="res://themes/menu_shade.tres" id="1_30q1j"]
 [ext_resource type="StyleBox" uid="uid://b230d772h6vh6" path="res://themes/puzzle_box_incomplete.tres" id="2_58i0l"]
 [ext_resource type="StyleBox" uid="uid://bk01cn1spbqc0" path="res://themes/new_style_box_flat.tres" id="2_ada5x"]
 [ext_resource type="StyleBox" uid="uid://dalg2sdgcells" path="res://themes/puzzle_portrait.tres" id="2_xpf2g"]
 [ext_resource type="StyleBox" uid="uid://bm6ahllekyo5l" path="res://themes/puzzle_box_complete.tres" id="3_7mjhe"]
+[ext_resource type="StyleBox" uid="uid://dg53ofkw2vl4e" path="res://themes/symbol_item.tres" id="5_5wnkj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r1kp4"]
 
@@ -44,5 +45,7 @@ PuzzleZoneComplete/base_type = &"Panel"
 PuzzleZoneComplete/styles/panel = ExtResource("3_7mjhe")
 PuzzleZoneIncomplete/base_type = &"Panel"
 PuzzleZoneIncomplete/styles/panel = ExtResource("2_58i0l")
+SymbolItem/base_type = &"PanelContainer"
+SymbolItem/styles/panel = ExtResource("5_5wnkj")
 VBoxContainer/constants/separation = 12
 WordBankItem/styles/panel = ExtResource("2_ada5x")

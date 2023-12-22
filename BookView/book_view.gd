@@ -4,7 +4,9 @@ extends Control
 # https://www.flaticon.com/free-icon/close_2976286
 
 @export var player_state: PlayerState
-@onready var book_view_clue_item_scene: PackedScene = preload("res://BookView/book_view_clue_item_combined.tscn")
+var book_view_name_item: PackedScene = preload("res://BookView/book_view_clue_item_combined.tscn")
+var book_view_symbol_item: PackedScene = preload("res://BookView/SymbolItems/symbol_item_combined.tscn")
+
 @onready var book_port = $BookViewSubViewportContainer/SubViewport/BookPort
 @onready var clues_tab_container = $BookViewSubViewportContainer/SubViewport/BookPort/PagesContainer/LeftBookMargin/TabContainer_Clues
 @onready var puzzles_tab_container = $BookViewSubViewportContainer/SubViewport/BookPort/PagesContainer/RightBookMargin/TabContainer_Puzzles
@@ -19,8 +21,8 @@ func _ready():
 	AudioManager.playBookMusic()
 	book_port.grab_focus()
 	
-	_populateTabWithType(ClueItem.CLUE_TYPE.NAME, names_tab)
-	_populateTabWithType(ClueItem.CLUE_TYPE.SYMBOL, symbols_tab)
+	_populateTabWithType(ClueItem.CLUE_TYPE.NAME, names_tab, book_view_name_item)
+	_populateTabWithType(ClueItem.CLUE_TYPE.SYMBOL, symbols_tab, book_view_symbol_item)
 	
 	clues_tab_container.current_tab = player_state.book_last_viewed_clue_tab_idx
 	clues_tab_container.tab_changed.connect(_on_clue_tab_change)
@@ -31,7 +33,7 @@ func _ready():
 	_update_has_unseen_items_marks()
 
 
-func _populateTabWithType(clue_type: ClueItem.CLUE_TYPE, tab_node: Control):
+func _populateTabWithType(clue_type: ClueItem.CLUE_TYPE, tab_node: Control, book_view_clue_item_scene: PackedScene):
 	var found_clue_items_of_type = player_state.getFoundCluesOfType(clue_type)
 
 	found_clue_items_of_type.map(func(found_clue_item: FoundClueItem):
@@ -46,7 +48,8 @@ func _defered_update_clue_initial_postions():
 
 
 func __update_clue_initial_positions():
-	clues_tab_container.get_current_tab_control().get_children().map(func(clue_node: BookViewClueItemCombined):
+	# clue_node can be BookViewClueItemCombined or SymbolItemCombined
+	clues_tab_container.get_current_tab_control().get_children().map(func(clue_node):
 		clue_node.setInitialPosition()
 	)
 

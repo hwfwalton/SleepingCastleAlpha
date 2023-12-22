@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8tfho0qgqpik"]
+
+[ext_resource type="Script" path="res://BookView/SymbolItems/symbol_item_combined.gd" id="1_ig00q"]
+[ext_resource type="PackedScene" uid="uid://d03b82yf4jv7b" path="res://BookView/SymbolItems/symbol_item_label.tscn" id="1_r1hnm"]
+[ext_resource type="PackedScene" uid="uid://c3sumqtipn46g" path="res://BookView/SymbolItems/symbol_item_draggable.tscn" id="2_728cg"]
+
+[node name="SymbolItemCombined" type="PanelContainer"]
+script = ExtResource("1_ig00q")
+
+[node name="symbol_item_label" parent="." instance=ExtResource("1_r1hnm")]
+layout_mode = 2
+
+[node name="SymbolItemDraggable" parent="." instance=ExtResource("2_728cg")]
