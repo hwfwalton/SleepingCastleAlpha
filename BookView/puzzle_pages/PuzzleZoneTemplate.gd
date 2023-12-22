@@ -8,6 +8,9 @@ var clue_slots: Array = []
 # Array[PuzzlePortrait]
 var portrait_nodes: Array = []
 
+# Original guardroom_zone1 first question wording
+# Which shift had started before the castle was put to sleep?
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#clue_slots = _get_clue_slots() as Array[BookViewClueSlot]

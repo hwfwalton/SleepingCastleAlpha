@@ -1,32 +1,32 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2xqsju8mfsrl"]
+[gd_scene load_steps=6 format=3 uid="uid://b2xqsju8mfsrl"]
 
 [ext_resource type="PackedScene" uid="uid://duj8c10cix6c" path="res://BookView/puzzle_pages/PuzzleZoneTemplate.tscn" id="1_c1j74"]
 [ext_resource type="PackedScene" uid="uid://d0mqgq2xl7fvd" path="res://BookView/book_view_clue_slot.tscn" id="2_ww1df"]
 [ext_resource type="LabelSettings" uid="uid://fofavbwv757m" path="res://themes/book_view_puzzle_text.tres" id="3_4s6bj"]
 [ext_resource type="LabelSettings" uid="uid://b8tuptb3aupga" path="res://themes/book_view_puzzle_text_detail.tres" id="3_ntx21"]
+[ext_resource type="PackedScene" uid="uid://c42cx8n2cnc3p" path="res://BookView/SymbolItems/symbol_item_slot.tscn" id="3_wkobo"]
 
 [node name="guardroom_zone_1" instance=ExtResource("1_c1j74")]
 custom_minimum_size = Vector2(518, 418)
 puzzle_zone_id = "guardroom_zone_1"
 
-[node name="BookViewClueSlot" parent="." index="1" instance=ExtResource("2_ww1df")]
-offset_left = 296.0
-offset_top = 24.0
-offset_right = 440.0
-offset_bottom = 64.0
-correct_clue_symbol_values = Array[int]([8])
-accepted_clue_types = Array[int]([1])
-metadata/_edit_lock_ = true
-
-[node name="Label" type="Label" parent="." index="2"]
+[node name="Label" type="Label" parent="." index="1"]
 layout_mode = 0
-offset_left = 40.0
-offset_top = 16.0
-offset_right = 296.0
-offset_bottom = 65.0
-text = "Which shift had started before the castle was put to sleep?"
+offset_left = 80.0
+offset_top = 24.0
+offset_right = 360.0
+offset_bottom = 73.0
+text = "What time did the last shift start at before the castle went to sleep?"
 label_settings = ExtResource("3_ntx21")
 autowrap_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="SymbolItemSlot" parent="." index="2" instance=ExtResource("3_wkobo")]
+offset_left = 368.0
+offset_top = 16.0
+offset_right = 464.0
+offset_bottom = 112.0
+correct_clue_symbol_values = Array[int]([8])
 metadata/_edit_lock_ = true
 
 [node name="Label2" type="Label" parent="." index="3"]
