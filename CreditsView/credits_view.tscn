@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dt10mmj34x0vi"]
+[gd_scene load_steps=3 format=3 uid="uid://dt10mmj34x0vi"]
 
+[ext_resource type="Script" path="res://CreditsView/credits_view.gd" id="1_fijuw"]
 [ext_resource type="Texture2D" uid="uid://ncxpnxc6rbml" path="res://assets/credits.png" id="1_jvlgj"]
 
 [node name="CreditsView" type="Control"]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_fijuw")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -26,3 +28,29 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_jvlgj")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="ReturnToMainMenuButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Return to Main Menu"
+
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/ReturnToMainMenuButton" to="." method="_on_return_to_main_menu_button_pressed"]
