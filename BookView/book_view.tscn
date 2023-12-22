@@ -102,9 +102,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
 theme_type_variation = &"BookViewMargins"
-theme_override_constants/margin_left = 220
-theme_override_constants/margin_top = 140
-theme_override_constants/margin_right = 0
+theme_override_constants/margin_left = 180
 
 [node name="TabContainer_Clues" type="TabContainer" parent="BookViewSubViewportContainer/SubViewport/BookPort/PagesContainer/LeftBookMargin"]
 layout_mode = 2
