@@ -20,7 +20,7 @@ anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -259.0
 offset_right = 259.0
-offset_bottom = 304.0
+offset_bottom = 280.0
 grow_horizontal = 2
 
 [node name="castle1_zone_1" parent="VBoxContainer/Control" index="1" instance=ExtResource("3_or3jn")]

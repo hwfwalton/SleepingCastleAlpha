@@ -5,16 +5,16 @@
 [ext_resource type="PackedScene" uid="uid://d0mqgq2xl7fvd" path="res://BookView/book_view_clue_slot.tscn" id="3_u44ev"]
 
 [node name="stables_zone_0" instance=ExtResource("1_lckb4")]
-custom_minimum_size = Vector2(518, 304)
+custom_minimum_size = Vector2(518, 280)
 offset_bottom = -721.0
 puzzle_zone_id = "stables_zone_0"
 
 [node name="Portrait_Alyssa" parent="." index="1" instance=ExtResource("2_w2v0j")]
 layout_mode = 1
 offset_left = 68.0
-offset_top = 24.0
+offset_top = 16.0
 offset_right = -314.0
-offset_bottom = -136.0
+offset_bottom = -120.0
 mouse_filter = 2
 required_clue_value = 2
 texture_resource_path = "res://assets/portraits/portrait.alyssa.png"
@@ -23,9 +23,9 @@ metadata/_edit_lock_ = true
 [node name="Portrait_Tom" parent="." index="2" instance=ExtResource("2_w2v0j")]
 layout_mode = 1
 offset_left = 308.0
-offset_top = 24.0
+offset_top = 16.0
 offset_right = -74.0
-offset_bottom = -136.0
+offset_bottom = -120.0
 mouse_filter = 2
 required_clue_value = 8
 texture_resource_path = "res://assets/portraits/portrait.tom12.17.1331.png"

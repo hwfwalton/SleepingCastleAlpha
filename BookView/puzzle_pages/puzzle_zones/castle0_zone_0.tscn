@@ -5,16 +5,16 @@
 [ext_resource type="PackedScene" uid="uid://dnkda1q86p5fm" path="res://BookView/puzzle_pages/Portrait.tscn" id="3_2d3vv"]
 
 [node name="castle0_zone_0" instance=ExtResource("1_4u7w8")]
-custom_minimum_size = Vector2(518, 304)
-offset_bottom = 304.0
+custom_minimum_size = Vector2(518, 280)
+offset_bottom = 280.0
 puzzle_zone_id = "castle0_zone_0"
 
 [node name="Portrait_Albert" parent="." index="1" instance=ExtResource("3_2d3vv")]
 layout_mode = 1
 offset_left = 68.0
-offset_top = 24.0
+offset_top = 16.0
 offset_right = -314.0
-offset_bottom = -136.0
+offset_bottom = -120.0
 mouse_filter = 2
 required_clue_value = 1
 texture_resource_path = "res://assets/portraits/portrait.albert.png"
@@ -23,9 +23,9 @@ metadata/_edit_lock_ = true
 [node name="Portrait_Philip" parent="." index="2" instance=ExtResource("3_2d3vv")]
 layout_mode = 1
 offset_left = 308.0
-offset_top = 24.0
+offset_top = 16.0
 offset_right = -74.0
-offset_bottom = -136.0
+offset_bottom = -120.0
 mouse_filter = 2
 required_clue_value = 6
 texture_resource_path = "res://assets/portraits/portrait.philip1216.png"

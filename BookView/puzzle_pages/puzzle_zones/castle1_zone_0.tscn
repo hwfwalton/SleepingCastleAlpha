@@ -5,16 +5,16 @@
 [ext_resource type="PackedScene" uid="uid://d0mqgq2xl7fvd" path="res://BookView/book_view_clue_slot.tscn" id="3_q6lpl"]
 
 [node name="castle1_zone_0" instance=ExtResource("1_5mtg5")]
-custom_minimum_size = Vector2(518, 304)
+custom_minimum_size = Vector2(518, 280)
 offset_bottom = -721.0
 puzzle_zone_id = "castle1_zone_0"
 
 [node name="Portrait" parent="." index="1" instance=ExtResource("2_w54jd")]
 layout_mode = 1
 offset_left = 68.0
-offset_top = 24.0
+offset_top = 16.0
 offset_right = -314.0
-offset_bottom = -136.0
+offset_bottom = -120.0
 required_clue_value = 7
 texture_resource_path = "res://assets/portraits/portrait.robert.png"
 metadata/_edit_lock_ = true
@@ -36,13 +36,15 @@ metadata/_edit_lock_ = true
 
 [node name="BookViewClueSlot2" parent="." index="3" instance=ExtResource("3_q6lpl")]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 64.0
-offset_top = 232.0
+offset_top = 224.0
 offset_right = -310.0
-offset_bottom = -32.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
 correct_clue_name_values = Array[int]([7])
 accepted_clue_types = Array[int]([0])
 metadata/_edit_lock_ = true

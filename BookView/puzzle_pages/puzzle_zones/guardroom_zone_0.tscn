@@ -5,39 +5,42 @@
 [ext_resource type="PackedScene" uid="uid://d0mqgq2xl7fvd" path="res://BookView/book_view_clue_slot.tscn" id="3_vfrw0"]
 
 [node name="guardroom_zone_0" instance=ExtResource("1_06ic3")]
-custom_minimum_size = Vector2(518, 304)
+custom_minimum_size = Vector2(518, 280)
 offset_bottom = -721.0
 puzzle_zone_id = "guardroom_zone_0"
 
 [node name="Portrait_Leona" parent="." index="1" instance=ExtResource("2_6clqg")]
 layout_mode = 1
 offset_left = 32.0
-offset_top = 24.0
+offset_top = 16.0
 offset_right = -350.0
-offset_bottom = -130.0
+offset_bottom = -120.0
 mouse_filter = 2
 required_clue_value = 5
 texture_resource_path = "res://assets/portraits/portrait.leona.png"
+metadata/_edit_lock_ = true
 
 [node name="Portrait_Gilderoy" parent="." index="2" instance=ExtResource("2_6clqg")]
 layout_mode = 1
 offset_left = 190.0
-offset_top = 24.0
+offset_top = 16.0
 offset_right = -192.0
-offset_bottom = -136.0
+offset_bottom = -120.0
 mouse_filter = 2
 required_clue_value = 4
 texture_resource_path = "res://assets/portraits/portrait.gilderoy.png"
+metadata/_edit_lock_ = true
 
 [node name="Portrait_Fontaine" parent="." index="3" instance=ExtResource("2_6clqg")]
 layout_mode = 1
 offset_left = 350.0
-offset_top = 24.0
+offset_top = 16.0
 offset_right = -32.0
-offset_bottom = -136.0
+offset_bottom = -120.0
 mouse_filter = 2
 required_clue_value = 3
 texture_resource_path = "res://assets/portraits/portrait.fontaine.png"
+metadata/_edit_lock_ = true
 
 [node name="ClueSlot_Leona" parent="." index="4" instance=ExtResource("3_vfrw0")]
 layout_mode = 1
@@ -52,6 +55,7 @@ grow_horizontal = 2
 grow_vertical = 2
 correct_clue_name_values = Array[int]([19])
 accepted_clue_types = Array[int]([0])
+metadata/_edit_lock_ = true
 
 [node name="ClueSlot_Hardin" parent="." index="5" instance=ExtResource("3_vfrw0")]
 layout_mode = 1
@@ -66,6 +70,7 @@ grow_horizontal = 2
 grow_vertical = 2
 correct_clue_name_values = Array[int]([30])
 accepted_clue_types = Array[int]([0])
+metadata/_edit_lock_ = true
 
 [node name="ClueSlot_Gilderoy" parent="." index="6" instance=ExtResource("3_vfrw0")]
 layout_mode = 1
@@ -80,6 +85,7 @@ grow_horizontal = 2
 grow_vertical = 2
 correct_clue_name_values = Array[int]([10])
 accepted_clue_types = Array[int]([0])
+metadata/_edit_lock_ = true
 
 [node name="ClueSlot_Culpepper" parent="." index="7" instance=ExtResource("3_vfrw0")]
 layout_mode = 1
@@ -94,6 +100,7 @@ grow_horizontal = 2
 grow_vertical = 2
 correct_clue_name_values = Array[int]([6])
 accepted_clue_types = Array[int]([0])
+metadata/_edit_lock_ = true
 
 [node name="ClueSlot_Fontaine" parent="." index="8" instance=ExtResource("3_vfrw0")]
 layout_mode = 1
@@ -108,6 +115,7 @@ grow_horizontal = 2
 grow_vertical = 2
 correct_clue_name_values = Array[int]([9])
 accepted_clue_types = Array[int]([0])
+metadata/_edit_lock_ = true
 
 [node name="ClueSlot_Farnsworth" parent="." index="9" instance=ExtResource("3_vfrw0")]
 layout_mode = 1
@@ -122,3 +130,4 @@ grow_horizontal = 2
 grow_vertical = 2
 correct_clue_name_values = Array[int]([28])
 accepted_clue_types = Array[int]([0])
+metadata/_edit_lock_ = true

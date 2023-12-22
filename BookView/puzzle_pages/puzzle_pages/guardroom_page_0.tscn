@@ -10,7 +10,7 @@
 text = "Guardroom"
 
 [node name="guardroom_zone_0" parent="VBoxContainer/Control" index="0" instance=ExtResource("2_1f2q7")]
-offset_bottom = 304.0
+offset_bottom = 280.0
 
 [node name="guardroom_zone_1" parent="VBoxContainer/Control" index="1" instance=ExtResource("3_x8xrr")]
 offset_top = 304.0
