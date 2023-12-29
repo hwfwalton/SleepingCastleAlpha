@@ -14,7 +14,7 @@ config/name="SleepingCastle"
 config/version="0.1"
 run/main_scene="res://root.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://assets/icons/icon.roseonly500x500.png"
 
 [autoload]
 
