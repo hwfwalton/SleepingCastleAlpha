@@ -16,11 +16,13 @@ text = "Red Horse"
 text = "A reddish-brown horse. There are flames on his bridle."
 
 [node name="ClueSparkle" parent="." index="1" instance=ExtResource("3_roepq")]
+visible = false
 layout_mode = 0
 clue_item_type = 1
 clue_item_symbol_value = 20
 
 [node name="ClueSparkle2" parent="." index="2" instance=ExtResource("3_roepq")]
+visible = false
 layout_mode = 0
 offset_left = 64.0
 offset_right = 128.0

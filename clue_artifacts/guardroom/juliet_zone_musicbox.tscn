@@ -16,6 +16,7 @@ text = "An ornate music box"
 text = ""
 
 [node name="ClueSparkle" parent="." index="1" instance=ExtResource("3_mc0gv")]
+visible = false
 layout_mode = 0
 clue_item_type = 1
 clue_item_symbol_value = 14

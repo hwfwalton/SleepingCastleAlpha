@@ -34,10 +34,12 @@ text = "A folded note under a blooming rose in a vase"
 text = ""
 
 [node name="ClueSparkle" parent="." index="1" instance=ExtResource("3_vq25w")]
+visible = false
 layout_mode = 0
 clue_item_name_value = 27
 
 [node name="ClueSparkle2" parent="." index="2" instance=ExtResource("3_vq25w")]
+visible = false
 layout_mode = 0
 offset_left = 64.0
 offset_right = 128.0
@@ -45,6 +47,7 @@ offset_bottom = 64.0
 clue_item_name_value = 20
 
 [node name="ClueSparkle3" parent="." index="3" instance=ExtResource("3_vq25w")]
+visible = false
 layout_mode = 0
 offset_top = 64.0
 offset_right = 64.0
