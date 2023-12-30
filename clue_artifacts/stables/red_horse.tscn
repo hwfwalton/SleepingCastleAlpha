@@ -13,7 +13,7 @@ texture = ExtResource("2_of4w8")
 text = "Red Horse"
 
 [node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
-text = "A reddish-brown horse. There are flames on his bridle."
+text = "A reddish-brown horse. There is a flame sigil on his bridle."
 
 [node name="ClueSparkle" parent="." index="1" instance=ExtResource("3_roepq")]
 visible = false

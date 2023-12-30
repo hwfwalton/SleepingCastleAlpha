@@ -13,7 +13,7 @@ texture = ExtResource("2_f11pl")
 text = "Small Black Horse"
 
 [node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
-text = "A small black horse. There is a symbol on his blanket."
+text = "A small black horse. There is a smoking skull sigit on his blanket."
 
 [node name="ClueSparkle" parent="." index="1" instance=ExtResource("3_rqng1")]
 visible = false
