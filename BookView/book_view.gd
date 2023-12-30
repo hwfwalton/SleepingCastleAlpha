@@ -10,8 +10,8 @@ var book_view_symbol_item: PackedScene = preload("res://BookView/SymbolItems/sym
 @onready var book_port = $BookViewSubViewportContainer/SubViewport/BookPort
 @onready var clues_tab_container = $BookViewSubViewportContainer/SubViewport/BookPort/PagesContainer/LeftBookMargin/TabContainer_Clues
 @onready var puzzles_tab_container = $BookViewSubViewportContainer/SubViewport/BookPort/PagesContainer/RightBookMargin/TabContainer_Puzzles
-@onready var names_tab = $BookViewSubViewportContainer/SubViewport/BookPort/PagesContainer/LeftBookMargin/TabContainer_Clues/Names
-@onready var symbols_tab = $BookViewSubViewportContainer/SubViewport/BookPort/PagesContainer/LeftBookMargin/TabContainer_Clues/Symbols
+@onready var name_clues: BookViewCluesPage = $BookViewSubViewportContainer/SubViewport/BookPort/PagesContainer/LeftBookMargin/TabContainer_Clues/Names
+@onready var symbol_clues: BookViewCluesPage = $BookViewSubViewportContainer/SubViewport/BookPort/PagesContainer/LeftBookMargin/TabContainer_Clues/Symbols
 
 @onready var book_last_seen_clue_count_by_idx: Array[int] = player_state.book_last_seen_clue_count_by_idx
 
@@ -21,8 +21,8 @@ func _ready():
 	AudioManager.playBookMusic()
 	book_port.grab_focus()
 	
-	_populateTabWithType(ClueItem.CLUE_TYPE.NAME, names_tab, book_view_name_item)
-	_populateTabWithType(ClueItem.CLUE_TYPE.SYMBOL, symbols_tab, book_view_symbol_item)
+	_populateTabWithType(ClueItem.CLUE_TYPE.NAME, name_clues, book_view_name_item)
+	_populateTabWithType(ClueItem.CLUE_TYPE.SYMBOL, symbol_clues, book_view_symbol_item)
 	
 	clues_tab_container.current_tab = player_state.book_last_viewed_clue_tab_idx
 	clues_tab_container.tab_changed.connect(_on_clue_tab_change)
@@ -33,13 +33,11 @@ func _ready():
 	_update_has_unseen_items_marks()
 
 
-func _populateTabWithType(clue_type: ClueItem.CLUE_TYPE, tab_node: Control, book_view_clue_item_scene: PackedScene):
+func _populateTabWithType(clue_type: ClueItem.CLUE_TYPE, tab_node: BookViewCluesPage, book_view_clue_item_scene: PackedScene):
 	var found_clue_items_of_type = player_state.getFoundCluesOfType(clue_type)
+	tab_node.set_clues_and_clue_scene(found_clue_items_of_type, book_view_clue_item_scene)
+	tab_node.render_clues()
 
-	found_clue_items_of_type.map(func(found_clue_item: FoundClueItem):
-		var clue_item_node = book_view_clue_item_scene.instantiate().init(found_clue_item)
-		tab_node.add_child(clue_item_node)
-	)
 	tab_node.draw.connect(_on_clue_tab_visible)
 
 
@@ -48,10 +46,7 @@ func _defered_update_clue_initial_postions():
 
 
 func __update_clue_initial_positions():
-	# clue_node can be BookViewClueItemCombined or SymbolItemCombined
-	clues_tab_container.get_current_tab_control().get_children().map(func(clue_node):
-		clue_node.setInitialPosition()
-	)
+	clues_tab_container.get_current_tab_control().set_clue_items_initial_position()
 
 
 func _update_has_unseen_items_marks():

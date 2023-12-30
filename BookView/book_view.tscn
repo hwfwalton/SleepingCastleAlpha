@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://dppvl8up7h4br"]
+[gd_scene load_steps=11 format=3 uid="uid://dppvl8up7h4br"]
 
 [ext_resource type="Script" path="res://BookView/book_view.gd" id="1_qo7gd"]
 [ext_resource type="Resource" uid="uid://d1ymuglidjrr0" path="res://resources/player_state.tres" id="2_dv4bw"]
 [ext_resource type="Texture2D" uid="uid://civmffyad70rv" path="res://assets/close_128.png" id="3_5nm8o"]
 [ext_resource type="Texture2D" uid="uid://dh722q7rnak78" path="res://assets/book3pagesresized12.21.2230.png" id="3_cbiwx"]
+[ext_resource type="PackedScene" uid="uid://dkcqg5h1m63eg" path="res://BookView/clue_pages/NameClues.tscn" id="4_fcyev"]
 [ext_resource type="PackedScene" uid="uid://cd0qwo0augsda" path="res://BookView/puzzle_pages/puzzle_pages/castle0_page_0.tscn" id="4_rpv8k"]
 [ext_resource type="PackedScene" uid="uid://0lvlbnj150ub" path="res://BookView/puzzle_pages/puzzle_pages/castle1_page_0.tscn" id="5_ppxmw"]
+[ext_resource type="PackedScene" uid="uid://b3xsihd2jjihs" path="res://BookView/clue_pages/SymbolClues.tscn" id="5_ys0xy"]
 [ext_resource type="PackedScene" uid="uid://b81tumioqdgjl" path="res://BookView/puzzle_pages/puzzle_pages/stables_page_0.tscn" id="6_bijfd"]
 [ext_resource type="PackedScene" uid="uid://dv4lqeidsuem1" path="res://BookView/puzzle_pages/puzzle_pages/guardroom_page_0.tscn" id="7_xwycs"]
 
@@ -109,14 +111,12 @@ layout_mode = 2
 mouse_filter = 2
 theme_type_variation = &"ClearPanel"
 
-[node name="Names" type="HFlowContainer" parent="BookViewSubViewportContainer/SubViewport/BookPort/PagesContainer/LeftBookMargin/TabContainer_Clues"]
+[node name="Names" parent="BookViewSubViewportContainer/SubViewport/BookPort/PagesContainer/LeftBookMargin/TabContainer_Clues" instance=ExtResource("4_fcyev")]
 layout_mode = 2
-mouse_filter = 2
 
-[node name="Symbols" type="HFlowContainer" parent="BookViewSubViewportContainer/SubViewport/BookPort/PagesContainer/LeftBookMargin/TabContainer_Clues"]
+[node name="Symbols" parent="BookViewSubViewportContainer/SubViewport/BookPort/PagesContainer/LeftBookMargin/TabContainer_Clues" instance=ExtResource("5_ys0xy")]
 visible = false
 layout_mode = 2
-mouse_filter = 2
 
 [node name="RightBookMargin" type="MarginContainer" parent="BookViewSubViewportContainer/SubViewport/BookPort/PagesContainer"]
 layout_mode = 2

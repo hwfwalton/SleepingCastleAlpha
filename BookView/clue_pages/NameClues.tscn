@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkcqg5h1m63eg"]
+
+[ext_resource type="PackedScene" uid="uid://wfphpp20gs55" path="res://BookView/clue_pages/CluePageTemplate.tscn" id="1_haai5"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_2r2d1"]
+
+[node name="NameClues" instance=ExtResource("1_haai5")]
+player_state_alpha_sort_key = "book_clues_names_sorting_by_alpha"
+player_state_sort_asc_key = "book_clues_names_sorting_asc"
+
+[node name="AlphaSortButton" parent="SortButtons" index="0"]
+button_group = SubResource("ButtonGroup_2r2d1")
+
+[node name="TimeSortButton" parent="SortButtons" index="1"]
+button_group = SubResource("ButtonGroup_2r2d1")

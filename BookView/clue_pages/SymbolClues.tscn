@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3xsihd2jjihs"]
+
+[ext_resource type="PackedScene" uid="uid://wfphpp20gs55" path="res://BookView/clue_pages/CluePageTemplate.tscn" id="1_t1e8u"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_fy0ak"]
+
+[node name="SymbolClues" instance=ExtResource("1_t1e8u")]
+player_state_alpha_sort_key = "book_clues_symbols_sorting_by_alpha"
+player_state_sort_asc_key = "book_clues_symbols_sorting_asc"
+
+[node name="AlphaSortButton" parent="SortButtons" index="0"]
+button_group = SubResource("ButtonGroup_fy0ak")
+
+[node name="TimeSortButton" parent="SortButtons" index="1"]
+button_group = SubResource("ButtonGroup_fy0ak")

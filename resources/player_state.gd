@@ -20,6 +20,11 @@ var book_last_viewed_puz_tab_idx: int = 0
 var book_last_viewed_clue_tab_idx: int = 0
 var book_last_seen_clue_count_by_idx: Array[int] = [0,0,0]
 
+var book_clues_names_sorting_by_alpha: bool = false
+var book_clues_symbols_sorting_by_alpha: bool = false
+var book_clues_names_sorting_asc: bool = true
+var book_clues_symbols_sorting_asc: bool = true
+
 var has_seen_welcome_letter = false
 #var has_been_clicked_by_node_path: Dictionary[]
 
