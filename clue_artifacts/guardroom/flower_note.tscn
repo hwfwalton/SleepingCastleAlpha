@@ -25,9 +25,14 @@ text = "My beloved,
 	I must leave on a special mission, I've left you this [b]rose[/b] as a symbol of my love for you and as a promise. Before the last petal wilts I will hold you in my arms once more.  Take care of it, as you would my heart. 
 
 Yours, 
-
 [b]Tristan Lockhart[/b]
-"
+[img=130]res://assets/symbols/symbol.lightning12.21.png[/img]"
+
+[node name="Symbol_lightning12_21" type="Sprite2D" parent="HBoxContainer/MarginContainer2/TextureRect" index="1"]
+visible = false
+position = Vector2(264.898, 754.625)
+scale = Vector2(0.270253, 0.270253)
+texture = ExtResource("4_sgh1r")
 
 [node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
 text = "A folded note under a blooming rose in a vase"
@@ -56,8 +61,3 @@ offset_right = 64.0
 offset_bottom = 128.0
 clue_item_type = 1
 clue_item_symbol_value = 22
-
-[node name="Symbol_lightning12_21" type="Sprite2D" parent="." index="4"]
-position = Vector2(632, 752)
-scale = Vector2(0.337975, 0.337975)
-texture = ExtResource("4_sgh1r")
