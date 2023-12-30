@@ -88,5 +88,6 @@ offset_left = 584.0
 offset_top = 784.0
 offset_right = 648.0
 offset_bottom = 848.0
+tooltip_text = "Castle Interior"
 artifact_name = "castle1/final_door"
 alt_icon_resource_path = "res://assets/dooricon.png"
