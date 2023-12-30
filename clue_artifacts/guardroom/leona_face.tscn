@@ -20,3 +20,11 @@ visible = false
 layout_mode = 0
 clue_item_type = 2
 clue_item_face_value = 5
+
+[node name="ClueSparkle2" parent="." index="2" instance=ExtResource("3_i6i2g")]
+visible = false
+layout_mode = 0
+offset_left = 64.0
+offset_right = 128.0
+offset_bottom = 64.0
+clue_item_name_value = 18
