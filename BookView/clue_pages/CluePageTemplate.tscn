@@ -17,20 +17,24 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_nr0mb")
 player_state = ExtResource("2_1mgn1")
+metadata/_edit_lock_ = true
 
 [node name="CluesContainer" type="HFlowContainer" parent="."]
 layout_mode = 2
 size_flags_vertical = 3
+metadata/_edit_lock_ = true
 
 [node name="SortButtons" type="HBoxContainer" parent="."]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
+metadata/_edit_lock_ = true
 
 [node name="SortDirectionButton" type="Button" parent="SortButtons"]
 layout_mode = 2
 toggle_mode = true
 text = "SortDir"
+metadata/_edit_lock_ = true
 
 [node name="AlphaSortButton" type="Button" parent="SortButtons"]
 custom_minimum_size = Vector2(24, 24)
@@ -38,12 +42,14 @@ layout_mode = 2
 toggle_mode = true
 button_group = SubResource("ButtonGroup_3et84")
 text = "A-Z"
+metadata/_edit_lock_ = true
 
 [node name="TimeSortButton" type="Button" parent="SortButtons"]
 layout_mode = 2
 toggle_mode = true
 button_group = SubResource("ButtonGroup_3et84")
 text = "Time"
+metadata/_edit_lock_ = true
 
 [connection signal="toggled" from="SortButtons/SortDirectionButton" to="." method="_on_sort_direction_button_toggled"]
 [connection signal="pressed" from="SortButtons/AlphaSortButton" to="." method="_on_alpha_sort_button_pressed"]
