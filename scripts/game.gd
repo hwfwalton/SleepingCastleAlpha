@@ -2,7 +2,10 @@ extends Control
 
 var level_instance
 @onready var level_anchor = $Container/LevelAnchor
+@onready var book_button_node = $BookButton
+
 @onready var clue_container_shell = preload("res://clue_containers/ClueContainerShell.tscn")
+@onready var book_view_scene = preload("res://BookView/book_view.tscn")
 @export var player_state: PlayerState
 
 signal load_level_request(level_name)
@@ -10,6 +13,8 @@ signal load_level_request(level_name)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	load_level("castle0")
+	book_button_node.pressed.connect(_on_book_button_pressed)
+	
 	pass
 
 func unload_level():
@@ -56,3 +61,15 @@ func _on_open_artifact_view(artifact_name: String):
 	
 	var scene_to_add_to = get_tree().current_scene.get_viewport()
 	scene_to_add_to.add_child(clue_container_shell_instance)
+
+
+func _on_book_button_pressed():
+	var book_view = book_view_scene.instantiate()
+	var scene_to_add_to = get_tree().current_scene.get_viewport()
+	scene_to_add_to.add_child(book_view)
+	book_button_node.visible = false
+	book_view.tree_exited.connect(_on_book_view_closed)
+
+
+func _on_book_view_closed():
+	book_button_node.visible = true
