@@ -8,8 +8,8 @@
 player_state_alpha_sort_key = "book_clues_names_sorting_by_alpha"
 player_state_sort_asc_key = "book_clues_names_sorting_asc"
 
-[node name="AlphaSortButton" parent="SortButtons" index="0"]
+[node name="AlphaSortButton" parent="SortButtons" index="1"]
 button_group = SubResource("ButtonGroup_2r2d1")
 
-[node name="TimeSortButton" parent="SortButtons" index="1"]
+[node name="TimeSortButton" parent="SortButtons" index="2"]
 button_group = SubResource("ButtonGroup_2r2d1")
