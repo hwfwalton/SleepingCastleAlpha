@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nj4vrncmbk3i"
-path="res://.godot/imported/symbol.clock_8.png-1895f51b27d33ef2795bb62db1d96e33.ctex"
+uid="uid://bmof2f8dtyad0"
+path="res://.godot/imported/ui.leroyglows.png-294630f9bffdfbb76543d76437b6a28c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/symbols/symbol.clock_8.png"
-dest_files=["res://.godot/imported/symbol.clock_8.png-1895f51b27d33ef2795bb62db1d96e33.ctex"]
+source_file="res://assets/ui.leroyglows.png"
+dest_files=["res://.godot/imported/ui.leroyglows.png-294630f9bffdfbb76543d76437b6a28c.ctex"]
 
 [params]
 

@@ -34,10 +34,13 @@ text = "Something has gone horribly wrong and I need your help!
 
 	The castle is locked tight, but those who know {Blurry Name} best have a secret password to get in. At least we won’t have to break a window to get in. 
 
-	Please follow us! I’ve sent my familiar Hawky to deliver this letter and my magic book to help you organize your thoughts. We don’t know what happened – we fear this spell was called by those loyal to her sorcerous uncle to punish the Queen for his death. We must find a way to release those we can trust from this slumber! 
+	Please follow us! I’ve sent my familiar Leroy to deliver this letter and my magic book to help you organize your thoughts. We don’t know what happened – we fear this spell was called by those loyal to her sorcerous uncle to punish the Queen for his death. We must find a way to release those we can trust from this slumber! 
 	
 Your friend Caroline Harper
 "
 
 [node name="MarginContainer" parent="HBoxContainer" index="1"]
 visible = false
+
+[node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
+text = "Oh no, the letter has been damaged by the rain, some of the words are too blurry to read! "
