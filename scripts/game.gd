@@ -14,6 +14,8 @@ signal load_level_request(level_name)
 func _ready():
 	load_level("castle0")
 	book_button_node.pressed.connect(_on_book_button_pressed)
+	book_button_node.mouse_entered.connect(_on_book_button_mouse_entered)
+	book_button_node.mouse_exited.connect(_on_book_button_mouse_exited)
 
 func unload_level():
 	if (is_instance_valid(level_instance)):
@@ -69,3 +71,11 @@ func _on_book_button_pressed():
 
 func _on_book_view_closed():
 	book_button_node.visible = true
+
+
+func _on_book_button_mouse_entered():
+	book_button_node.scale = Vector2(1.05, 1.05)
+
+
+func _on_book_button_mouse_exited():
+	book_button_node.scale = Vector2(1, 1)
