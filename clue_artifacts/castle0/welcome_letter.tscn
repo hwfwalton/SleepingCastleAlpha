@@ -12,7 +12,6 @@ scale = Vector2(1.61, 1.11)
 texture = ExtResource("2_poubs")
 
 [node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="1"]
-custom_minimum_size = Vector2(1000, 0)
 texture = ExtResource("2_poubs")
 stretch_mode = 0
 
@@ -39,8 +38,8 @@ text = "Something has gone horribly wrong and I need your help!
 Your friend Caroline Harper
 "
 
-[node name="MarginContainer" parent="HBoxContainer" index="1"]
-visible = false
-
 [node name="ArtifactTitle" parent="HBoxContainer/MarginContainer/VBoxContainer" index="0"]
 text = "Oh no, the letter has been damaged by the rain, some of the words are too blurry to read! "
+
+[node name="ArtifactDescription" parent="HBoxContainer/MarginContainer/VBoxContainer" index="1"]
+text = ""
