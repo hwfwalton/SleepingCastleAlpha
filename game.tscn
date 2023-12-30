@@ -15,11 +15,13 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_5hktd")
 player_state = ExtResource("2_id1lh")
+metadata/_edit_lock_ = true
 
 [node name="Stainedglassbackground" type="Sprite2D" parent="."]
 visible = false
 texture = ExtResource("3_30kn3")
 centered = false
+metadata/_edit_lock_ = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -30,6 +32,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("3_30kn3")
+metadata/_edit_lock_ = true
 
 [node name="Container" type="Control" parent="."]
 custom_minimum_size = Vector2(1440, 1080)
@@ -46,6 +49,7 @@ offset_bottom = 540.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+metadata/_edit_lock_ = true
 
 [node name="LevelAnchor" type="Control" parent="Container"]
 layout_mode = 2
@@ -53,6 +57,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 2
+metadata/_edit_lock_ = true
 
 [node name="HUDButtons" parent="." instance=ExtResource("3_artgc")]
 layout_mode = 1
