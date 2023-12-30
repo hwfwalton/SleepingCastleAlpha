@@ -32,6 +32,7 @@ metadata/_edit_lock_ = true
 
 [node name="SortDirectionButton" type="Button" parent="SortButtons"]
 layout_mode = 2
+tooltip_text = "Toggle sort asc/desc"
 toggle_mode = true
 text = "SortDir"
 metadata/_edit_lock_ = true
@@ -39,6 +40,7 @@ metadata/_edit_lock_ = true
 [node name="AlphaSortButton" type="Button" parent="SortButtons"]
 custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
+tooltip_text = "Sort clues by name"
 toggle_mode = true
 button_group = SubResource("ButtonGroup_3et84")
 text = "A-Z"
@@ -46,6 +48,7 @@ metadata/_edit_lock_ = true
 
 [node name="TimeSortButton" type="Button" parent="SortButtons"]
 layout_mode = 2
+tooltip_text = "Sort clues by order discovered"
 toggle_mode = true
 button_group = SubResource("ButtonGroup_3et84")
 text = "Time"
