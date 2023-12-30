@@ -14,8 +14,6 @@ signal load_level_request(level_name)
 func _ready():
 	load_level("castle0")
 	book_button_node.pressed.connect(_on_book_button_pressed)
-	
-	pass
 
 func unload_level():
 	if (is_instance_valid(level_instance)):
@@ -62,14 +60,12 @@ func _on_open_artifact_view(artifact_name: String):
 	var scene_to_add_to = get_tree().current_scene.get_viewport()
 	scene_to_add_to.add_child(clue_container_shell_instance)
 
-
 func _on_book_button_pressed():
 	var book_view = book_view_scene.instantiate()
 	var scene_to_add_to = get_tree().current_scene.get_viewport()
 	scene_to_add_to.add_child(book_view)
 	book_button_node.visible = false
 	book_view.tree_exited.connect(_on_book_view_closed)
-
 
 func _on_book_view_closed():
 	book_button_node.visible = true
