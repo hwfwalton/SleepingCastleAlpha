@@ -24,7 +24,13 @@ size_flags_vertical = 3
 
 [node name="SortButtons" type="HBoxContainer" parent="."]
 layout_mode = 2
+size_flags_horizontal = 8
 size_flags_vertical = 8
+
+[node name="SortDirectionButton" type="Button" parent="SortButtons"]
+layout_mode = 2
+toggle_mode = true
+text = "SortDir"
 
 [node name="AlphaSortButton" type="Button" parent="SortButtons"]
 custom_minimum_size = Vector2(24, 24)
@@ -39,11 +45,6 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_3et84")
 text = "Time"
 
-[node name="SortDirectionButton" type="Button" parent="SortButtons"]
-layout_mode = 2
-toggle_mode = true
-text = "SortDir"
-
+[connection signal="toggled" from="SortButtons/SortDirectionButton" to="." method="_on_sort_direction_button_toggled"]
 [connection signal="pressed" from="SortButtons/AlphaSortButton" to="." method="_on_alpha_sort_button_pressed"]
 [connection signal="pressed" from="SortButtons/TimeSortButton" to="." method="_on_time_sort_button_pressed"]
-[connection signal="toggled" from="SortButtons/SortDirectionButton" to="." method="_on_sort_direction_button_toggled"]
