@@ -27,11 +27,12 @@ offset_right = -25.3201
 offset_bottom = 0.319946
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 23
+bbcode_enabled = true
 text = "Something has gone horribly wrong and I need your help! 
 
-	My brother Simon was frantic to get his son out of the castle before {Blurry Name} attacked, but by the time we arrived, it was all over. We expected to find a feast to celebrate the Queen’s victory, but when we arrived at the castle, we found everyone frozen as though sleeping, and we can’t wake them up! 
+	My brother Simon was frantic to get his son out of the castle before [img=160]res://assets/raindamage.png[/img] attacked, but by the time we arrived, it was all over. We expected to find a feast to celebrate the Queen’s victory, but when we arrived at the castle, we found everyone frozen as though sleeping, and we can’t wake them up! 
 
-	The castle is locked tight, but those who know {Blurry Name} best have a secret password to get in. At least we won’t have to break a window to get in. 
+	The castle is locked tight, but those who know [img=160]res://assets/raindamage.png[/img] best have a secret password to get in. At least we won’t have to break a window to get in. 
 
 	Please follow us! I’ve sent my familiar Leroy to deliver this letter and my magic book to help you organize your thoughts. We don’t know what happened – we fear this spell was called by those loyal to her sorcerous uncle to punish the Queen for his death. We must find a way to release those we can trust from this slumber! 
 	
