@@ -179,7 +179,7 @@ var clue_symbol_resources = {
 	CLUE_SYMBOL.RAIN: preload("res://assets/symbols/symbol.raindrop.png"),
 	CLUE_SYMBOL.RED_HORSE: preload("res://assets/symbols/symbol.red_horse.png"),
 	CLUE_SYMBOL.ROSE_DEPRECATED: preload("res://assets/symbols/symbol.rose_plant.png"),
-	CLUE_SYMBOL.ROSE_SIGIL: preload("res://assets/icons/icon.roseonly500x500.png"),
+	CLUE_SYMBOL.ROSE_SIGIL: preload("res://assets/symbols/symbol.rose_sigil.png"),
 	CLUE_SYMBOL.RUBY: preload("res://assets/symbols/symbol.ruby.png"),
 	CLUE_SYMBOL.SMALL_BLACK_HORSE: preload("res://assets/symbols/symbol.small_black_horse.png"),
 	CLUE_SYMBOL.SMOKE: preload("res://assets/symbols/symbol.smoke.png"),
