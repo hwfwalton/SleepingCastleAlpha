@@ -17,8 +17,7 @@ func _on_ready():
 
 
 func _on_start_button_pressed():
-	AudioManager.switchStageMusicTrackToCastle()
-	AudioManager.playStageMusic()
+	AudioManager.playNewGameSfxAndMusic()
 	get_tree().change_scene_to_packed(game_scene)
 
 

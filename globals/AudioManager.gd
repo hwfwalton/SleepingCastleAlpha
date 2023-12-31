@@ -8,6 +8,7 @@ var mus_expository_song: AudioStream = preload("res://assets/audio/music/mus-exp
 @onready var sfx_book_open: AudioStreamPlayer = $sfx_book_open
 @onready var sfx_book_page_turn: AudioStreamPlayer = $sfx_book_page_turn
 @onready var sfx_book_close: AudioStreamPlayer = $sfx_book_close
+@onready var sfx_reverb_kick: AudioStreamPlayer = $sfx_reverb_kick
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,7 +23,7 @@ func playMainMenuMusic():
 	stage_music_player.stream_paused = false
 	stage_music_player.play()
 
-func switchStageMusicTrackToCastle():
+func _switchStageMusicTrackToCastle():
 	stage_music_player.stream = mus_expository_song
 	stage_music_player.play()
 	stage_music_player.stream_paused = true
@@ -34,3 +35,8 @@ func playStageMusic():
 func playBookMusic():
 	stage_music_player.stream_paused = true
 	book_music_player.stream_paused = false
+
+func playNewGameSfxAndMusic():
+	_switchStageMusicTrackToCastle()
+	playStageMusic()
+	sfx_reverb_kick.play()
