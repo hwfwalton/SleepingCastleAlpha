@@ -34,15 +34,15 @@ script = ExtResource("1_uxxgm")
 
 [node name="sfx_book_open" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_ln1g2")
-bus = &"BookSounds"
+bus = &"SFX"
 
 [node name="sfx_book_page_turn" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_7vxds")
-bus = &"BookSounds"
+bus = &"SFX"
 
 [node name="sfx_book_close" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_xtgbg")
-bus = &"BookSounds"
+bus = &"SFX"
 
 [node name="stage_music_player" type="AudioStreamPlayer" parent="."]
 bus = &"Music"

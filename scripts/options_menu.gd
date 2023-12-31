@@ -9,7 +9,7 @@ extends Control
 
 # Check the "default_bus_layout" file for the source of these bus names
 var master_bus_name = "Master"
-var sfx_bus_name = "BookSounds"
+var sfx_bus_name = "SFX"
 var music_bus_name = "Music"
 
 @onready var master_bus_idx = AudioServer.get_bus_index(master_bus_name)
