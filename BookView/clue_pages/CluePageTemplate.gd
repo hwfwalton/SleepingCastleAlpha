@@ -41,7 +41,7 @@ func render_clues():
 	clues_to_show.sort_custom(func(item_a: FoundClueItem, item_b: FoundClueItem):
 		var is_a_before_b = false
 		if (is_alpha_sort):
-			is_a_before_b = item_a.clue_item.getClueDisplayText() < item_b.clue_item.getClueDisplayText()
+			is_a_before_b = item_a.clue_item.getClueSortValue() < item_b.clue_item.getClueSortValue()
 		else:
 			is_a_before_b = item_a.found_timestamp < item_b.found_timestamp
 		

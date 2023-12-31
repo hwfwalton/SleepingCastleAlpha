@@ -109,7 +109,7 @@ var clue_symbol_display_text = {
 	CLUE_SYMBOL.NONE: "Non symbol type clue",
 }
 
-var clue_symbol_alpha_text = {
+var clue_symbol_sort_values = {
 	CLUE_SYMBOL.APPLE: "Apple",
 	CLUE_SYMBOL.BROWN_HORSE: "Horse: Brown",
 	CLUE_SYMBOL.CLOCK_0: "Clock 01200midnight",
@@ -138,12 +138,12 @@ var clue_symbol_alpha_text = {
 	CLUE_SYMBOL.SMOKING_SKULL: "Smoking skull",
 	CLUE_SYMBOL.STABLED_WHITE_HORSE: "Horse: White Stable",
 	CLUE_SYMBOL.SUGAR_CUBE: "Sugar cubes",
-	CLUE_SYMBOL.SUNRISE: "1 Sunrise",
-	CLUE_SYMBOL.SUNSET: "2 Sunset",
+	CLUE_SYMBOL.SUNRISE: "S1 Sunrise",
+	CLUE_SYMBOL.SUNSET: "S2 Sunset",
 	CLUE_SYMBOL.WHITE_HORSE: "Horse: White Outside",
 	CLUE_SYMBOL.RASPBERRY: "Raspberry",
 	CLUE_SYMBOL.STRAWBERRY: "Strawberry",
-	CLUE_SYMBOL.NONE: "Non symbol type clue",
+	CLUE_SYMBOL.NONE: "ZNon symbol type clue",
 }
 
 var clue_face_display_text = {
@@ -218,6 +218,14 @@ func getClueDisplayText():
 		return clue_name_display_text.get(name_value)
 	elif (type == ClueItem.CLUE_TYPE.SYMBOL):
 		return clue_symbol_display_text.get(symbol_value)
+	elif (type == ClueItem.CLUE_TYPE.FACE):
+		return clue_face_display_text.get(face_value)
+
+func getClueSortValue():
+	if (type == ClueItem.CLUE_TYPE.NAME):
+		return clue_name_display_text.get(name_value)
+	elif (type == ClueItem.CLUE_TYPE.SYMBOL):
+		return clue_symbol_sort_values.get(symbol_value)
 	elif (type == ClueItem.CLUE_TYPE.FACE):
 		return clue_face_display_text.get(face_value)
 
