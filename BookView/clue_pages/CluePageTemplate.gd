@@ -7,9 +7,10 @@ class_name BookViewCluesPage
 @export var player_state: PlayerState
 
 @onready var clues_container = $CluesContainer
-@onready var alpha_sort_button_node: Button = $SortButtons/AlphaSortButton
-@onready var time_sort_button_node: Button = $SortButtons/TimeSortButton
-@onready var sort_dir_button_node: Button = $SortButtons/SortDirectionButton
+@onready var sort_dir_button_node: Button = $SortButtons/PanelContainer/SortDirectionButton
+@onready var alpha_sort_button_node: Button = $SortButtons/PanelContainer2/AlphaSortButton
+@onready var time_sort_button_node: Button = $SortButtons/PanelContainer3/TimeSortButton
+
 
 var clues_to_show: Array[FoundClueItem]
 var clue_item_scene_to_use: PackedScene
