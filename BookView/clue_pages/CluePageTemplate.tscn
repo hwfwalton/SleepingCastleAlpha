@@ -38,11 +38,13 @@ metadata/_edit_lock_ = true
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_type_variation = &"BookPanel"
+metadata/_edit_lock_ = true
 
 [node name="SortDirectionTextureRect" type="TextureRect" parent="SortButtons/PanelContainer"]
 layout_mode = 2
 texture = ExtResource("3_loo7b")
 expand_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="SortDirectionButton" type="Button" parent="SortButtons/PanelContainer"]
 layout_mode = 2
@@ -54,11 +56,13 @@ metadata/_edit_lock_ = true
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_type_variation = &"BookPanel"
+metadata/_edit_lock_ = true
 
 [node name="AlphaSortTextureRect" type="TextureRect" parent="SortButtons/PanelContainer2"]
 layout_mode = 2
 texture = ExtResource("4_r72ey")
 expand_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="AlphaSortButton" type="Button" parent="SortButtons/PanelContainer2"]
 custom_minimum_size = Vector2(24, 24)
@@ -74,11 +78,13 @@ metadata/_edit_lock_ = true
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_type_variation = &"BookPanel"
+metadata/_edit_lock_ = true
 
 [node name="TimeSortTextureRect" type="TextureRect" parent="SortButtons/PanelContainer3"]
 layout_mode = 2
 texture = ExtResource("5_jw75e")
 expand_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="TimeSortButton" type="Button" parent="SortButtons/PanelContainer3"]
 layout_mode = 2
