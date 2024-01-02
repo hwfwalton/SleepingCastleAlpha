@@ -19,7 +19,7 @@ func _populate_symbols_node():
 	)
 	pass
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _on_zone_completed():
 	get_tree().change_scene_to_packed(credits_view)
 	print("You win!")
