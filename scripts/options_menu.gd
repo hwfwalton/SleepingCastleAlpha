@@ -15,6 +15,8 @@ var music_bus_name = "Music"
 @onready var master_bus_idx = AudioServer.get_bus_index(master_bus_name)
 @onready var sfx_bus_idx = AudioServer.get_bus_index(sfx_bus_name)
 @onready var music_bus_idx = AudioServer.get_bus_index(music_bus_name)
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	options_pane_container.grab_focus()
