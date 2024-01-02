@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dua8h0obvspql"]
 
-[ext_resource type="Texture2D" uid="uid://b050s6jkjyq4d" path="res://assets/stainedglassborderonly.png" id="1_7i7xa"]
 [ext_resource type="Script" path="res://clue_containers/ClueContainerTemplate.gd" id="1_llbtt"]
+[ext_resource type="Texture2D" uid="uid://dtyiw12fsyup7" path="res://assets/stainedglassborderonlyv2.png" id="2_3t8fc"]
 
 [node name="ClueContainerTemplate" type="Control"]
 custom_minimum_size = Vector2(1440, 1080)
@@ -23,7 +23,7 @@ layout_mode = 2
 offset_right = 1440.0
 offset_bottom = 1080.0
 mouse_filter = 2
-texture = ExtResource("1_7i7xa")
+texture = ExtResource("2_3t8fc")
 expand_mode = 2
 stretch_mode = 5
 metadata/_edit_lock_ = true
