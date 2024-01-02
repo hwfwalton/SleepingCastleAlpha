@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b3xsihd2jjihs" path="res://BookView/clue_pages/SymbolClues.tscn" id="5_ys0xy"]
 [ext_resource type="PackedScene" uid="uid://b81tumioqdgjl" path="res://BookView/puzzle_pages/puzzle_pages/stables_page_0.tscn" id="6_bijfd"]
 [ext_resource type="PackedScene" uid="uid://dv4lqeidsuem1" path="res://BookView/puzzle_pages/puzzle_pages/guardroom_page_0.tscn" id="7_xwycs"]
-[ext_resource type="Shortcut" uid="uid://dcr5q3fqlxka7" path="res://shortcuts/esc_press.tres" id="11_2x38y"]
+[ext_resource type="Shortcut" uid="uid://ck4gp2ptsvu3s" path="res://shortcuts/book_close_shortcut.tres" id="11_ifmdl"]
 
 [node name="BookView" type="Control"]
 layout_mode = 3
@@ -164,6 +164,6 @@ texture = ExtResource("3_5nm8o")
 [node name="CloseButton" type="Button" parent="BookViewSubViewportContainer/SubViewport/BookPort/CloseButtonPanelContainer"]
 layout_mode = 2
 tooltip_text = "Close"
-shortcut = ExtResource("11_2x38y")
+shortcut = ExtResource("11_ifmdl")
 
 [connection signal="pressed" from="BookViewSubViewportContainer/SubViewport/BookPort/CloseButtonPanelContainer/CloseButton" to="." method="_on_close_button_pressed"]

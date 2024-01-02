@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://shlcw5nd2bgb"]
+[gd_scene load_steps=7 format=3 uid="uid://shlcw5nd2bgb"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_5hktd"]
 [ext_resource type="Resource" uid="uid://d1ymuglidjrr0" path="res://resources/player_state.tres" id="2_id1lh"]
 [ext_resource type="Texture2D" uid="uid://dtyiw12fsyup7" path="res://assets/stainedglassborderonlyv2.png" id="3_30kn3"]
 [ext_resource type="PackedScene" uid="uid://bfagcjk1uorf7" path="res://GameHUD/hud_buttons.tscn" id="3_artgc"]
+[ext_resource type="Shortcut" uid="uid://cwuc806mx1gge" path="res://shortcuts/book_button_shortcut.tres" id="5_0jf7v"]
 [ext_resource type="Texture2D" uid="uid://ctjainjosb4sw" path="res://assets/closedbook.png" id="5_omuys"]
 
 [node name="Game" type="Control"]
@@ -80,6 +81,7 @@ offset_right = 240.0
 offset_bottom = 420.0
 grow_vertical = 2
 pivot_offset = Vector2(0, 416)
+shortcut = ExtResource("5_0jf7v")
 texture_normal = ExtResource("5_omuys")
 ignore_texture_size = true
 stretch_mode = 3
