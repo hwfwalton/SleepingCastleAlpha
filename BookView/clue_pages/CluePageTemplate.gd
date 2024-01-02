@@ -11,13 +11,14 @@ class_name BookViewCluesPage
 @onready var alpha_sort_button_node: Button = $SortButtons/PanelContainer2/AlphaSortButton
 @onready var time_sort_button_node: Button = $SortButtons/PanelContainer3/TimeSortButton
 
+@onready var sort_dir_texture_node: TextureRect = $SortButtons/PanelContainer/MarginContainer/SortDirectionTextureRect
 
 var clues_to_show: Array[FoundClueItem]
 var clue_item_scene_to_use: PackedScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	sort_dir_button_node.toggled.connect(_on_sort_direction_button_toggled)
+	sort_dir_button_node.pressed.connect(_on_sort_direction_button_pressed)
 	alpha_sort_button_node.pressed.connect(_on_alpha_sort_button_pressed)
 	time_sort_button_node.pressed.connect(_on_time_sort_button_pressed)
 
@@ -40,6 +41,7 @@ func set_clues_and_clue_scene(found_clues_to_show: Array[FoundClueItem], book_vi
 	clue_item_scene_to_use = book_view_clue_item_scene
 
 func render_clues():
+	update_sort_direction_button_arrow()
 	var is_alpha_sort = player_state[player_state_alpha_sort_key]
 	var is_sort_asc = player_state[player_state_sort_asc_key]
 
@@ -65,14 +67,21 @@ func render_clues():
 		clues_container.add_child(clue_item_node)
 	)
 
+func update_sort_direction_button_arrow():
+	# If clues are being sorted ascending, then the arrow should actually point
+	# downwards as our sorting of them in ascending order results in them being
+	# rendered in visually descending order (i.e. A at top and Z at bottom)
+	var sort_clues_asc = player_state[player_state_sort_asc_key]
+	sort_dir_texture_node.flip_v = sort_clues_asc
+
 func set_clue_items_initial_position():
 	clues_container.get_children().map(func(clue_node):
 		clue_node.setInitialPosition()
 	)
 
 
-func _on_sort_direction_button_toggled(toggled_on):
-	player_state[player_state_sort_asc_key] = toggled_on
+func _on_sort_direction_button_pressed():
+	player_state[player_state_sort_asc_key] = !player_state[player_state_sort_asc_key]
 	render_clues()
 
 
