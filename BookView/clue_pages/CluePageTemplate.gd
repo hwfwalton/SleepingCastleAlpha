@@ -56,7 +56,6 @@ func render_clues():
 	)
 	
 	# Clear out existing children before adding the new ones
-	var existing_children = clues_container.get_children()
 	clues_container.get_children().map(func(child):
 			clues_container.remove_child(child)
 			child.queue_free()
