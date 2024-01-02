@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bmra5comie0c5" path="res://GameHUD/nav_sparkle.tscn" id="4_ntgd1"]
 [ext_resource type="PackedScene" uid="uid://no2lghy85xom" path="res://world_items/artifact_sparkle.tscn" id="5_ipxsi"]
 [ext_resource type="PackedScene" uid="uid://ds41sfndwx00q" path="res://world_items/hidden_sparkle.tscn" id="6_w8axl"]
-[ext_resource type="Texture2D" uid="uid://bmof2f8dtyad0" path="res://assets/ui.leroyglows.png" id="7_dntlk"]
+[ext_resource type="Texture2D" uid="uid://bmof2f8dtyad0" path="res://assets/ui/ui.leroyglows.png" id="7_dntlk"]
 [ext_resource type="PackedScene" uid="uid://qgibjy1gropy" path="res://world_items/container_sparkle.tscn" id="7_dsoi4"]
 
 [node name="StageTemplate" instance=ExtResource("1_wfnam")]
