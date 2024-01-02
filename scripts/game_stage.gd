@@ -9,6 +9,7 @@ var nav_sparkle_nodes = []
 var clue_item_nodes = []
 var clue_container_nodes = []
 var artifact_nodes = []
+var hidden_nodes = []
 
 # Moon Icon
 # https://www.vecteezy.com/png/1189147-moon-crescent
@@ -29,6 +30,10 @@ func _ready():
 		elif (node.is_in_group("artifact_sparkle")):
 			node.open_artifact_view.connect(self._on_artifact_sparkle_open_artifact_view)
 			artifact_nodes.push_front(node)
+		elif (node.is_in_group("hidden_sparkle")):
+			node.open_artifact_view.connect(self._on_artifact_sparkle_open_artifact_view)
+			hidden_nodes.push_front(node)
+	)
 	)
 
 func _on_nav_sparkle_load_level_request(level_name):
