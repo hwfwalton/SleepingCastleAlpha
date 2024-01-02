@@ -1,7 +1,11 @@
-[gd_resource type="Theme" load_steps=9 format=3 uid="uid://cl8j1lod7ob4"]
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://cl8j1lod7ob4"]
 
 [ext_resource type="StyleBox" uid="uid://cihkw8lu2kqi" path="res://themes/menu_shade.tres" id="1_30q1j"]
+[ext_resource type="StyleBox" uid="uid://k3jimt0eg4ij" path="res://themes/book_view_sort_button/book_view_sort_button_normal.tres" id="1_jx7vu"]
+[ext_resource type="StyleBox" uid="uid://cj21bu1vhds54" path="res://themes/book_view_sort_button/book_view_sort_button_focus.tres" id="1_nsuwe"]
+[ext_resource type="StyleBox" uid="uid://um6ccid8n5fd" path="res://themes/book_view_sort_button/book_view_sort_button_hover.tres" id="1_udsi8"]
 [ext_resource type="StyleBox" uid="uid://b230d772h6vh6" path="res://themes/puzzle_box_incomplete.tres" id="2_58i0l"]
+[ext_resource type="StyleBox" uid="uid://cue3jghvnua48" path="res://themes/book_view_sort_button/book_view_sort_button_pressed.tres" id="2_a4scc"]
 [ext_resource type="StyleBox" uid="uid://bk01cn1spbqc0" path="res://themes/new_style_box_flat.tres" id="2_ada5x"]
 [ext_resource type="StyleBox" uid="uid://dalg2sdgcells" path="res://themes/puzzle_portrait.tres" id="2_xpf2g"]
 [ext_resource type="StyleBox" uid="uid://bm6ahllekyo5l" path="res://themes/puzzle_box_complete.tres" id="3_7mjhe"]
@@ -24,6 +28,16 @@ BookViewMargins/constants/margin_bottom = 160
 BookViewMargins/constants/margin_left = 40
 BookViewMargins/constants/margin_right = 40
 BookViewMargins/constants/margin_top = 140
+BookViewSortButton/base_type = &"Button"
+BookViewSortButton/styles/focus = ExtResource("1_nsuwe")
+BookViewSortButton/styles/hover = ExtResource("1_udsi8")
+BookViewSortButton/styles/normal = ExtResource("1_jx7vu")
+BookViewSortButton/styles/pressed = ExtResource("2_a4scc")
+BookViewSortButtonTextureMargin/base_type = &"MarginContainer"
+BookViewSortButtonTextureMargin/constants/margin_bottom = 2
+BookViewSortButtonTextureMargin/constants/margin_left = 2
+BookViewSortButtonTextureMargin/constants/margin_right = 2
+BookViewSortButtonTextureMargin/constants/margin_top = 2
 ClearPanel/base_type = &"TabContainer"
 ClearPanel/styles/panel = SubResource("StyleBoxEmpty_3weie")
 ClueItemMargins/base_type = &"MarginContainer"

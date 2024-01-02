@@ -12,13 +12,13 @@
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -0.5
-offset_right = -1816.0
-offset_bottom = -1036.5
+offset_right = -1768.0
+offset_bottom = -1032.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_constants/separation = 0
 script = ExtResource("1_nr0mb")
 player_state = ExtResource("2_1mgn1")
 metadata/_edit_lock_ = true
@@ -35,62 +35,86 @@ size_flags_vertical = 8
 metadata/_edit_lock_ = true
 
 [node name="PanelContainer" type="PanelContainer" parent="SortButtons"]
-custom_minimum_size = Vector2(32, 32)
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 theme_type_variation = &"BookPanel"
-metadata/_edit_lock_ = true
-
-[node name="SortDirectionTextureRect" type="TextureRect" parent="SortButtons/PanelContainer"]
-layout_mode = 2
-texture = ExtResource("3_loo7b")
-expand_mode = 1
 metadata/_edit_lock_ = true
 
 [node name="SortDirectionButton" type="Button" parent="SortButtons/PanelContainer"]
 layout_mode = 2
 tooltip_text = "Toggle sort asc/desc"
+theme_type_variation = &"BookViewSortButton"
 toggle_mode = true
 metadata/_edit_lock_ = true
 
-[node name="PanelContainer2" type="PanelContainer" parent="SortButtons"]
-custom_minimum_size = Vector2(32, 32)
+[node name="MarginContainer" type="MarginContainer" parent="SortButtons/PanelContainer"]
 layout_mode = 2
-theme_type_variation = &"BookPanel"
+mouse_filter = 2
+theme_type_variation = &"BookViewSortButtonTextureMargin"
 metadata/_edit_lock_ = true
 
-[node name="AlphaSortTextureRect" type="TextureRect" parent="SortButtons/PanelContainer2"]
+[node name="SortDirectionTextureRect" type="TextureRect" parent="SortButtons/PanelContainer/MarginContainer"]
 layout_mode = 2
-texture = ExtResource("4_r72ey")
+mouse_filter = 2
+texture = ExtResource("3_loo7b")
 expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="PanelContainer2" type="PanelContainer" parent="SortButtons"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_type_variation = &"BookPanel"
 metadata/_edit_lock_ = true
 
 [node name="AlphaSortButton" type="Button" parent="SortButtons/PanelContainer2"]
 custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
 tooltip_text = "Sort clues by name"
+theme_type_variation = &"BookViewSortButton"
 toggle_mode = true
 button_group = SubResource("ButtonGroup_3et84")
 text = "
 "
 metadata/_edit_lock_ = true
 
-[node name="PanelContainer3" type="PanelContainer" parent="SortButtons"]
-custom_minimum_size = Vector2(32, 32)
+[node name="MarginContainer" type="MarginContainer" parent="SortButtons/PanelContainer2"]
 layout_mode = 2
-theme_type_variation = &"BookPanel"
+mouse_filter = 2
+theme_type_variation = &"BookViewSortButtonTextureMargin"
 metadata/_edit_lock_ = true
 
-[node name="TimeSortTextureRect" type="TextureRect" parent="SortButtons/PanelContainer3"]
+[node name="AlphaSortTextureRect" type="TextureRect" parent="SortButtons/PanelContainer2/MarginContainer"]
 layout_mode = 2
-texture = ExtResource("5_jw75e")
+mouse_filter = 2
+texture = ExtResource("4_r72ey")
 expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="PanelContainer3" type="PanelContainer" parent="SortButtons"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+theme_type_variation = &"BookPanel"
 metadata/_edit_lock_ = true
 
 [node name="TimeSortButton" type="Button" parent="SortButtons/PanelContainer3"]
 layout_mode = 2
 tooltip_text = "Sort clues by order discovered"
+theme_type_variation = &"BookViewSortButton"
 toggle_mode = true
 button_group = SubResource("ButtonGroup_3et84")
 text = "
 "
+metadata/_edit_lock_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="SortButtons/PanelContainer3"]
+layout_mode = 2
+mouse_filter = 2
+theme_type_variation = &"BookViewSortButtonTextureMargin"
+metadata/_edit_lock_ = true
+
+[node name="TimeSortTextureRect" type="TextureRect" parent="SortButtons/PanelContainer3/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("5_jw75e")
+expand_mode = 1
 metadata/_edit_lock_ = true
