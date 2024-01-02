@@ -26,9 +26,8 @@ var book_clues_names_sorting_asc: bool = true
 var book_clues_symbols_sorting_asc: bool = true
 
 var has_seen_welcome_letter = false
-var seen_container_views: Array = []
-var seen_artifact_views: Array = []
-#var has_been_clicked_by_node_path: Dictionary[]
+var seen_artifact_views: Dictionary = {}
+var seen_all_artifacts_in_container: Dictionary = {}
 
 @export var test_value: int = 0
 

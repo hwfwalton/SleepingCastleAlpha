@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://goyko717eehg"]
+[gd_scene load_steps=5 format=3 uid="uid://goyko717eehg"]
 
 [ext_resource type="Script" path="res://clue_containers/ClueContainerShell.gd" id="1_msx2q"]
 [ext_resource type="Texture2D" uid="uid://civmffyad70rv" path="res://assets/close_128.png" id="2_i5xge"]
+[ext_resource type="Resource" uid="uid://d1ymuglidjrr0" path="res://resources/player_state.tres" id="2_qrahp"]
 [ext_resource type="Shortcut" uid="uid://dcr5q3fqlxka7" path="res://shortcuts/esc_press.tres" id="3_bq45h"]
 
 [node name="ClueContainerShell" type="Control"]
@@ -13,6 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_msx2q")
+player_state = ExtResource("2_qrahp")
 
 [node name="ClueContainerSubViewportContainer" type="SubViewportContainer" parent="."]
 layout_mode = 1

@@ -14,15 +14,12 @@ func _ready():
 
 
 func _update_has_seen_appearance():
-	if not player_state.seen_container_views.has(container_name):
+	if not player_state.seen_all_artifacts_in_container.get(container_name, false):
 		modulate = Color(Color.YELLOW, 0.7)
 	else:
 		modulate = Color.WHITE
 
 
 func _on_button_pressed():
-	if not player_state.seen_container_views.has(container_name):
-		player_state.seen_container_views.append(container_name)
-
 	open_clue_container.emit(container_name)
 	_update_has_seen_appearance()

@@ -20,14 +20,11 @@ func _ready():
 
 
 func _update_has_seen_appearance():
-	if not player_state.seen_artifact_views.has(artifact_name):
+	if not player_state.seen_artifact_views.get(artifact_name, false):
 		modulate = Color(Color.YELLOW, 0.7)
 	else:
 		modulate = Color.WHITE
 
 func _on_button_pressed():
-	if not player_state.seen_artifact_views.has(artifact_name):
-		player_state.seen_artifact_views.append(artifact_name)
-
 	open_artifact_view.emit(artifact_name)
 	_update_has_seen_appearance()
