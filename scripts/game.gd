@@ -1,6 +1,6 @@
 extends Control
 
-var level_instance
+var level_instance: GameStage
 @onready var level_anchor = $Container/LevelAnchor
 @onready var book_button_node = $BookButton
 
@@ -53,6 +53,7 @@ func _on_open_clue_container(container_name: String):
 	
 	var scene_to_add_to = get_tree().current_scene.get_viewport()
 	scene_to_add_to.add_child(clue_container_shell_instance)
+	clue_container_shell_instance.tree_exited.connect(_on_clue_view_close)
 
 func _on_open_artifact_view(artifact_name: String):
 	var clue_container_shell_instance = clue_container_shell.instantiate() as ClueContainerShell
@@ -61,6 +62,10 @@ func _on_open_artifact_view(artifact_name: String):
 	
 	var scene_to_add_to = get_tree().current_scene.get_viewport()
 	scene_to_add_to.add_child(clue_container_shell_instance)
+	clue_container_shell_instance.tree_exited.connect(_on_clue_view_close)
+
+func _on_clue_view_close():
+	level_instance.update_has_seen_appearance_of_all_nodes()
 
 func _on_book_button_pressed():
 	var book_view = book_view_scene.instantiate()

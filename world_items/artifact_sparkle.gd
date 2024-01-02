@@ -11,7 +11,7 @@ class_name ArtifactSparkle
 signal open_artifact_view(artifact_name: String)
 
 func _ready():
-	_update_has_seen_appearance()
+	update_has_seen_appearance()
 
 	# Assign the tooltip from the root Control node to the Button
 	button_node.tooltip_text = tooltip_text
@@ -19,7 +19,7 @@ func _ready():
 		texture_rect.texture = load(alt_icon_resource_path)
 
 
-func _update_has_seen_appearance():
+func update_has_seen_appearance():
 	if not player_state.seen_artifact_views.get(artifact_name, false):
 		modulate = Color(Color.YELLOW, 0.7)
 	else:
@@ -27,4 +27,4 @@ func _update_has_seen_appearance():
 
 func _on_button_pressed():
 	open_artifact_view.emit(artifact_name)
-	_update_has_seen_appearance()
+	update_has_seen_appearance()

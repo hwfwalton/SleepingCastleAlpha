@@ -1,4 +1,5 @@
 extends Control
+class_name GameStage
 
 signal load_level_request(level_name: String)
 signal clue_item_found(clue_item: ClueItem)
@@ -34,7 +35,16 @@ func _ready():
 			node.open_artifact_view.connect(self._on_artifact_sparkle_open_artifact_view)
 			hidden_nodes.push_front(node)
 	)
+
+
+func update_has_seen_appearance_of_all_nodes():
+	clue_container_nodes.map(func(container_node: ContainerSparkle):
+		container_node.update_has_seen_appearance()
 	)
+	artifact_nodes.map(func(artifact_node: ArtifactSparkle):
+		artifact_node.update_has_seen_appearance()
+	)
+
 
 func _on_nav_sparkle_load_level_request(level_name):
 	load_level_request.emit(level_name)
