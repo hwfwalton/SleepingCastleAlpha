@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgeu6iu4nq58y"
-path="res://.godot/imported/icon.alpha.png-87fcb77119c47e65beb5b76edcab642a.ctex"
+uid="uid://cnfa7ul6502np"
+path="res://.godot/imported/icon.alphasquare.png-a32fa3686a499a58a3c42bb9ed18e05a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/icon.alpha.png"
-dest_files=["res://.godot/imported/icon.alpha.png-87fcb77119c47e65beb5b76edcab642a.ctex"]
+source_file="res://assets/ui/icon.alphasquare.png"
+dest_files=["res://.godot/imported/icon.alphasquare.png-a32fa3686a499a58a3c42bb9ed18e05a.ctex"]
 
 [params]
 
