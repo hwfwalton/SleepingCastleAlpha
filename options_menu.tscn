@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0b3s6cv80j6e"]
+[gd_scene load_steps=4 format=3 uid="uid://c0b3s6cv80j6e"]
 
 [ext_resource type="Script" path="res://scripts/options_menu.gd" id="1_ysv0m"]
+[ext_resource type="Texture2D" uid="uid://civmffyad70rv" path="res://assets/close_128.png" id="2_wqv6f"]
+[ext_resource type="Shortcut" uid="uid://dcr5q3fqlxka7" path="res://shortcuts/esc_press.tres" id="3_q2dqp"]
 
 [node name="OptionsMenu" type="Control"]
 layout_mode = 3
@@ -142,8 +144,28 @@ focus_previous = NodePath("../../../../OptionsPanelContainer/MarginContainer/VBo
 text = "Quit Game
 "
 
+[node name="CloseButtonPanelContainer" type="PanelContainer" parent="OptionsMenuSubViewportContainer/SubViewport"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -128.0
+offset_bottom = 128.0
+grow_horizontal = 0
+mouse_filter = 1
+theme_type_variation = &"BookPanel"
+
+[node name="CloseTextureRect" type="TextureRect" parent="OptionsMenuSubViewportContainer/SubViewport/CloseButtonPanelContainer"]
+layout_mode = 2
+texture = ExtResource("2_wqv6f")
+
+[node name="CloseButton" type="Button" parent="OptionsMenuSubViewportContainer/SubViewport/CloseButtonPanelContainer"]
+layout_mode = 2
+tooltip_text = "Close"
+shortcut = ExtResource("3_q2dqp")
+
 [connection signal="value_changed" from="OptionsMenuSubViewportContainer/SubViewport/OptionsPanelContainer/MarginContainer/VBoxContainer/HBoxContainer/MasterSlider" to="." method="_on_master_slider_value_changed"]
 [connection signal="value_changed" from="OptionsMenuSubViewportContainer/SubViewport/OptionsPanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/SfxSlider" to="." method="_on_sfx_slider_value_changed"]
 [connection signal="value_changed" from="OptionsMenuSubViewportContainer/SubViewport/OptionsPanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/MusicSlider" to="." method="_on_music_slider_value_changed"]
 [connection signal="pressed" from="OptionsMenuSubViewportContainer/SubViewport/OptionsPanelContainer/MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="OptionsMenuSubViewportContainer/SubViewport/MarginContainer/QuitButtonContainer/MarginContainer/QuitButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="OptionsMenuSubViewportContainer/SubViewport/CloseButtonPanelContainer/CloseButton" to="." method="_on_back_button_pressed"]
