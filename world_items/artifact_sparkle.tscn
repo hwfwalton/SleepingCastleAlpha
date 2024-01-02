@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://no2lghy85xom"]
+[gd_scene load_steps=4 format=3 uid="uid://no2lghy85xom"]
 
 [ext_resource type="Script" path="res://world_items/artifact_sparkle.gd" id="1_2s8mq"]
+[ext_resource type="Resource" uid="uid://d1ymuglidjrr0" path="res://resources/player_state.tres" id="2_5bk4e"]
 [ext_resource type="Texture2D" uid="uid://djrmj8v4r57kv" path="res://assets/sparkles.png" id="2_xbt0w"]
 
 [node name="ArtifactSparkle" type="PanelContainer" groups=["artifact_sparkle"]]
@@ -9,6 +10,7 @@ offset_bottom = 64.0
 mouse_filter = 1
 theme_type_variation = &"BookPanel"
 script = ExtResource("1_2s8mq")
+player_state = ExtResource("2_5bk4e")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 2

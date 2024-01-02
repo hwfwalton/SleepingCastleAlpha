@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://qgibjy1gropy"]
+[gd_scene load_steps=4 format=3 uid="uid://qgibjy1gropy"]
 
 [ext_resource type="Script" path="res://world_items/container_sparkle.gd" id="1_mvmpt"]
+[ext_resource type="Resource" uid="uid://d1ymuglidjrr0" path="res://resources/player_state.tres" id="2_augbo"]
 [ext_resource type="Texture2D" uid="uid://djrmj8v4r57kv" path="res://assets/sparkles.png" id="2_us441"]
 
 [node name="ContainerSparkle" type="PanelContainer" groups=["container_sparkle"]]
@@ -9,6 +10,7 @@ offset_bottom = 64.0
 mouse_filter = 1
 theme_type_variation = &"BookPanel"
 script = ExtResource("1_mvmpt")
+player_state = ExtResource("2_augbo")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 2
