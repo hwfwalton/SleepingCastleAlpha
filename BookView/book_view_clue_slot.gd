@@ -22,7 +22,7 @@ func _ready():
 	)
 
 
-func _process(delta):
+func _process(_delta):
 	if GlobalState.is_dragging:
 		modulate = Color.AQUA
 	else: 

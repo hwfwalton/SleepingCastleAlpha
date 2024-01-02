@@ -28,7 +28,7 @@ func setInitialPosition():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if draggable:
 		if Input.is_action_just_pressed("click"):
 			offset = get_global_mouse_position() - global_position
