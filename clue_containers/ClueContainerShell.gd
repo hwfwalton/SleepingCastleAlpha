@@ -51,3 +51,9 @@ func _on_clue_item_found(clue_item: ClueItem):
 
 func _on_open_artifact_view(clicked_artifact_name: String):
 	open_artifact_view.emit(clicked_artifact_name)
+
+
+func update_has_seen_appearance_of_all_nodes():
+	clue_view_node.getArtifactNodes().map(func(artifact_node: ArtifactSparkle):
+		artifact_node.update_has_seen_appearance()
+	)

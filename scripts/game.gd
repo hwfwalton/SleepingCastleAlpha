@@ -1,6 +1,7 @@
 extends Control
 
 var level_instance: GameStage
+var open_clue_views: Array
 @onready var level_anchor = $Container/LevelAnchor
 @onready var book_button_node = $BookButton
 
@@ -53,7 +54,9 @@ func _on_open_clue_container(container_name: String):
 	
 	var scene_to_add_to = get_tree().current_scene.get_viewport()
 	scene_to_add_to.add_child(clue_container_shell_instance)
-	clue_container_shell_instance.tree_exited.connect(_on_clue_view_close)
+	
+	open_clue_views.append(clue_container_shell_instance)
+	clue_container_shell_instance.tree_exiting.connect(_on_clue_view_close.bind(clue_container_shell_instance))
 
 func _on_open_artifact_view(artifact_name: String):
 	var clue_container_shell_instance = clue_container_shell.instantiate() as ClueContainerShell
@@ -62,9 +65,17 @@ func _on_open_artifact_view(artifact_name: String):
 	
 	var scene_to_add_to = get_tree().current_scene.get_viewport()
 	scene_to_add_to.add_child(clue_container_shell_instance)
-	clue_container_shell_instance.tree_exited.connect(_on_clue_view_close)
+	
+	open_clue_views.append(clue_container_shell_instance)
+	clue_container_shell_instance.tree_exiting.connect(_on_clue_view_close.bind(clue_container_shell_instance))
 
-func _on_clue_view_close():
+func _on_clue_view_close(clue_being_closed: ClueContainerShell):
+	open_clue_views = open_clue_views.filter(func(open_view):
+		return open_view != clue_being_closed
+	)
+	open_clue_views.map(func(open_view):
+		open_view.update_has_seen_appearance_of_all_nodes()
+	)
 	level_instance.update_has_seen_appearance_of_all_nodes()
 
 func _on_book_button_pressed():
