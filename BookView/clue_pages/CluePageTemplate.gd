@@ -71,6 +71,11 @@ func set_clue_items_initial_position():
 	)
 
 
+func _on_sort_direction_button_toggled(toggled_on):
+	player_state[player_state_sort_asc_key] = toggled_on
+	render_clues()
+
+
 func _on_alpha_sort_button_pressed():
 	player_state[player_state_alpha_sort_key] = true
 	render_clues()
@@ -78,9 +83,4 @@ func _on_alpha_sort_button_pressed():
 
 func _on_time_sort_button_pressed():
 	player_state[player_state_alpha_sort_key] = false
-	render_clues()
-
-
-func _on_sort_direction_button_toggled(toggled_on):
-	player_state[player_state_sort_asc_key] = toggled_on
 	render_clues()
