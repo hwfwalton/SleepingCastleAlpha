@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://goyko717eehg"]
+[gd_scene load_steps=4 format=3 uid="uid://goyko717eehg"]
 
 [ext_resource type="Script" path="res://clue_containers/ClueContainerShell.gd" id="1_msx2q"]
 [ext_resource type="Texture2D" uid="uid://civmffyad70rv" path="res://assets/close_128.png" id="2_i5xge"]
+[ext_resource type="Shortcut" uid="uid://dcr5q3fqlxka7" path="res://shortcuts/esc_press.tres" id="3_bq45h"]
 
 [node name="ClueContainerShell" type="Control"]
 layout_mode = 3
@@ -56,5 +57,6 @@ texture = ExtResource("2_i5xge")
 [node name="CloseButton" type="Button" parent="ClueContainerSubViewportContainer/SubViewport/CloseButtonPanelContainer"]
 layout_mode = 2
 tooltip_text = "Close"
+shortcut = ExtResource("3_bq45h")
 
 [connection signal="pressed" from="ClueContainerSubViewportContainer/SubViewport/CloseButtonPanelContainer/CloseButton" to="." method="_on_close_button_pressed"]
