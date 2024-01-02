@@ -17,9 +17,9 @@ var clue_item_scene_to_use: PackedScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	sort_dir_button_node.pressed.connect(_on_alpha_sort_button_pressed)
-	alpha_sort_button_node.pressed.connect(_on_time_sort_button_pressed)
-	time_sort_button_node.toggled.connect(_on_sort_direction_button_toggled)
+	sort_dir_button_node.toggled.connect(_on_sort_direction_button_toggled)
+	alpha_sort_button_node.pressed.connect(_on_alpha_sort_button_pressed)
+	time_sort_button_node.pressed.connect(_on_time_sort_button_pressed)
 
 	var is_alpha_sort = player_state[player_state_alpha_sort_key]
 	var is_sort_asc = player_state[player_state_sort_asc_key]
