@@ -117,3 +117,7 @@ mouse_filter = 2
 texture = ExtResource("5_jw75e")
 expand_mode = 1
 metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="SortButtons/PanelContainer/SortDirectionButton" to="." method="_on_sort_direction_button_pressed"]
+[connection signal="pressed" from="SortButtons/PanelContainer2/AlphaSortButton" to="." method="_on_alpha_sort_button_pressed"]
+[connection signal="pressed" from="SortButtons/PanelContainer3/TimeSortButton" to="." method="_on_time_sort_button_pressed"]
