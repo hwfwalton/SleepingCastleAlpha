@@ -23,4 +23,5 @@ func _populate_symbols_node():
 func _on_zone_completed():
 	close_shell.emit()
 	get_tree().change_scene_to_packed(credits_view)
+	AudioManager.playGameVictoryMusic()
 	print("You win!")
