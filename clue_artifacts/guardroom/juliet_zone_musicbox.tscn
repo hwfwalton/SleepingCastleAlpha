@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://f36gf4blk3ji"]
+[gd_scene load_steps=5 format=3 uid="uid://f36gf4blk3ji"]
 
 [ext_resource type="PackedScene" uid="uid://din48m4aysgf8" path="res://clue_artifacts/ArtifactViewTemplate.tscn" id="1_6fyvr"]
 [ext_resource type="Texture2D" uid="uid://dnpqxkl1ec41b" path="res://assets/clues/clue.musicbox.png" id="2_0pop5"]
+[ext_resource type="Script" path="res://clue_artifacts/guardroom/juliet_zone_musicbox.gd" id="2_8qsxf"]
 [ext_resource type="PackedScene" uid="uid://dw7qjdh5v703h" path="res://world_items/clue_sparkle.tscn" id="3_mc0gv"]
 
 [node name="ArtifactViewTemplate" instance=ExtResource("1_6fyvr")]
+script = ExtResource("2_8qsxf")
 
 [node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
 texture = ExtResource("2_0pop5")
