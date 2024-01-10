@@ -55,3 +55,6 @@ bus = &"Music"
 [node name="music_book_player" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ycpmu")
 bus = &"Music"
+
+[node name="music_artifact_player" type="AudioStreamPlayer" parent="."]
+bus = &"Music"

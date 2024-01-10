@@ -6,6 +6,7 @@ var mus_expository_song: AudioStream = preload("res://assets/audio/music/mus-exp
 var mus_victory_reprise: AudioStream = preload("res://assets/audio/music/mus-victory-reprise-29-dec-2023.ogg")
 @onready var music_stage_player: AudioStreamPlayer = $music_stage_player
 @onready var music_book_player: AudioStreamPlayer = $music_book_player
+@onready var music_artifact_player: AudioStreamPlayer = $music_artifact_player
 @onready var sfx_book_open: AudioStreamPlayer = $sfx_book_open
 @onready var sfx_book_page_turn: AudioStreamPlayer = $sfx_book_page_turn
 @onready var sfx_book_close: AudioStreamPlayer = $sfx_book_close
@@ -34,13 +35,28 @@ func _switchStageMusicTrackToVictory():
 	music_stage_player.play()
 	music_stage_player.stream_paused = true
 
-func playStageMusic():
-	music_book_player.stream_paused = true
-	music_stage_player.stream_paused = false
+func setArtifactMusicTrackTo(artifact_music_audio_stream: AudioStream):
+	music_artifact_player.stream = artifact_music_audio_stream
+	music_artifact_player.play()
+	music_artifact_player.stream_paused = true
 
+func playStageMusic():
+	music_artifact_player.stream_paused = true
+	music_book_player.stream_paused = true
+
+	music_stage_player.stream_paused = false
+	
 func playBookMusic():
+	music_artifact_player.stream_paused = true
 	music_stage_player.stream_paused = true
+
 	music_book_player.stream_paused = false
+
+func playArtifactMusic():
+	music_stage_player.stream_paused = true
+	music_book_player.stream_paused = true
+
+	music_artifact_player.stream_paused = false
 
 func playNewGameSfxAndMusic():
 	_switchStageMusicTrackToCastle()
