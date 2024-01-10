@@ -49,9 +49,9 @@ bus = &"SFX"
 stream = ExtResource("9_xple4")
 bus = &"SFX"
 
-[node name="stage_music_player" type="AudioStreamPlayer" parent="."]
+[node name="music_stage_player" type="AudioStreamPlayer" parent="."]
 bus = &"Music"
 
-[node name="book_music_player" type="AudioStreamPlayer" parent="."]
+[node name="music_book_player" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ycpmu")
 bus = &"Music"
