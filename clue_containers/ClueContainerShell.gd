@@ -19,6 +19,8 @@ func _ready():
 		clue_view_node = load("res://clue_artifacts/%s.tscn" % artifact_name).instantiate()
 		sub_viewport.add_child(clue_view_node)
 
+	# clue_view_node is expected to be of type ArtifactView or ContainerView
+
 	var clue_items_in_container = clue_view_node.getClueNodes()
 	clue_items_in_container.map(func(clue_item_node: ClueSparkle):
 		clue_item_node.clue_item_found.connect(self._on_clue_item_found)
