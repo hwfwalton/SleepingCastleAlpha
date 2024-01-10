@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dbnkp7e5pe4i7" path="res://assets/clues/clue.boxingtrophy.png" id="2_f7qqb"]
 
 [node name="ArtifactViewTemplate" instance=ExtResource("1_wi0te")]
+artifact_touch_sfx = 1
 
 [node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
 texture = ExtResource("2_f7qqb")

@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b8bvsltsp1ptg" path="res://assets/clues/clue.hairoil.png" id="2_87q6f"]
 
 [node name="ArtifactViewTemplate" instance=ExtResource("1_y87ng")]
+artifact_touch_sfx = 1
 
 [node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
 texture = ExtResource("2_87q6f")

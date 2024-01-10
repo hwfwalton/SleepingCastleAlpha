@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dw7qjdh5v703h" path="res://world_items/clue_sparkle.tscn" id="3_mmp6p"]
 
 [node name="ArtifactViewTemplate" instance=ExtResource("1_ryeki")]
+artifact_touch_sfx = 2
 
 [node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
 texture = ExtResource("2_hu8ra")
