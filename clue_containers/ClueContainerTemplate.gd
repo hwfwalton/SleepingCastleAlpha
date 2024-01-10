@@ -9,7 +9,7 @@ func getClueNodes():
 	return clue_nodes
 
 func getArtifactNodes():
-	var artifact_sparkle = get_children().filter(func(node):
+	var artifact_sparkles = get_children().filter(func(node):
 		return node.is_in_group("artifact_sparkle")
 	)
-	return artifact_sparkle
+	return artifact_sparkles
