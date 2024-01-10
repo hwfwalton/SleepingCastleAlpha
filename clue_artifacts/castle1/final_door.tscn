@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://c42cx8n2cnc3p" path="res://BookView/SymbolItems/symbol_item_slot.tscn" id="5_v6qxu"]
 
 [node name="ArtifactViewTemplate" instance=ExtResource("1_gr250")]
+script = ExtResource("3_lehqw")
+player_state = ExtResource("4_ho24x")
 
 [node name="TextureRect" parent="HBoxContainer/MarginContainer2" index="0"]
 texture = ExtResource("2_v26sy")
@@ -20,8 +22,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_type_variation = &"BookPanel"
-script = ExtResource("3_lehqw")
-player_state = ExtResource("4_ho24x")
 
 [node name="VFlowContainer" type="VFlowContainer" parent="HBoxContainer/MarginContainer2/TextureRect/FinalDoorPuzzle" index="0"]
 custom_minimum_size = Vector2(600, 0)

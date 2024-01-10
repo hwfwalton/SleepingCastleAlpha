@@ -1,8 +1,8 @@
-extends Control
+extends ArtifactView
 
 @export var player_state: PlayerState
-@onready var slots_node: PuzzleZone = $VFlowContainer/Slots
-@onready var symbols_node = $VFlowContainer/FoundSymbols
+@onready var slots_node: PuzzleZone = $HBoxContainer/MarginContainer2/TextureRect/FinalDoorPuzzle/VFlowContainer/Slots
+@onready var symbols_node = $HBoxContainer/MarginContainer2/TextureRect/FinalDoorPuzzle/VFlowContainer/FoundSymbols
 var symbol_item_scene = preload("res://BookView/SymbolItems/symbol_item_combined.tscn")
 var credits_view = preload("res://CreditsView/credits_view.tscn")
 
@@ -21,5 +21,6 @@ func _populate_symbols_node():
 
 
 func _on_zone_completed():
+	close_shell.emit()
 	get_tree().change_scene_to_packed(credits_view)
 	print("You win!")
