@@ -1,4 +1,6 @@
 extends Control
+class_name ArtifactView
+
 
 func getClueNodes():
 	var clue_nodes = get_children().filter(func(node):
