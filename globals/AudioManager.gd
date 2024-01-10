@@ -76,7 +76,6 @@ func playGameVictoryMusic():
 	playStageMusic()
 
 func playArtifactTouchSfx(artifact_touch_sfx: GlobalState.ARTIFACT_TOUCH_SFX):
-	print("playing artifact_touch_sfx: %s" % GlobalState.ARTIFACT_TOUCH_SFX.keys()[artifact_touch_sfx])
 	if (artifact_touch_sfx == GlobalState.ARTIFACT_TOUCH_SFX.NONE):
 		return
 	else:
