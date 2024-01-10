@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b36yrqijqvrvm"]
+[gd_scene load_steps=16 format=3 uid="uid://b36yrqijqvrvm"]
 
 [ext_resource type="Script" path="res://globals/AudioManager.gd" id="1_uxxgm"]
 [ext_resource type="AudioStream" uid="uid://b2k4ti0yxo8hv" path="res://assets/audio/book/sfx-book-close-10-dec-2023.ogg" id="1_xtgbg"]
@@ -9,7 +9,9 @@
 [ext_resource type="AudioStream" uid="uid://dm72vwgqxicae" path="res://assets/audio/book/opening_sounds/sfx-page-shuffle-10-dec-2023.ogg" id="5_1b6ng"]
 [ext_resource type="AudioStream" uid="uid://e2tirfphvhad" path="res://assets/audio/book/opening_sounds/sfx-fumble-with-book-1-10-dec-2023.ogg" id="6_vntyb"]
 [ext_resource type="AudioStream" uid="uid://b0pqg6peev7s1" path="res://assets/audio/book/opening_sounds/sfx-fumble-with-book-2-10-dec-2023.ogg" id="7_bc1bh"]
+[ext_resource type="AudioStream" uid="uid://8cekliyr80ve" path="res://assets/audio/sfx/sfx-door-creak-close-29-dec-2023.ogg" id="9_mbgl5"]
 [ext_resource type="AudioStream" uid="uid://t0iu32asaolh" path="res://assets/audio/sfx/sfx-reverb-kick-10-dec-2023.ogg" id="9_xple4"]
+[ext_resource type="AudioStream" uid="uid://7duk3wilbtjt" path="res://assets/audio/sfx/sfx-door-creak-open-29-dec-2023.ogg" id="10_qpcl4"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ln1g2"]
 streams_count = 3
@@ -30,6 +32,14 @@ stream_1/weight = 1.0
 stream_2/stream = ExtResource("4_louj6")
 stream_2/weight = 1.0
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_stylb"]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("9_mbgl5")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("10_qpcl4")
+stream_1/weight = 1.0
+
 [node name="AudioManager" type="Node"]
 script = ExtResource("1_uxxgm")
 
@@ -47,6 +57,10 @@ bus = &"SFX"
 
 [node name="sfx_reverb_kick" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_xple4")
+bus = &"SFX"
+
+[node name="sfx_door_creak" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_stylb")
 bus = &"SFX"
 
 [node name="music_stage_player" type="AudioStreamPlayer" parent="."]

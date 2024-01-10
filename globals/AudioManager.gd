@@ -11,6 +11,7 @@ var mus_victory_reprise: AudioStream = preload("res://assets/audio/music/mus-vic
 @onready var sfx_book_page_turn: AudioStreamPlayer = $sfx_book_page_turn
 @onready var sfx_book_close: AudioStreamPlayer = $sfx_book_close
 @onready var sfx_reverb_kick: AudioStreamPlayer = $sfx_reverb_kick
+@onready var sfx_door_creak: AudioStreamPlayer = $sfx_door_creak
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

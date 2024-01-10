@@ -11,3 +11,4 @@ func _ready():
 
 func _on_nav_sparkle_pressed():
 	load_level_request.emit(nav_destination_name)
+	AudioManager.sfx_door_creak.play()
