@@ -48,6 +48,7 @@ func _on_close_button_pressed():
 		
 	queue_free()
 	get_parent().emit_signal("ready")
+	AudioManager.playStageMusic()
 	clue_view_node = null
 
 func _on_clue_item_found(clue_item: ClueItem):
