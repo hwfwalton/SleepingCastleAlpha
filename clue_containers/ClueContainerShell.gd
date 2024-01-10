@@ -29,6 +29,8 @@ func _ready():
 		artifact_node.open_artifact_view.connect(self._on_open_artifact_view)
 	)
 	
+	clue_view_node.close_shell.connect(self._on_close_button_pressed)
+	
 	get_tree().call_group("clue_item", "emit_found_signal")
 
 

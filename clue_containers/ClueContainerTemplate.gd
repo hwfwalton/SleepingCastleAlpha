@@ -1,6 +1,7 @@
 extends Control
 class_name ContainerView
 
+signal close_shell
 
 func getClueNodes():
 	var clue_nodes = get_children().filter(func(node):

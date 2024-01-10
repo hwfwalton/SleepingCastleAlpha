@@ -1,6 +1,7 @@
 extends Control
 class_name ArtifactView
 
+signal close_shell
 
 func getClueNodes():
 	var clue_nodes = get_children().filter(func(node):
