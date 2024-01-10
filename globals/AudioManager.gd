@@ -12,6 +12,13 @@ var mus_victory_reprise: AudioStream = preload("res://assets/audio/music/mus-vic
 @onready var sfx_book_close: AudioStreamPlayer = $sfx_book_close
 @onready var sfx_reverb_kick: AudioStreamPlayer = $sfx_reverb_kick
 @onready var sfx_door_creak: AudioStreamPlayer = $sfx_door_creak
+@onready var sfx_artifact_touch: AudioStreamPlayer = $sfx_artifact_touch
+
+var artifact_open_sfx_streams = {
+	GlobalState.ARTIFACT_TOUCH_SFX.ITEMS: preload("res://assets/audio/sfx/sfx-misc-items-fall-29-dec-2023.ogg"),
+	GlobalState.ARTIFACT_TOUCH_SFX.PAPER: preload("res://assets/audio/sfx/sfx-unfurling-scroll-29-dec-2023.ogg"),
+	GlobalState.ARTIFACT_TOUCH_SFX.WHISPERS: preload("res://assets/audio/sfx/sfx-indistinct-whispers-29-dec-2023.ogg"),
+}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -68,3 +75,11 @@ func playGameVictoryMusic():
 	_switchStageMusicTrackToVictory()
 	playStageMusic()
 
+func playArtifactTouchSfx(artifact_touch_sfx: GlobalState.ARTIFACT_TOUCH_SFX):
+	print("playing artifact_touch_sfx: %s" % GlobalState.ARTIFACT_TOUCH_SFX.keys()[artifact_touch_sfx])
+	if (artifact_touch_sfx == GlobalState.ARTIFACT_TOUCH_SFX.NONE):
+		return
+	else:
+		sfx_artifact_touch.stream = artifact_open_sfx_streams.get(artifact_touch_sfx)
+		sfx_artifact_touch.play()
+		

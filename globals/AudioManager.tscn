@@ -63,6 +63,9 @@ bus = &"SFX"
 stream = SubResource("AudioStreamRandomizer_stylb")
 bus = &"SFX"
 
+[node name="sfx_artifact_touch" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
 [node name="music_stage_player" type="AudioStreamPlayer" parent="."]
 bus = &"Music"
 
